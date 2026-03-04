@@ -1,0 +1,126 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+fstart = 40      # Hz
+fstop = 4e6      # Hz
+
+filenames = [
+
+# With ECG Electrodes
+
+    # "Mesure_freqCoupure/Electrode_Patch/SansMisc/meas_Z_H8L2.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/SansMisc/meas_Z_H8L5.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/SansMisc/meas_Z_H8L11.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/SansMisc/meas_Z_H5L11.txt",
+   
+    # "Mesure_freqCoupure/Electrode_Patch/AvecMisc_avantColo/meas_Z_H8L2.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/AvecMisc_avantColo/meas_Z_H8L5.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/AvecMisc_avantColo/meas_Z_H8L11.txt",
+    # "Mesure_freqCoupure/Electrode_Patch/AvecMisc_avantColo/meas_Z_H5L11.txt",
+    
+    "Mesure_freqCoupure/Electrode_Patch/AvecMisc_apresColo/meas_Z_H8L2.txt",
+    "Mesure_freqCoupure/Electrode_Patch/AvecMisc_apresColo/meas_Z_H8L5.txt",
+    "Mesure_freqCoupure/Electrode_Patch/AvecMisc_apresColo/meas_Z_H8L11.txt",
+    "Mesure_freqCoupure/Electrode_Patch/AvecMisc_apresColo/meas_Z_H5L11.txt",
+
+# With Metal Rod Electrodes
+    # "Mesure_freqCoupure/Electrode_Tiges/SansMisc/meas_Z_H8L2.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/SansMisc/meas_Z_H8L5.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/SansMisc/meas_Z_H8L11.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/SansMisc/meas_Z_H5L11.txt",
+    
+    # "Mesure_freqCoupure/Electrode_Tiges/AvecMisc_apresColo/meas_Z_H8L2.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/AvecMisc_apresColo/meas_Z_H8L5.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/AvecMisc_apresColo/meas_Z_H8L11.txt",
+    # "Mesure_freqCoupure/Electrode_Tiges/AvecMisc_apresColo/meas_Z_H5L11.txt",
+]
+
+plt.figure()
+
+# for filename in filenames:
+#     with open(filename, "r") as f:
+#         file_meas = f.read()
+
+#     mag_meas, phase_meas = file_meas.split("###############")
+
+#     mag = np.array([float(x) for x in mag_meas.replace("\n", "").split(",") if x.strip()])
+#     mag = mag[::2]
+
+#     pts = len(mag)
+#     f = np.logspace(np.log10(fstart), np.log10(fstop), pts)
+
+#     plt.semilogx(f, 20 * np.log10(np.abs(mag)), label=filename.split("/")[-1])
+ref_mag = None  # Courbe de référence
+
+for i, filename in enumerate(filenames):
+    with open(filename, "r") as f:
+        file_meas = f.read()
+
+    mag_meas, phase_meas = file_meas.split("###############")
+
+    mag = np.array([float(x) for x in mag_meas.replace("\n", "").split(",") if x.strip()])
+    mag = mag[::2]
+
+    pts = len(mag)
+    f = np.logspace(np.log10(fstart), np.log10(fstop), pts)
+
+    # Définir la première courbe comme référence
+    if i == 0:
+        ref_mag = mag
+        plt.semilogx(f, np.zeros_like(mag), label=filename.split("/")[-1] + " (ref)")
+    else:
+        # Calcul de l'écart relatif en %
+        relative_percent = (np.abs(mag - ref_mag)) / ref_mag * 100
+        plt.semilogx(f, relative_percent, label=filename.split("/")[-1])
+
+# plt.title("ECG Electrodes - Substrate only")
+# plt.title("ECG Electrodes - Substrate with mycelium in colonization phase")
+plt.title("ECG Electrodes - Substrate fully colonized by mycelium")
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Relative error (%)")
+plt.ylim(0,100)
+plt.grid()
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
