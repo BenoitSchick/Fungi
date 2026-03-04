@@ -247,7 +247,7 @@ The results shown in @ecg_3Z compare the impedance magnitude measured at differe
 
 The largest variation is observed for the bag containing only substrate, with differences exceeding 80% at low frequencies (between the H8L2 electrode configuration and the H5L11 configuation for example). This indicates that the electrical properties vary significantly across the substrate when no mycelium is present. Such variability may be attributed to non-uniform moisture distribution, air pockets... \
 When mycelium is present in the bag, the differences between measurement positions are significantly reduced. This suggests that the presence of mycelium tends to homogenize the electrical properties of the medium : as the mycelium develops throughout the substrate, it improves electrical conductivity, resulting in a more uniform impedance across different locations. \
-However, when the mycelium is fully developped, the variability slightly increases again compared to the intermediate state. //This may indicate structural changes in the substrate after complete colonization. \
+However, when the mycelium is fully developped, the variability slightly increases again compared to the intermediate state. This may suggest that the bag labeled as being in the colonization phase actually exhibits a more uniform distribution of mycelium throughout the substrate. In contrast, the bag labeled as fully developed may present a less homogeneous internal structure, which could explain the slightly higher variability observed in the measurements.
 
 #set par(
   first-line-indent: 0em,
@@ -385,7 +385,7 @@ The objective of this study was to characterize the electrical behavior of three
 #set par(
   first-line-indent: 0em,
 )
-The first measurements were performed using ECG electrodes attached to the plastic surface of the three bags. Under this configuration, the system behaved mainly as a capacitive element and the resistive contribution of the substrate could not be clearly isolated. The measurements may be influenced by the plastic layer and contact effects, making it difficult to detect changes related to the mycelium growth.\
+The first measurements were performed using ECG electrodes attached to the plastic surface of the three bags. Under this configuration, the system behaved mainly as a capacitive element and the resistive contribution of the substrate could not be clearly isolated. Nevertheless, a reduction in the variability of impedance between measurement positions was observed when mycelium was present, suggesting a possible homogenization of the electrical properties of the substrate. This reduction in spatial variability could therefore serve as an indicator of whether the mycelium has developed uniformly throughout the entire substrate.
 
 #set par(
   first-line-indent: 0em,
@@ -397,7 +397,9 @@ In contrast, when using metal rod electrodes inserted directly into the substrat
   first-line-indent: 0em,
 )
 
-In conclusion, the impedance measurements using either ECG electrodes or metal rod electrodes in the current configuration do not provide a clear and reliable indicator of mycelium growth. Alternative measurements techniques may be required to increase the sensivity to biological changes within the substrate.
+In conclusion, the measurements were not conducted under fully controlled or optimized conditions. In particular, slight movements of the electrodes between measurements may have introduced additional impedance variations, and the electrode positions were not placed exactly at the same locations each time. \
+A longitudinal study following the same bag throughout the entire development process, under better-controlled environmental and measurement conditions, would likely provide more conclusive insights into the relationship between impedance and mycelium growth.
+
 // = Unnumbered section <nonumber>
 
 // == Unnumbered section in level two <nonumber>
