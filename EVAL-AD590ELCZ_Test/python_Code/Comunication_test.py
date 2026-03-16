@@ -74,32 +74,45 @@ class myThread(threading.Thread):
 
         index = 0
         for port in availablePorts:
-            COM.append(self._selectFileName(myMeasurementDir+port+'_Measurements'))
+            safe_port = port.replace("/", "_")
+            COM.append(self._selectFileName(myMeasurementDir + safe_port + '_Measurements'))
             index+=1       
     
         while True:
             newData = msgQueue.get()
+            #print("-----newData: \n", newData)
             
-            sender = newData[0:4]
+            sender = newData.split(' : ')[0]
+            #print("-----sender: \n", sender)
             
             value = newData[newData.find('b')+2:newData.find('\n')-2]
             valueAllCOM = newData[:newData.find('\n')-2]
             measurement[sender] = value
 
+            #print("-----value: \n", value)
+            
+            
             value = value + ',' + time.asctime(time.localtime(time.time()))
             valueAllCOM = valueAllCOM + ',' + time.asctime(time.localtime(time.time()))
             
             file1 = open(allCOMFileName,"a")
             file1.write(newData)
             file1.write('\n')
-            file1.close
+            file1.close()
 
+
+            # i == index, elem == port
+            # verify if sender=/dev/ttyACM0 is contained in the name of the port elem = /dev/ttyACM0
             indexAsList = [i for i, elem in enumerate(availablePorts) if sender in elem]
             
-            indexAsStrings = [str(index) for index in indexAsList]
-            indexAsString = "".join(indexAsStrings)
-            indexAsInt = int(indexAsString)
+            #print("-----indexAsList: \n", indexAsList)
             
+            indexAsStrings = [str(index) for index in indexAsList]
+            #print("-----indexAsStrings: \n", indexAsStrings)
+            indexAsString = "".join(indexAsStrings)
+            #print("-----indexAsString: \n", indexAsString)
+            indexAsInt = int(indexAsString)
+            #print("-----indexAsInt: \n", indexAsInt)
             file2 = open(COM[indexAsInt],"a")
             
             if(firstWrite):
@@ -109,7 +122,7 @@ class myThread(threading.Thread):
             
             file2.write(value)
             file2.write('\n')
-            file2.close
+            file2.close()
     
     def run(self):
 
