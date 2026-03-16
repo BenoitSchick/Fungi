@@ -51,7 +51,7 @@ class myThread(threading.Thread):
                     msgQueue.put(tmp)
                     time.sleep(waitingTime)
                     serialPort.reset_input_buffer()
-
+            time.sleep(0.01)
     def _selectFileName(self, fileName):
         i = 0
         while True:
@@ -71,7 +71,6 @@ class myThread(threading.Thread):
         global firstWrite
 
         allCOMFileName = self._selectFileName(myMeasurementDir+'AllCOM_Measurements')
-
         index = 0
         for port in availablePorts:
             safe_port = port.replace("/", "_")
@@ -95,10 +94,10 @@ class myThread(threading.Thread):
             value = value + ',' + time.asctime(time.localtime(time.time()))
             valueAllCOM = valueAllCOM + ',' + time.asctime(time.localtime(time.time()))
             
-            file1 = open(allCOMFileName,"a")
-            file1.write(newData)
-            file1.write('\n')
-            file1.close()
+           # file1 = open(allCOMFileName,"a")
+           # file1.write(newData)
+           # file1.write('\n')
+           # file1.close()
 
 
             # i == index, elem == port
