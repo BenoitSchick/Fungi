@@ -1,0 +1,11 @@
+# Configure remote folder on google drive
+- sudo apt install rclone
+- rclone config
+- rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Test/python_Code/Measurement gdrive:measure_impedance
+
+# Use crontab to automate synchronization every min/hour.. 
+- crontab -e
+- * * * * * rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Test/python_Code/Measurement gdrive:measure_impedance
+
+
+rclone bisync Google_Drive_bisync:/ "R:\GDrive" --check-access --fast-list --drive-skip-shortcuts --drive-acknowledge-abuse --drive-skip-gdocs --drive-skip-dangling-shortcuts --verbose --resync
