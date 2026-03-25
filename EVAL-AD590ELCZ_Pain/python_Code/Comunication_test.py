@@ -47,9 +47,9 @@ class myThread(threading.Thread):
                 if len(data) > 10:
                     tmp = serialPort.name + ' : ' + data
                     # Debug 
-                    print(tmp)
+                    #print(tmp)
                     msgQueue.put(tmp)
-                    time.sleep(waitingTime)
+                    #time.sleep(waitingTime)
                     serialPort.reset_input_buffer()
             time.sleep(0.01)
     def _selectFileName(self, fileName):
