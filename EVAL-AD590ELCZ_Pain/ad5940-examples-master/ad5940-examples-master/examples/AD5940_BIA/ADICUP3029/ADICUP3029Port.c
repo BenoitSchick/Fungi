@@ -134,6 +134,22 @@ uint32_t AD5940_MCUResourceInit(void *pCfg)
   pADI_XINT0->CFG0 = (0x1<<0)|(1<<3);//External IRQ0 enabled. Falling edge
   pADI_XINT0->CLR = BITM_XINT_CLR_IRQ0;
   NVIC_EnableIRQ(XINT_EVT0_IRQn);		  //Enable External Interrupt 0 source.
+	
+	
+	
+	//P0.13 == Interrupt Pin (XINT0_WAKE2 - IO13 on ADICUP3029 board)
+	//Page 119 - Datasheet AD5940	
+	
+	/* Configure P0.13 (IO13) en entr?e */
+	pADI_GPIO0->IEN |= (1<<13);
+	//pADI_GPIO0->PE  |= (1<<13);
+
+	/* XINT0_WAKE2 = IRQ2, bits [10:8] du registre CFG0 */
+	pADI_XINT0->CFG0 |= (0x1<<7);   /* IRQ2 enable, rising edge */
+	pADI_XINT0->CLR   =  BITM_XINT_CLR_IRQ2;
+	NVIC_EnableIRQ(XINT_EVT2_IRQn);
+	
+
   
   AD5940_CsSet();
   AD5940_RstSet();
@@ -146,5 +162,36 @@ void Ext_Int0_Handler()
    pADI_XINT0->CLR = BITM_XINT_CLR_IRQ0;
    ucInterrupted = 1;
   /* This example just set the flag and deal with interrupt in AD5940Main function. It's your choice to choose how to process interrupt. */
+}
+
+
+void Ext_Int2_Handler()
+{
+	printf("In2 Handler \n");
+}
+
+
+
+
+
+
+volatile static uint32_t uartInterrupted = 0; 
+
+uint32_t AD5940_GetUartFlag(void)
+{
+   return uartInterrupted;
+}
+
+uint32_t AD5940_ClrUartFlag(void)
+{
+   pADI_XINT0->CLR = BITM_XINT_CLR_UART_RX_CLR;
+   uartInterrupted = 0;
+   return 1;
+}
+
+void UART_Int_Handler()
+{
+	pADI_XINT0->CLR = BITM_XINT_CLR_UART_RX_CLR;
+	uartInterrupted = 1;
 }
 

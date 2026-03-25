@@ -90,7 +90,7 @@ AD5940Err AppBIACtrl(int32_t BcmCtrl, void *pPara)
       if(AppBIACfg.BIAInited == bFALSE)
         return AD5940ERR_APPERROR;
       /* Start it */
-      wupt_cfg.WuptEn = bFALSE;//bTRUE;
+      wupt_cfg.WuptEn = bTRUE;
       wupt_cfg.WuptEndSeq = WUPTENDSEQ_A;
       wupt_cfg.WuptOrder[0] = SEQID_0;
       wupt_cfg.SeqxSleepTime[SEQID_0] = (uint32_t)(AppBIACfg.WuptClkFreq/AppBIACfg.BiaODR)-2-1;
