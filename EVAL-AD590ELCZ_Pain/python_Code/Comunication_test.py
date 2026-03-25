@@ -51,7 +51,7 @@ class myThread(threading.Thread):
                     msgQueue.put(tmp)
                     time.sleep(waitingTime)
                     serialPort.reset_input_buffer()
-
+            time.sleep(0.01)
     def _selectFileName(self, fileName):
         i = 0
         while True:
@@ -71,35 +71,39 @@ class myThread(threading.Thread):
         global firstWrite
 
         allCOMFileName = self._selectFileName(myMeasurementDir+'AllCOM_Measurements')
-
         index = 0
         for port in availablePorts:
-            COM.append(self._selectFileName(myMeasurementDir+port+'_Measurements'))
+            safe_port = port.replace("/", "_")
+            COM.append(self._selectFileName(myMeasurementDir + safe_port + '_Measurements'))
             index+=1       
-    
+
         while True:
             newData = msgQueue.get()
             
-            sender = newData[0:4]
+            sender = newData.split(' : ')[0]
             
             value = newData[newData.find('b')+2:newData.find('\n')-2]
             valueAllCOM = newData[:newData.find('\n')-2]
             measurement[sender] = value
 
+            
             value = value + ',' + time.asctime(time.localtime(time.time()))
             valueAllCOM = valueAllCOM + ',' + time.asctime(time.localtime(time.time()))
             
-            file1 = open(allCOMFileName,"a")
-            file1.write(newData)
-            file1.write('\n')
-            file1.close
+           # file1 = open(allCOMFileName,"a")
+           # file1.write(newData)
+           # file1.write('\n')
+           # file1.close()
 
+
+            # i == index, elem == port
+            # verify if sender=/dev/ttyACM0 is contained in the name of the port elem = /dev/ttyACM0
             indexAsList = [i for i, elem in enumerate(availablePorts) if sender in elem]
+            
             
             indexAsStrings = [str(index) for index in indexAsList]
             indexAsString = "".join(indexAsStrings)
             indexAsInt = int(indexAsString)
-            
             file2 = open(COM[indexAsInt],"a")
             
             if(firstWrite):
@@ -109,7 +113,7 @@ class myThread(threading.Thread):
             
             file2.write(value)
             file2.write('\n')
-            file2.close
+            file2.close()
     
     def run(self):
 
@@ -126,6 +130,7 @@ class myThread(threading.Thread):
         # Thread for gathering all data
         t = threading.Thread(target = self.measurementDisplay, args=(availablePorts,))
         t.daemon = True
+
         threads.append(t)
         print("Thread for gathering data created")
 
