@@ -12,3 +12,7 @@ rclone bisync "/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Me
 
 rclone bisync "/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement" ddrive:measure_impedance" --fast-list --drive-skip-shortcuts --drive-acknowledge-abuse --drive-skip-gdocs --drive-skip-dangling-shortcuts --verbose
 
+
+# activer/desactiver wifi
+sudo rfkill block wifi
+sudo rfkill unblock wifi
