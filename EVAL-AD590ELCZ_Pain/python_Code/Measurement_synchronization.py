@@ -1,5 +1,7 @@
 import RPi.GPIO as GPIO
 import time
+import subprocess
+
 
 GPIO.setmode(GPIO.BOARD)
 
@@ -14,7 +16,17 @@ GPIO.setup(led36, GPIO.OUT)
 GPIO.setup(led37, GPIO.OUT)
 
 
+def wifi_off():
+    subprocess.run(["sudo", "rfkill", "block", "wifi"])
+
+def wifi_on():
+    subprocess.run(["sudo", "rfkill", "unblock", "wifi"])
+
+
 while True:
+
+    wifi_off()
+    time.sleep(2)
 
     GPIO.output(led36, True)
     time.sleep(0.2)
@@ -35,11 +47,5 @@ while True:
     time.sleep(0.2)
     GPIO.output(led40, False)
     
-
+    wifi_on()
     time.sleep(300)
-
-    
-
-
-
-
