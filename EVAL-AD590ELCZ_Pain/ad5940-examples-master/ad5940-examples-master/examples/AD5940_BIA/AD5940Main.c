@@ -33,7 +33,7 @@ Analog Devices Software License Agreement.
  
 #define TIME_BETWEEN_MEASURE (3) // Time between measurements in seconds
 #define MEASURE_FREQ (1000.0) 	  // Frequence of the sin for the measurement
-#define NB_SWEEP_POINTS 50
+#define NB_SWEEP_POINTS 20
 
 /********************************************************************************
  *	^^^^^^^^	PARAMETER TO MODIFY FOR CHANGING THE MEASUREMENT STYLE	^^^^^^^^	*
@@ -63,7 +63,8 @@ int32_t BIAShowResult(uint32_t *pData, uint32_t DataCount)
   /*Process data*/
   for(int i=0;i<DataCount;i++)
   {
-    printf("%f,%f\n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
+    printf("%.2f,%.2f\n",pImp[i].Magnitude,pImp[i].Phase*180/MATH_PI);
+		//AD5940_Delay10us(1000);
   }
   return 0;
 }
@@ -148,8 +149,8 @@ void AD5940BIAStructInit(void)
 	/* Sweep Function Control */
 	pBIACfg->SweepCfg.SweepEn = bTRUE;
 	pBIACfg->SweepCfg.SweepStart = 1000;
-	pBIACfg->SweepCfg.SweepStop = 200000;
-	pBIACfg->SweepCfg.SweepLog = bTRUE;
+	pBIACfg->SweepCfg.SweepStop = 100000;
+	pBIACfg->SweepCfg.SweepLog = bFALSE;
 	pBIACfg->SweepCfg.SweepPoints = NB_SWEEP_POINTS;
 	pBIACfg->SweepCfg.SweepIndex = 0;
 	
@@ -157,7 +158,7 @@ void AD5940BIAStructInit(void)
   pBIACfg->RcalVal = 10000.0;
   pBIACfg->DftNum = DFTNUM_8192;
   pBIACfg->NumOfData = -1;      /* Never stop until you stop it manually by AppBIACtrl() function */
-  pBIACfg->BiaODR = 20;         /* ODR(Sample Rate) 20Hz */
+  pBIACfg->BiaODR = 5;         /* ODR(Sample Rate) 20Hz */
   pBIACfg->FifoThresh = 4;      /* 4 */
   pBIACfg->ADCSinc3Osr = ADCSINC3OSR_2;
 }
@@ -170,7 +171,7 @@ static void PollGPIOTrigger(void)
 {
   uint32_t gpio_val  = AD5940_ReadReg(REG_AGPIO_GP0IN);
   uint32_t cur_state = (gpio_val & AGPIO_Pin4) ? 1u : 0u;
- 
+	
   if (cur_state == 1u && prev_pin4_state == 0u)
   {
     if (sweep_running == bFALSE)   /* Only arm if no sweep is in progress */
@@ -181,7 +182,7 @@ static void PollGPIOTrigger(void)
   prev_pin4_state = cur_state;
 }
 
-
+static uint32_t sweep_point_count = 0;
 
 void AD5940_Main(void)
 {
@@ -200,6 +201,7 @@ void AD5940_Main(void)
 	
 	
 	sweep_running = bTRUE;
+	sweep_point_count = 0;
 	
 	while(1)
   {
@@ -210,24 +212,26 @@ void AD5940_Main(void)
     {
       AD5940_ClrMCUIntFlag(); /* Clear this flag */
 			
-			if (pBIACfg->SweepCfg.SweepIndex == 0)
+			temp = APPBUFF_SIZE;
+      AppBIAISR(AppBuff, &temp); /* Deal with it and provide a buffer to store data we got */
+      BIAShowResult(AppBuff, 1); /* Show the results to UART */
+			sweep_point_count++;
+			
+			if (sweep_point_count >= NB_SWEEP_POINTS)//(pBIACfg->SweepCfg.SweepIndex == 0)
       {
         AppBIACtrl(BIACTRL_SHUTDOWN, 0);
         sweep_running = bFALSE;
         flag_GPIO = bFALSE; 
+				sweep_point_count = 0;
       }
-			
-			temp = APPBUFF_SIZE;
-      AppBIAISR(AppBuff, &temp); /* Deal with it and provide a buffer to store data we got */
-      BIAShowResult(AppBuff, 1); /* Show the results to UART */
-			
     } 
 		
     if (flag_GPIO == bTRUE && sweep_running == bFALSE)
     {
       flag_GPIO     = bFALSE;
       sweep_running = bTRUE;
-      AppBIAInit(AppBuff, APPBUFF_SIZE);
+			//AppBIAInit(AppBuff, APPBUFF_SIZE);
+      AppBIAInit(0, 0);
       AppBIACtrl(BIACTRL_START, 0);
 			//AD5940_Delay10us(100000);
     }
