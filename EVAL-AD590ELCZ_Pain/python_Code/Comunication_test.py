@@ -116,7 +116,8 @@ class myThread(threading.Thread):
             file2.close()
     
     def run(self):
-
+        
+        time.sleep(20) # Add time before scanning COM ports and creating threads
         availablePorts = serial_ports()
 
         print(availablePorts)
