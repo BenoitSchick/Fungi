@@ -25,27 +25,27 @@ def wifi_on():
 
 while True:
 
-    wifi_off()
-    time.sleep(5)
+  #  wifi_off()
+    time.sleep(15)
 
     GPIO.output(led36, True)
     time.sleep(0.2)
     GPIO.output(led36, False)
-    time.sleep(5)
+    time.sleep(15)
     
     GPIO.output(led37, True)
     time.sleep(0.2)
     GPIO.output(led37, False)
-    time.sleep(5)
+    time.sleep(15)
 
     GPIO.output(led38, True)
     time.sleep(0.2)
     GPIO.output(led38, False)
-    time.sleep(5)
+    time.sleep(15)
 
     GPIO.output(led40, True)
     time.sleep(0.2)
     GPIO.output(led40, False)
-    
-    wifi_on()
+    time.sleep(15)
+  #  wifi_on()
     time.sleep(300)
