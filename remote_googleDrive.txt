@@ -21,7 +21,7 @@ sudo rfkill block wifi
 sudo rfkill unblock wifi
 
 
-# Service pour lancer le script python : /etc/systemd/system/read_ports.service
+# Service pour lancer le script python com_ports.py : /etc/systemd/system/read_ports.service
 
 [Unit]
 Description=Measurement System (Serial)
@@ -29,6 +29,25 @@ After=network.target
 
 [Service]
 ExecStart=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/.venv/bin/python3 /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/com_ports.py
+WorkingDirectory=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code
+Restart=always
+RestartSec=5
+User=fr1boise
+
+PrivilegesStartOnly=true
+
+[Install]
+WantedBy=multi-user.target
+
+
+# Service pour lancer le script python Measurement_synchronization.py : /etc/systemd/system/measure_syncro.service
+
+[Unit]
+Description=Measurement System (Synchronisation)
+After=network.target
+
+[Service]
+ExecStart=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/.venv/bin/python3 /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement_synchronization.py
 WorkingDirectory=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code
 Restart=always
 RestartSec=5
