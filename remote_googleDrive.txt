@@ -5,10 +5,10 @@
 
 # Use crontab to automate synchronization every min/hour.. 
 - crontab -e
-- * * * * * rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement gdrive:measure_impedance
+- * * * * * rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement gdrive:mesure_impedance
 
 
-- */30 * * * * rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement gdrive:measure_impedance
+- */30 * * * * rclone sync /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement gdrive:mesure_impedance
 
 
 rclone bisync "/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement" "ddrive:measure_impedance" --fast-list --drive-skip-shortcuts --drive-acknowledge-abuse --drive-skip-gdocs --drive-skip-dangling-shortcuts --verbose --resync
