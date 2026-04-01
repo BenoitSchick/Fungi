@@ -16,3 +16,29 @@ rclone bisync "/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Me
 # activer/desactiver wifi
 sudo rfkill block wifi
 sudo rfkill unblock wifi
+
+
+# Service pour lancer le script python : /etc/systemd/system/read_ports.service
+
+[Unit]
+Description=Measurement System (Serial)
+After=network.target
+
+[Service]
+ExecStart=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/.venv/bin/python3 /home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/com_ports.py
+WorkingDirectory=/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code
+Restart=always
+RestartSec=5
+User=fr1boise
+
+PrivilegesStartOnly=true
+
+[Install]
+WantedBy=multi-user.target
+
+
+# Commande pour demarrer le service
+sudo systemctl enable impedance_measure.service
+sudo systemctl start impedance_measure.service
+sudo systemctl status impedance_measure.service
+sudo systemctl stop impedance_measure.service
