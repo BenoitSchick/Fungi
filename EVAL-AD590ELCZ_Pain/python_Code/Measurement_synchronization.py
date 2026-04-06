@@ -22,7 +22,9 @@ def wifi_off():
 def wifi_on():
     subprocess.run(["sudo", "rfkill", "unblock", "wifi"])
 
-
+def sync_rclone():
+    subprocess.run(["rclone", "sync", "/home/fr1boise/Documents/Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement", "gdrive:mesure_impedance"])
+           
 while True:
 
     wifi_off()
@@ -48,4 +50,6 @@ while True:
     GPIO.output(led40, False)
     time.sleep(15)
     wifi_on()
+    time.sleep(10)
+    sync_rclone()
     time.sleep(300)
