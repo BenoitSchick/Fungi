@@ -4,6 +4,7 @@ import glob
 import serial
 import time
 import logging
+import pyudev
 from queue import Queue, Full
 from pathlib import Path
 
@@ -151,13 +152,34 @@ class myThread(threading.Thread):
         # Thread for gathering all data
         t = threading.Thread(target = self.measurementDisplay, args=(availablePorts,))
         t.daemon = True
-
         threads.append(t)
         logger.info("Thread for gathering data created")
+
+        # Thread for polling USB
+        t1 = threading.Thread(target=monitor_usb)
+        t1.daemon = True
+        threads.append(t1)
+
+        
 
         for thread in threads:
             thread.start()
 
+
+def monitor_usb():
+    context = pyudev.Context()
+    monitor = pyudev.Monitor.from_netlink(context)
+    monitor.filter_by(subsystem='tty')
+    
+    for device in iter(monitor.poll, None):
+        if device.device_node and "ttyACM" in device.device_node:
+            if device.action == 'add':
+                logger.info(f"USB connected : {device.device_node} — Service restart")
+                sys.exit(1)
+            elif device.action == 'remove':
+                logger.info(f"USB removed : {device.device_node} — Service restart")
+                sys.exit(1)
+            
 # Source: https://stackoverflow.com/questions/12090503/listing-available-com-ports-with-python
 def serial_ports():
     """ Lists serial port names
@@ -197,7 +219,8 @@ if __name__ == "__main__":
     while True:
         for t in threads:
             if not t.is_alive():
-                logging.error("Interrupted thread detected")
+                logging.error("Interrupted thread detected - Restart Service")
                 sys.exit(1) # service will restart
         time.sleep(5)
+        
         nop = 0
