@@ -3,8 +3,10 @@ import sys
 import glob
 import serial
 import time
-from queue import Queue
+import logging
+from queue import Queue, Full
 from pathlib import Path
+
 
 # List of the threads
 threads = []
@@ -17,6 +19,10 @@ waitingTime = 1
 
 # Name of the directory where to store the measured data
 myMeasurementDir = 'Measurement/'
+
+# Logging
+logger = logging.getLogger(__name__)
+log_file = myMeasurementDir + "system_log.txt"
 
 firstWrite = True
 
@@ -33,6 +39,7 @@ class myThread(threading.Thread):
                                         stopbits=serial.STOPBITS_ONE)
             validPort = 1
         except serial.SerialException as e:
+            logger.info('Port opening error')
             if e.errno == 13:
                 raise e
             validPort = 0
@@ -48,7 +55,11 @@ class myThread(threading.Thread):
                     tmp = serialPort.name + ' : ' + data
                     # Debug 
                     #print(tmp)
-                    msgQueue.put(tmp)
+                    try:
+                        msgQueue.put(tmp, block=False)
+                    except queue.Full:
+                        logger.info('full queue - put failed')
+                        pass
                     #time.sleep(waitingTime)
                     #serialPort.reset_input_buffer()
             time.sleep(0.01)
@@ -79,9 +90,20 @@ class myThread(threading.Thread):
             f.write('Freq [Hz],Magnitude [Ohm],Phase[Deg],Time of Measurement\n')
             file_handles[port] = f
 
+        last_flush = time.time()
+        
         try:
             while True:
-                newData = msgQueue.get()
+                try:
+                    newData = msgQueue.get(timeout=5)
+                except Exception:
+                    for f in file_handles.values():
+                        f.flush()
+                    last_flush = time.time()
+                    continue
+
+                if msgQueue.qsize() % 50 == 0:
+                    logger.info(f"Queue size: {msgQueue.qsize()}")
 
                 parts = newData.split(' : ', 1)
                 if len(parts) < 2:
@@ -96,10 +118,15 @@ class myThread(threading.Thread):
                 matched_port = next((p for p in availablePorts if sender in p), None)
                 if matched_port and matched_port in file_handles:
                     file_handles[matched_port].write(line)
-                    if time.time() % 2 < 0.01:  # toutes 2 secondes
-                        file_handles[matched_port].flush()
+                    #file_handles[matched_port].flush()
                 else:
-                    print(f"[WARN] Port inconnu : {sender}")
+                    logger.info("Port inconnu")
+
+                # Flush every 2 seconds
+                if time.time() - last_flush > 2:
+                    for f in file_handles.values():
+                        f.flush()
+                    last_flush = time.time()
 
         finally:
             # Fermeture si le thread s'arrete
@@ -118,14 +145,14 @@ class myThread(threading.Thread):
             t = threading.Thread(target = self.serialRead, args=(port,))
             t.daemon = True
             threads.append(t)
-            print("Thread for " + port + " created")
+            logger.info("Thread for " + port + " created")
 
         # Thread for gathering all data
         t = threading.Thread(target = self.measurementDisplay, args=(availablePorts,))
         t.daemon = True
 
         threads.append(t)
-        print("Thread for gathering data created")
+        logger.info("Thread for gathering data created")
 
         for thread in threads:
             thread.start()
@@ -161,8 +188,15 @@ def serial_ports():
     return result
 
 if __name__ == "__main__":
+    logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s %(message)s')
+    logger.info('Started')
     my_thread = myThread(1)
     my_thread.run()
 
     while True:
+        for t in threads:
+            if not t.is_alive():
+                logging.error("Thread mort détecté !")
+                sys.exit(1) # service will restart
+        time.sleep(5)
         nop = 0
