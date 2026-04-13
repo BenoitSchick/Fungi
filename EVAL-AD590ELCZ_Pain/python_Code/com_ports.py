@@ -57,7 +57,7 @@ class myThread(threading.Thread):
                     #print(tmp)
                     try:
                         msgQueue.put(tmp, block=False)
-                    except queue.Full:
+                    except Full:
                         logger.info('full queue - put failed')
                         pass
                     #time.sleep(waitingTime)
@@ -102,9 +102,10 @@ class myThread(threading.Thread):
                     last_flush = time.time()
                     continue
 
-                if msgQueue.qsize() % 50 == 0:
-                    logger.info(f"Queue size: {msgQueue.qsize()}")
-
+                qsize = msgQueue.qsize()
+                if qsize > 800:
+                    logger.info(f"Queue HIGH: {qsize}")
+                    
                 parts = newData.split(' : ', 1)
                 if len(parts) < 2:
                     continue
@@ -196,7 +197,7 @@ if __name__ == "__main__":
     while True:
         for t in threads:
             if not t.is_alive():
-                logging.error("Thread mort détecté !")
+                logging.error("Interrupted thread detected")
                 sys.exit(1) # service will restart
         time.sleep(5)
         nop = 0
