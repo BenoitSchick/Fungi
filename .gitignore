@@ -1,0 +1,35 @@
+# Dossiers de compilation (CMake)
+build/
+bin/
+obj/
+
+# Fichiers spécifiques à CMake
+CMakeFiles/
+CMakeCache.txt
+CMakeConfigureLog.yaml
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Dépendances téléchargées (comme picotool)
+_deps/
+
+# Sorties de compilation spécifiques au Raspberry Pi Pico
+*.elf
+*.bin
+*.hex
+*.uf2
+*.map
+*.dis
+
+# Fichiers de log et temporaires
+*.log
+*.tlog
+*.o
+*.obj
+*.d
+
+# IDE (VS Code / CLion)
+.vscode/
+.idea/
+.cmake/
