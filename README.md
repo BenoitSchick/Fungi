@@ -24,7 +24,7 @@ The measurement process is triggered by the Raspberry Pi. The reason for this is
 
 The first step is to install the Keil IDE to compile and program the Evaluation Board by following this setup guide: https://wiki.analog.com/resources/eval/user-guides/eval-ad5940/tools/keil_setup_guide  
 
-The code used to program the evaluation board is located in the following folder: _Fungi/04_Software/EVAL-AD590ELCZ_Pain/ad5940-examples-master/ad5940-examples-master/examples/AD5940_BIA_
+The code used to program the evaluation board is located in the following folder: _Fungi/EVAL-AD590ELCZ_Pain/ad5940-examples-master/ad5940-examples-master/examples/AD5940_BIA_
 
 This code is based on the official repository: https://github.com/analogdevicesinc/ad5940-examples  
 
@@ -33,12 +33,12 @@ With this code, the evaluation board performs a frequency sweep to measure imped
 ### Raspberry Pi Configuration
 
 The Raspberry Pi runs two Python scripts in the background, located in:  
-_Fungi/04_Software/EVAL-AD590ELCZ_Pain/python_Code_
+_Fungi/EVAL-AD590ELCZ_Pain/python_Code_
 
 - com_ports.py 
 - Measurement_synchronization.py  
 
-The first script retrieves data from each COM port to which the four AD5940 boards are connected. It stores the data in CSV files, one per COM port, in the folder: _Fungi/04_Software/EVAL-AD590ELCZ_Pain/python_Code/Measurement_
+The first script retrieves data from each COM port to which the four AD5940 boards are connected. It stores the data in CSV files, one per COM port, in the folder: _Fungi/EVAL-AD590ELCZ_Pain/python_Code/Measurement_
 
 The second script sends trigger pulses to the **GP4 pins** of the four evaluation boards to start measurements. It also coordinates measurements between the boards to avoid interference. Additionally, it synchronizes the data in the `Measurement` folder with a `measure_impedance` folder on Google Drive using `rclone`.
 
