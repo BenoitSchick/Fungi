@@ -123,3 +123,31 @@ WantedBy=multi-user.target
 sudo systemctl enable name.service
 sudo systemctl start name.service
 ```
+
+# EVAL-AD777xFMCZ
+## Raspberry pi pico W config
+- Configure your environment (linux)
+```bash
+$ sudo apt install wget
+$ wget https://raw.githubusercontent.com/raspberrypi/pico-setup/master/pico_setup.sh 
+$ chmod +x pico_setup.sh
+$ ./pico_setup.sh
+$ sudo reboot
+```
+- Get the SDK
+```bash
+$ mkdir ~/pico
+$ cd ~/pico
+$ git clone https://github.com/raspberrypi/pico-sdk.git --branch master
+$ cd pico-sdk
+$ git submodule update --init
+$ cd ..
+$ git clone https://github.com/raspberrypi/pico-examples.git --branch master
+```
+- Install the Toolchain
+```bash
+$ sudo apt update
+$ sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi build-essential
+```
+
+For more details, such as how to build a project, visit the website:https://pip-assets.raspberrypi.com/categories/610-raspberry-pi-pico/documents/RP-008276-DS-1-getting-started-with-pico.pdf?disposition=inline under the section: Appendix C: Manual toolchain setup
