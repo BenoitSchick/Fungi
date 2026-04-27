@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/ad719x/README.rst 

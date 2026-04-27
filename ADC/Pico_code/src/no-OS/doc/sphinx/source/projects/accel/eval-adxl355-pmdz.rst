@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/eval-adxl355-pmdz/README.rst

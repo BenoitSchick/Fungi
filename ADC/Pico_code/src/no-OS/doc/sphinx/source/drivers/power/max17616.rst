@@ -1,1 +1,0 @@
-.. include:: ../../../../../drivers/power/max17616/README.rst

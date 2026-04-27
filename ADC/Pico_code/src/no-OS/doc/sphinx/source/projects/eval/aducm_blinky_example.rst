@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/aducm_blinky_example/README.rst

@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/ad7768-evb/README.rst

@@ -33,3 +33,8 @@ _deps/
 .vscode/
 .idea/
 .cmake/
+
+
+no_os/
+Pico_code/
+RaspBerry_code/

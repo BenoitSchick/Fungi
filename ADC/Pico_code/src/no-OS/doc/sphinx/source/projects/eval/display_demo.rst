@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/display_demo/README.rst

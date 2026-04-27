@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/ad738x_fmcz/README.rst

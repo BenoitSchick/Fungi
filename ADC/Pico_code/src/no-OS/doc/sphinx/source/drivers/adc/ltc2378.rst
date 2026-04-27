@@ -1,1 +1,0 @@
-.. include:: ../../../../../drivers/adc/ltc2378/README.rst

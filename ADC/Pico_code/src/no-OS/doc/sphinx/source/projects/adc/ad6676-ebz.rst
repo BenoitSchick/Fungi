@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/ad6676-ebz/README.rst 

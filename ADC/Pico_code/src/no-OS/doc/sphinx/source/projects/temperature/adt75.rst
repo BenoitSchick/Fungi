@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/adt75/README.rst

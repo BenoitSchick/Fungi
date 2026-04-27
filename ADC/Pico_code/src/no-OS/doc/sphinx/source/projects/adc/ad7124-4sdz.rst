@@ -1,1 +1,0 @@
-.. include:: ../../../../../projects/ad7124-4sdz/README.rst

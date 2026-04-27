@@ -1,1 +1,0 @@
-.. include:: ../../../../../drivers/switch/adgs6414d/README.rst
