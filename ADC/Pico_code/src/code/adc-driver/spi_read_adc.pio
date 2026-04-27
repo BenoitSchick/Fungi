@@ -1,0 +1,171 @@
+.program spi_read_adc 
+.side_set 3    ; bit0 -> SCK (pin_sck), bit1 -> CSn (pin_sck+1)
+
+.wrap_target
+    ; Idle: wait for DRDY = 1, keep CSn high (MOSI=bit2 SCK=bit1, CSn=bit0)
+    wait 1 pin 1		    side 0x1
+
+
+    ; Assert CSn low, short front porch (SCK=0, CSn=0)
+	set x, 30				side 0x0
+	set y, 7				side 0x4
+	
+	in pins, 1				side 0x6
+	jmp bitloop	 			side 0x0
+
+blockloop:
+	set x, 30				side 0x0
+	in pins, 1				side 0x2
+	jmp bitloop				side 0x0
+
+bitloop:
+	in pins, 1				side 0x2
+	jmp x-- bitloop			side 0x0
+	jmp y-- blockloop		side 0x0 
+
+	irq set 0				side 0x0
+	nop						side 0x1
+.wrap
+
+
+% c-sdk {
+#include "hardware/pio.h"
+#include "hardware/gpio.h"
+#include "hardware/structs/pio.h"
+#include "hardware/clocks.h"
+
+static inline void spi_read_adc_init(PIO pio, uint sm, uint prog_offs, uint speed_hz,
+                                    uint pin_csn, uint pin_miso) {
+    
+	pio_sm_config c = spi_read_adc_program_get_default_config(prog_offs);
+
+    // map IN base so "in pins, ..." and "wait ... pin <idx>" use this base
+    sm_config_set_in_pins(&c, pin_miso);   // so "in pins,1" => pin_miso + 1 (DRDY)
+
+    // sideset base (side bit0 -> csn, side bit1 -> sck, side bit2 -> mosi)
+    sm_config_set_sideset_pins(&c, pin_csn);
+
+    // in-shift config: MSB-first, autopush at 32 bits
+    sm_config_set_in_shift(&c, false, true, 32);
+
+    // join RX FIFO to get 8-entry RX FIFO
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+	
+	// config the clock div of the SM based on speed param
+	float div = (float)clock_get_hz(clk_sys) / (float)speed_hz;
+	sm_config_set_clkdiv(&c, div);
+
+
+    // initial outputs: CSn=1 (inactive), SCK=0; MOSI=0
+    const uint32_t sides_mask = (7u << pin_csn);        // MOSI + SCK + CSn
+    const uint32_t initial_sides = (1u << pin_csn);     // binary 01: miso = 0, \
+														// sck = 0, csn =1
+    // make the GPIOs available to PIO
+    pio_gpio_init(pio, pin_miso);
+	pio_gpio_init(pio, pin_miso + 1); // drdy
+    pio_gpio_init(pio, pin_csn + 1); // sck
+	pio_gpio_init(pio, pin_csn + 2); // mosi
+    pio_gpio_init(pio, pin_csn);
+
+    pio_sm_set_pins_with_mask(pio, sm, initial_sides, sides_mask);
+
+    // set directions: SCK, CSn and MOSI are outputs; MISO and DRDY stay inputs
+    pio_sm_set_pindirs_with_mask(pio, sm, sides_mask, sides_mask | (3u << pin_miso));
+
+    // bypass input synchroniser for timing-critical pins
+    hw_set_bits(&pio->input_sync_bypass, (3u << pin_miso));
+
+    pio_sm_init(pio, sm, prog_offs, &c);
+
+
+    // enable the SM
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}
+
+
+
+.program spi_read_adc1 
+.side_set 3    ; bit0 -> SCK (pin_sck), bit1 -> CSn (pin_sck+1)
+
+.wrap_target
+    ; Idle: wait for DRDY = 1, keep CSn high (MOSI=bit2 SCK=bit1, CSn=bit0)
+    wait 1 pin 1		    side 0x1
+
+
+    ; Assert CSn low, short front porch (SCK=0, CSn=0)
+	set x, 30				side 0x0
+	set y, 7				side 0x4
+	
+	in pins, 1				side 0x6
+	jmp bitloop	 			side 0x0
+
+blockloop:
+	set x, 30				side 0x0
+	in pins, 1				side 0x2
+	jmp bitloop				side 0x0
+
+bitloop:
+	in pins, 1				side 0x2
+	jmp x-- bitloop			side 0x0
+	jmp y-- blockloop		side 0x0 
+
+	irq set 1				side 0x0
+	nop						side 0x1
+.wrap
+
+
+% c-sdk {
+#include "hardware/pio.h"
+#include "hardware/gpio.h"
+#include "hardware/structs/pio.h"
+#include "hardware/clocks.h"
+
+static inline void spi_read_adc1_init(PIO pio, uint sm, uint prog_offs, uint speed_hz,
+                                    uint pin_csn, uint pin_miso) {
+    
+	pio_sm_config c = spi_read_adc1_program_get_default_config(prog_offs);
+
+    // map IN base so "in pins, ..." and "wait ... pin <idx>" use this base
+    sm_config_set_in_pins(&c, pin_miso);   // so "in pins,1" => pin_miso + 1 (DRDY)
+
+    // sideset base (side bit0 -> csn, side bit1 -> sck, side bit2 -> mosi)
+    sm_config_set_sideset_pins(&c, pin_csn);
+
+    // in-shift config: MSB-first, autopush at 32 bits
+    sm_config_set_in_shift(&c, false, true, 32);
+
+    // join RX FIFO to get 8-entry RX FIFO
+    sm_config_set_fifo_join(&c, PIO_FIFO_JOIN_RX);
+	
+	// config the clock div of the SM based on speed param
+	float div = (float)clock_get_hz(clk_sys) / (float)speed_hz;
+	sm_config_set_clkdiv(&c, div);
+
+
+    // initial outputs: CSn=1 (inactive), SCK=0; MOSI=0
+    const uint32_t sides_mask = (7u << pin_csn);        // MOSI + SCK + CSn
+    const uint32_t initial_sides = (1u << pin_csn);     // binary 01: miso = 0, \
+														// sck = 0, csn =1
+    // make the GPIOs available to PIO
+    pio_gpio_init(pio, pin_miso);
+	pio_gpio_init(pio, pin_miso + 1); // drdy
+    pio_gpio_init(pio, pin_csn + 1); // sck
+	pio_gpio_init(pio, pin_csn + 2); // mosi
+    pio_gpio_init(pio, pin_csn);
+
+    pio_sm_set_pins_with_mask(pio, sm, initial_sides, sides_mask);
+
+    // set directions: SCK, CSn and MOSI are outputs; MISO and DRDY stay inputs
+    pio_sm_set_pindirs_with_mask(pio, sm, sides_mask, sides_mask | (3u << pin_miso));
+
+    // bypass input synchroniser for timing-critical pins
+    hw_set_bits(&pio->input_sync_bypass, (3u << pin_miso));
+
+    pio_sm_init(pio, sm, prog_offs, &c);
+
+
+    // enable the SM
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}

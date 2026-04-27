@@ -1,0 +1,16 @@
+x = b'123456789'
+size = len(x)
+print (x)
+print ("size = ", size)
+print (" ")
+print ("i hex ASCII")
+for i in range(0,size): # => for(i=0; i<size; i++)
+    print (i, " ", x[i], " ", (i+1)) #quand y a un seul byte, affiche val. ASCII
+print (" ")
+print (0, " ", x[0], " 1")
+print (" ")
+print (size-1, " ", x[size-1], " 9")
+print (" ")
+print (x[0:0])
+print (x[0:1])
+print (x[0:size-1])
