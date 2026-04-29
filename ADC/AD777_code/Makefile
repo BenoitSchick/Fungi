@@ -5,10 +5,11 @@ CFLAGS=-Wno-unused-parameter
 
 # Makefile common part
 # CC=gcc
-CC=arm-linux-gnueabihf-gcc
-LD=arm-linux-gnueabihf-gcc
+CC=gcc #arm-linux-gnueabihf-gcc
+LD=gcc #arm-linux-gnueabihf-gcc
 AR=ar
-CFLAGS+=-pedantic -Wall -Wextra -g -c -mtune=cortex-a8 -Og -MD -std=gnu11
+#CFLAGS+=-pedantic -Wall -Wextra -g -c -mtune=cortex-a8 -Og -MD -std=gnu11
+CFLAGS+=-pedantic -Wall -Wextra -g -c -Og -MD -std=gnu11
 EXE=$(EXEC)
 OBJDIR=.obj
 OBJS+=$(addprefix $(OBJDIR)/, $(SRCS:.c=.o))

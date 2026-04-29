@@ -30,17 +30,15 @@
 
 
 // Local save directory on the Raspberry Pi
-#define SAVE_DIR    "/home/fr1boise/Documents/Fungi/ADC"
+#define SAVE_DIR    "/home/fr1boise/Documents/Fungi/ADC/AD777_code"
 
-/* #define PORT 		50005 */
-/* #define IP_ADDRESS	"160.98.87.167" //"160.98.86.179" */
 
 int main(int argc, char **argv) {
   // Variables
   ad7770_dev *device;
   ad7770_init_param init_param;
   int i, flag_error;
-  uint32_t j, decimation;
+  uint32_t decimation;
   char buf_rx[32];
   char buf_tx[32] = {0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
                      0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
@@ -164,6 +162,8 @@ int main(int argc, char **argv) {
   // ----------------------------------------------------------------
   // AD7770 inialisation
   // ----------------------------------------------------------------
+  
+  printf("AD7770 begin init\n");
   init_param.gpio_start = START;
   init_param.gpio_reset_n = RESET_n;
   init_param.gpio_test = TEST;
@@ -180,8 +180,10 @@ int main(int argc, char **argv) {
   //Enable all 8 channels with gain set to 1
   for (i = ad7770_CH0; i <= ad7770_CH7; i++)
     init_param.state[i] = ad7770_ENABLE;
+    printf("AD7770 enable ch%d\n", i);
   for (i = ad7770_CH0; i <= ad7770_CH7; i++)
     init_param.gain[i] = ad7770_GAIN_1;
+    printf("AD7770 configure gain %d\n", i);
 
   init_param.dec_rate_int = 0x0080; // data rate = 16kHz -> decimation = 2048/16 = 128
   init_param.dec_rate_dec = 0x0000; // 4096 = 0x0080  0*2^16 = 0 = 0x0000
@@ -194,25 +196,38 @@ int main(int argc, char **argv) {
     init_param.sync_offset[i] = 0;
     init_param.offset_corr[i] = 0;
     init_param.gain_corr[i] = 1; // 0x555555;
+    printf("AD7770 compensation ch%d\n", i);
   }
+
+
+  printf("gain/offset error compensation done\n");
   init_param.ref_buf_op_mode[1] = ad7770_REF_BUF_DISABLED;
   init_param.ref_buf_op_mode[2] = ad7770_REF_BUF_DISABLED;
   init_param.sinc5_state = ad7770_DISABLE;
 
+  printf("done done done\n");
   if (ad7770_setup(&device, init_param) != SUCCESS)
+    printf("setup fail\n");
     return 0;
 
 
+  printf("done setup\n");
   // ----------------------------------------------------------------
   // Creation of the save directory on the Raspberry Pi
   // Format : /home/fr1boise/Documents/Fungi/ADC/27April_14h30min00sec
   // ----------------------------------------------------------------
   t = time(NULL);
   tm = localtime(&t);
+  
+  printf("done01\n");
   strftime(time_str, 64, "%d%B_%Hh%Mmin%Ssec", tm);
+  
+  printf("done02\n");
   sprintf(dir_name, "%s/%s", SAVE_DIR, time_str);
   printf(" directory = %s\n", dir_name);
   fflush(stdout);
+
+  printf("creation save directory \n");
 
   umask(0);
   if (mkdir(dir_name, 0777) < 0) {
@@ -228,17 +243,23 @@ int main(int argc, char **argv) {
   for (i = 0; i < 8; i++) {
     sprintf(file_name, "%s/channel%d", dir_name, i); // write in file_name
     write_ptr[i] = fopen(file_name, "wb"); // write the content of file_name in the file : write_ptr
-							    //
+					   
+    printf("opening file ch%d\n", i);
+
     if (write_ptr[0] == 0) {
+
+      printf("error %d\n", i);
       sprintf(file_name, "%s opening", file_name);
       perror(file_name);
       return -1;
     } else {
+      printf("success open\n");
       printf("%s.bin successfully opened\n", file_name);
       fflush(stdout);
     }
   }
 
+      printf("error file\n");
   sprintf(file_name, "%s/error", dir_name);
   write_ptr[8] = fopen(file_name, "wb");
   if (write_ptr[8] == 0) {
@@ -250,11 +271,13 @@ int main(int argc, char **argv) {
     fflush(stdout);
   }
 
+      printf("config file\n");
   sprintf(file_name, "%s/config.txt", dir_name);
   config_ptr = fopen(file_name, "w");
   if (config_ptr == 0) {
-    sprintf(file_name, "%s openning", file_name);
-    perror(file_name);
+    char err_msg[200];
+    sprintf(err_msg, "%s openning", file_name);
+    perror(err_msg);
     return -1;
   } else {
     printf("%s successfully opened\n", file_name);
