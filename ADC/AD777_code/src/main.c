@@ -4,8 +4,8 @@
 //
 // This programm is used to save the data from the AD into a USB
 
-#include "../include/ad7770.h"
-#include <bcm2835.h>
+#include "ad7770.h"
+#include "bcm2835.h"
 #include <dirent.h>
 #include <netinet/in.h>
 #include <stdio.h>

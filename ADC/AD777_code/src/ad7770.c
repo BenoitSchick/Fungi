@@ -45,6 +45,7 @@
 #include <stdlib.h>
 //#include "platform_drivers.h"
 #include "ad7770.h"
+#include "bcm2835.h"
 
 /******************************************************************************/
 /*************************** Constants Definitions ****************************/
@@ -69,6 +70,15 @@ const uint8_t pin_mode_options[16][4] = {
 	{0xFF,	0xFF,	0xFF,	0xFF},	// DEC_RATE_1024, LOW_PWR, INT_REF	
 };
 
+const uint8_t reset_reg_val[ad7770_REG_SRC_UPDATE + 1] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x24, 0x09, 0x80, 0x20, 0x00, 0x00, 0x00, 0x00, 0x38, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xfe, 0x00, 0x3e, 0x00, 0x3c, 0x00, 0x00, 0x00,
+	0X00, 0X80, 0X00, 0X00, 0X00};
+
 /******************************************************************************/
 /************************** Functions Implementation **************************/
 /******************************************************************************/
@@ -83,7 +93,6 @@ uint8_t ad7770_compute_crc8(uint8_t *data,
 {
 	uint8_t i;
 	uint8_t crc = 0;
-
 	while (data_size) {
 		for (i = 0x80; i != 0; i >>= 1) {
 			if (((crc & 0x80) != 0) != ((*data & i) != 0)) {
@@ -112,7 +121,7 @@ int32_t ad7770_spi_int_reg_read(ad7770_dev *dev,
 {
 	uint8_t buf[3];
 	uint8_t buf_size = 2;
-	uint8_t crc;
+	uint8_t crc, i;
 	int32_t ret;
 
 	buf[0] = 0x80 | (reg_addr & 0x7F);
@@ -120,7 +129,9 @@ int32_t ad7770_spi_int_reg_read(ad7770_dev *dev,
 	buf[2] = 0x00;
 	if (dev->spi_crc_en == ad7770_ENABLE)
 		buf_size = 3;
-	ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
+	//ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
+	/*ret = SUCCESS;
+	bcm2835_spi_transfern(buf, buf_size);
 
 	*reg_data = buf[1];
 	if (dev->spi_crc_en == ad7770_ENABLE) {
@@ -131,7 +142,24 @@ int32_t ad7770_spi_int_reg_read(ad7770_dev *dev,
 			ret = FAILURE;
 		}
 	}
-
+	return ret;*/
+	
+	ret = SUCCESS;
+	for(i = 0; i < 4; ){
+		bcm2835_spi_transfern(buf, buf_size);
+		*reg_data = buf[1];
+		if (dev->spi_crc_en == ad7770_ENABLE) {
+			buf[0] = 0x80 | (reg_addr & 0x7F);
+			crc = ad7770_compute_crc8(&buf[0], 2);
+			if (crc != buf[2]) i++;		// CRC error
+			else return ret;	// No CRC error, return SUCCESS	
+		}
+		else return ret;	// No CRC check, return SUCCESS
+	}
+	
+	ret = FAILURE; // after 4 tries, CRC error during reg_read, return FAILURE
+	printf("%s: reg 0x%02X -> CRC Error.\n", __func__, reg_addr);
+	fflush(stdout);
 	return ret;
 }
 
@@ -148,6 +176,7 @@ int32_t ad7770_spi_int_reg_write(ad7770_dev *dev,
 {
 	uint8_t buf[3];
 	uint8_t buf_size = 2;
+	uint8_t i, reg_CRC;
 	int32_t ret;
 
 	buf[0] = 0x00 | (reg_addr & 0x7F);
@@ -155,10 +184,43 @@ int32_t ad7770_spi_int_reg_write(ad7770_dev *dev,
 	if (dev->spi_crc_en == ad7770_ENABLE) {
 		buf[2] = ad7770_compute_crc8(&buf[0], 2);
 		buf_size = 3;
+		//ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
+		// DON'T read back CRC test if going in SAR or sigma-delta via SPI mode
+		if(((reg_addr == ad7770_REG_GENERAL_USER_CONFIG_2) && ((reg_data & ad7770_SAR_DIAG_MODE_EN) != 0)) ||
+			((reg_addr == ad7770_REG_GENERAL_USER_CONFIG_3) && ((reg_data & ad7770_SPI_SLAVE_MODE_EN) != 0))){
+				bcm2835_spi_transfern(buf, buf_size);
+				dev->cached_reg_val[reg_addr] = reg_data;
+				return SUCCESS;
+			}
+		
+		// DON'T read back CRC test if in SAR or sigma-delta via SPI mode
+		if(((dev->cached_reg_val[ad7770_REG_GENERAL_USER_CONFIG_2] & ad7770_SAR_DIAG_MODE_EN) != 0) ||
+			((dev->cached_reg_val[ad7770_REG_GENERAL_USER_CONFIG_3] & ad7770_SPI_SLAVE_MODE_EN) != 0)){
+				bcm2835_spi_transfern(buf, buf_size);
+				dev->cached_reg_val[reg_addr] = reg_data;
+				return SUCCESS;
+			}
+			
+		for(i = 0; i < 4; ){
+			bcm2835_spi_transfern(buf, buf_size);
+			ret = ad7770_spi_int_reg_read_mask(dev, ad7770_REG_GEN_ERR_REG_1, ad7770_SPI_CRC_ERR, &reg_CRC);
+			if(ret == SUCCESS){
+				if(reg_CRC == 0x00){	
+					dev->cached_reg_val[reg_addr] = reg_data; // No CRC error during reg_write, return SUCCESS
+					return ret;
+				}
+				else i++;
+			}
+			else return ret;	// CRC error during reg_read, return FAILURE
+		}
 	}
-	ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
-	dev->cached_reg_val[reg_addr] = reg_data;
-
+	else{
+		bcm2835_spi_transfern(buf, buf_size); // No CRC check
+		return SUCCESS;
+	}
+	ret = FAILURE;	// after 4 tries, CRC error during reg_write, return FAILURE
+	printf("%s: reg 0x%02X with value 0x%02X-> CRC Error.\n", __func__, reg_addr, reg_data);
+	fflush(stdout);
 	return ret;
 }
 
@@ -253,7 +315,9 @@ int32_t ad7770_spi_sar_read_code(ad7770_dev *dev,
 		buf[2] = ad7770_compute_crc8(&buf[0], 2);
 		buf_size = 3;
 	}
-	ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
+	//ret = spi_write_and_read(&dev->spi_dev, buf, buf_size);
+	ret = SUCCESS;
+	bcm2835_spi_transfern(buf, buf_size);
 	dev->cached_reg_val[ad7770_REG_GLOBAL_MUX_CONFIG] =
 									ad7770_GLOBAL_MUX_CTRL(mux_next_conv);
 	buf[0] = buf[0] & 0x0F;
@@ -262,6 +326,7 @@ int32_t ad7770_spi_sar_read_code(ad7770_dev *dev,
 		crc = ad7770_compute_crc8(&buf[0], 2);
 		if (crc != buf[2]) {
 			printf("%s: CRC Error.\n", __func__);
+			fflush(stdout);
 			ret = FAILURE;
 		}
 	}
@@ -302,10 +367,12 @@ int32_t ad7770_set_spi_op_mode(ad7770_dev *dev,
 										ad7770_REG_GENERAL_USER_CONFIG_2,
 										ad7770_SAR_DIAG_MODE_EN,
 										cfg_2);
+										
 	ret |= ad7770_spi_int_reg_write_mask(dev,
 										 ad7770_REG_GENERAL_USER_CONFIG_3,
 										 ad7770_SPI_SLAVE_MODE_EN,
 										 cfg_3);
+										 
 	dev->spi_op_mode = mode;
 
 	return ret;
@@ -342,7 +409,7 @@ int32_t ad7770_do_update_mode_pins(ad7770_dev *dev)
 		goto error;
 
 	if (!(dev->gain[ad7770_CH4] == dev->gain[ad7770_CH5] ==
-		  dev->gain[ad7770_CH6] == dev->gain[ad7770_CH6]))
+		  dev->gain[ad7770_CH6] == dev->gain[ad7770_CH7]))
 		goto error;
 
 	switch (dev->dec_rate_int) {
@@ -376,7 +443,7 @@ int32_t ad7770_do_update_mode_pins(ad7770_dev *dev)
 	if (mode == 0xFF)
 	  goto error;
 
-	ret = gpio_set_value(&dev->gpio_dev,
+	/*ret = gpio_set_value(&dev->gpio_dev,
 					dev->gpio_mode0,
 					((mode & 0x01) >> 0));
 	ret |= gpio_set_value(&dev->gpio_dev,
@@ -387,19 +454,21 @@ int32_t ad7770_do_update_mode_pins(ad7770_dev *dev)
 					((mode & 0x04) >> 2));
 	ret |= gpio_set_value(&dev->gpio_dev,
 					dev->gpio_mode3,
-					((mode & 0x08) >> 3));
+					((mode & 0x08) >> 3));*/
 
 	/* All the pins that define the ad7770 configuration mode are re-evaluated
 	 * every time SYNC_IN pin is pulsed. */
-	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_sync_in, GPIO_LOW);
+	/*ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_sync_in, GPIO_LOW);
 	mdelay(10);
 	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_sync_in, GPIO_HIGH);
 
-	return ret;
+	return ret;*/
+	return SUCCESS;
 
 error:
 	printf("%s: This setting can't be set in PIN control mode.\n",
 		   __func__);
+	fflush(stdout);
 	return FAILURE;
 }
 
@@ -426,10 +495,16 @@ int32_t ad7770_set_state(ad7770_dev *dev,
 {
 	int32_t ret;
 
-	ret = ad7770_spi_int_reg_write_mask(dev,
+	/*ret = ad7770_spi_int_reg_write_mask(dev,
 										ad7770_REG_CH_DISABLE,
 										ad7770_CH_DISABLE(0x1),
-										ad7770_CH_DISABLE(state));
+										ad7770_CH_DISABLE(state));*/
+										
+	ret = ad7770_spi_int_reg_write_mask(dev,
+										ad7770_REG_CH_DISABLE,
+										ad7770_CH_DISABLE(ch),
+										(state == ad7770_DISABLE) ? ad7770_CH_DISABLE(ch) : 0);
+										
 	dev->state[ch] = state;
 
 	return ret;
@@ -560,6 +635,7 @@ int32_t ad7770_set_dec_rate(ad7770_dev *dev,
 		default:
 			printf("%s: This setting can't be set in PIN control mode.\n",
 				   __func__);
+			fflush(stdout);
 			return FAILURE;
 		}
 		dev->dec_rate_int = int_val;
@@ -574,7 +650,7 @@ int32_t ad7770_set_dec_rate(ad7770_dev *dev,
 		ret |= ad7770_spi_int_reg_write(dev,
 										ad7770_REG_SRC_N_LSB,
 										lsb);
-		dec_val = (dec_val * 65536) / 1000;
+		//dec_val = (dec_val * 65536) / 1000;
 		msb = (dec_val & 0xFF00) >> 8;
 		lsb = (dec_val & 0x00FF) >> 0;
 		ret |= ad7770_spi_int_reg_write(dev,
@@ -620,10 +696,16 @@ int32_t ad7770_set_power_mode(ad7770_dev *dev,
 {
 	int32_t ret;
 
+	/*ret = ad7770_spi_int_reg_write_mask(dev,
+										ad7770_REG_GENERAL_USER_CONFIG_1,
+										ad7770_MOD_POWERMODE,
+										pwr_mode ? ad7770_MOD_POWERMODE : 0);*/
+										
 	ret = ad7770_spi_int_reg_write_mask(dev,
 										ad7770_REG_GENERAL_USER_CONFIG_1,
 										ad7770_MOD_POWERMODE,
-										pwr_mode ? ad7770_MOD_POWERMODE : 0);
+										(pwr_mode ==  ad7770_HIGH_RES) ? ad7770_MOD_POWERMODE : 0);
+										
 	dev->pwr_mode = pwr_mode;
 
 	return ret;
@@ -699,7 +781,7 @@ int32_t ad7770_set_dclk_div(ad7770_dev *dev,
 	int32_t ret;
 
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
-		ret = gpio_set_value(&dev->gpio_dev,
+		/*ret = gpio_set_value(&dev->gpio_dev,
 						dev->gpio_dclk0,
 						((div & 0x01) >> 0));
 		ret |= gpio_set_value(&dev->gpio_dev,
@@ -707,11 +789,16 @@ int32_t ad7770_set_dclk_div(ad7770_dev *dev,
 						((div & 0x02) >> 1));
 		ret |= gpio_set_value(&dev->gpio_dev,
 						dev->gpio_dclk2,
-						((div & 0x04) >> 2));
+						((div & 0x04) >> 2));*/
 	} else {
-		ret = ad7770_spi_int_reg_write_mask(dev,
+		/*ret = ad7770_spi_int_reg_write_mask(dev,
 											ad7770_REG_CH_DISABLE,
 											ad7770_DCLK_CLK_DIV(0x3),
+											ad7770_DCLK_CLK_DIV(div));*/
+											
+		ret = ad7770_spi_int_reg_write_mask(dev,
+											ad7770_REG_DOUT_FORMAT,
+											ad7770_DCLK_CLK_DIV(0x7),
 											ad7770_DCLK_CLK_DIV(div));
 	}
 	dev->dclk_div = div;
@@ -757,6 +844,7 @@ int32_t ad7770_set_sync_offset(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -790,6 +878,7 @@ int32_t ad7770_get_sync_offset(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -825,6 +914,7 @@ int32_t ad7770_set_offset_corr(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -867,6 +957,7 @@ int32_t ad7770_get_offset_corr(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -902,6 +993,7 @@ int32_t ad7770_set_gain_corr(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -945,6 +1037,7 @@ int32_t ad7770_get_gain_corr(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -976,6 +1069,7 @@ int32_t ad7770_set_ref_buf_op_mode(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -1048,6 +1142,7 @@ int32_t ad7770_get_ref_buf_op_mode(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -1165,10 +1260,14 @@ int32_t ad7770_do_single_sar_conv(ad7770_dev *dev,
 	restore_sar_state = dev->sar_state;
 	ret = ad7770_set_sar_cfg(dev, ad7770_ENABLE, mux);
 	ret |= ad7770_set_spi_op_mode(dev, ad7770_SAR_CONV);
-	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_LOW);
-	mdelay(10);	// Acquisition Time = min 500 ns
-	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_HIGH);
-	mdelay(10);	// Conversion Time = max 3.4 us
+	//ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_LOW);
+	//mdelay(10);	// Acquisition Time = min 500 ns
+	bcm2835_gpio_clr(dev->gpio_convst);
+	usleep(10000);
+	//ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_HIGH);
+	//mdelay(10);	// Conversion Time = max 3.4 us
+	bcm2835_gpio_set(dev->gpio_convst);
+	usleep(10000);
 	ad7770_spi_sar_read_code(dev, mux, sar_code);
 	ret |= ad7770_set_sar_cfg(dev, restore_sar_state, mux);
 	ret |= ad7770_set_spi_op_mode(dev, restore_spi_op_mode);
@@ -1188,7 +1287,9 @@ int32_t ad7770_do_spi_soft_reset(ad7770_dev *dev)
 
 	/* Keeping the SDI pin high during 64 consecutives clocks generates a
 	   software reset */
-	ret = spi_write_and_read(&dev->spi_dev, buf, 8);
+	//ret = spi_write_and_read(&dev->spi_dev, buf, 8);
+	ret = SUCCESS;
+	bcm2835_spi_transfern(buf, 8);
 
 	return ret;
 }
@@ -1209,6 +1310,7 @@ int32_t ad7771_set_sinc5_filter_state(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -1234,6 +1336,7 @@ int32_t ad7771_get_sinc5_filter_state(ad7770_dev *dev,
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		printf("%s: This feature is not available in PIN control mode.\n",
 			   __func__);
+		fflush(stdout);
 		return FAILURE;
 	}
 
@@ -1253,16 +1356,16 @@ int32_t ad7770_setup(ad7770_dev **device,
 					 ad7770_init_param init_param)
 {
 	ad7770_dev *dev;
-	uint8_t i;
-	int32_t ret;
+	uint8_t i, data_rst;
+	int32_t ret = 0;
 
 	dev = (ad7770_dev *)malloc(sizeof(*dev));
 	if (!dev) {
-		return -1;
+		return FAILURE;
 	}
-
+	
 	/* SPI */
-	dev->spi_dev.chip_select = init_param.spi_chip_select;
+	/*dev->spi_dev.chip_select = init_param.spi_chip_select;
 	dev->spi_dev.mode = init_param.spi_mode;
 	dev->spi_dev.device_id = init_param.spi_device_id;
 	dev->spi_dev.type = init_param.spi_type;
@@ -1270,46 +1373,48 @@ int32_t ad7770_setup(ad7770_dev **device,
 
 	dev->gpio_dev.device_id = init_param.gpio_device_id;
 	dev->gpio_dev.type = init_param.gpio_type;
-	ret |= gpio_init(&dev->gpio_dev);
+	ret |= gpio_init(&dev->gpio_dev);*/
 
 	/* GPIO */
-	dev->gpio_reset = init_param.gpio_reset;
-	dev->gpio_mode0 = init_param.gpio_mode0;
-	dev->gpio_mode1 = init_param.gpio_mode1;
-	dev->gpio_mode2 = init_param.gpio_mode2;
-	dev->gpio_mode3 = init_param.gpio_mode3;
-	dev->gpio_dclk0 = init_param.gpio_dclk0;
-	dev->gpio_dclk1 = init_param.gpio_dclk1;
-	dev->gpio_dclk2 = init_param.gpio_dclk2;
-	dev->gpio_sync_in = init_param.gpio_sync_in;
-	dev->gpio_convst_sar = init_param.gpio_convst_sar;
-
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_reset, GPIO_OUT);
+	dev->gpio_start = init_param.gpio_start;
+	dev->gpio_reset_n = init_param.gpio_reset_n;
+	dev->gpio_test = init_param.gpio_test;
+	dev->gpio_drdy_n = init_param.gpio_drdy_n;
+	dev->gpio_convst = init_param.gpio_convst;
+	dev->gpio_connected = init_param.gpio_connected;	
+	dev->gpio_switch = init_param.gpio_switch;	
+	dev->gpio_led_err = init_param.gpio_led_err;
+	dev->gpio_led_rdy = init_param.gpio_led_rdy;
+	dev->gpio_led_run = init_param.gpio_led_run;	
+	
+	// Hardware reset because of p.37 INTEGRATED LDOs
+	// and control trough REG_GEN_ERR_REG_2 bit 5
+	dev->spi_crc_en = ad7770_DISABLE; // to have no CRC problem with this 1st message
+	uint32_t count=0;
+	do{
+		bcm2835_gpio_clr(dev->gpio_reset_n);
+		usleep(10000);
+		bcm2835_gpio_set(dev->gpio_reset_n);
+		usleep(10000);
+		ad7770_spi_int_reg_read_mask(dev, ad7770_REG_GEN_ERR_REG_2, 0x20, &data_rst);
+		count++;
+	}while(data_rst == 0x00);
+	//printf("count = %d\n", count);
+	/*ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_reset, GPIO_OUT);
 	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_reset, GPIO_LOW);
 	mdelay(10);	// RESET Hold Time = min 2 × MCLK
 	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_reset, GPIO_HIGH);
-	mdelay(10);	// RESET Rising Edge to First DRDY = min 225 us
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_mode0, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_mode1, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_mode2, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_mode3, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_dclk0, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_dclk1, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_dclk2, GPIO_OUT);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_sync_in, GPIO_OUT);
-	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_sync_in, GPIO_HIGH);
-	ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_OUT);
-	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_convst_sar, GPIO_HIGH);
+	mdelay(10);	// RESET Rising Edge to First DRDY = min 225 us*/
 
 	/* Device Settings */
 	dev->ctrl_mode = init_param.ctrl_mode;
 	dev->spi_crc_en = ad7770_DISABLE;
-	dev->spi_op_mode = ad7770_INT_REG;
+	dev->spi_op_mode = ad7770_SD_CONV;
 	dev->sar_state = ad7770_DISABLE;
 	dev->sar_mux = ad7770_AUXAINP_AUXAINN;
 
-	if ((dev->ctrl_mode == ad7770_SPI_CTRL) &&
-				(init_param.spi_crc_en == ad7770_ENABLE)) {
+	// Enable CRC in SPI transmission trough ad7770_REG_GEN_ERR_REG_1_EN bit 0 
+	if ((dev->ctrl_mode == ad7770_SPI_CTRL) && (init_param.spi_crc_en == ad7770_ENABLE)) {
 		ret |= ad7770_spi_int_reg_read(dev,
 							ad7770_REG_GEN_ERR_REG_1_EN,
 							&dev->cached_reg_val[ad7770_REG_GEN_ERR_REG_1_EN]);
@@ -1319,63 +1424,175 @@ int32_t ad7770_setup(ad7770_dev **device,
 							ad7770_SPI_CRC_TEST_EN);
 		dev->spi_crc_en = ad7770_ENABLE;
 	}
-
-	if (dev->ctrl_mode == ad7770_SPI_CTRL)
-		for (i = ad7770_REG_CH_CONFIG(0); i <= ad7770_REG_SRC_UPDATE; i++)
+	//printf("test1\n");
+	// Read all the registers and save them
+	if (dev->ctrl_mode == ad7770_SPI_CTRL){
+		for (i = ad7770_REG_CH_CONFIG(0); i <= ad7770_REG_SRC_UPDATE; i++){
+			if(i == 0x1b) i++;
+			dev->reset_reg_val[i] = reset_reg_val[i];
 			ret |= ad7770_spi_int_reg_read(dev, i, &dev->cached_reg_val[i]);
-
+		}
+	}
+	
+	// Powerdown Vcm
+	//ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_GENERAL_USER_CONFIG_1, ad7770_PDB_VCM, 0x00);
+	
+	// Set the drive strength to extra strong
+	ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_GENERAL_USER_CONFIG_2, ad7770_SDO_DRIVE_STR(0x03), ad7770_SDO_DRIVE_STR(0x03));
+	
+	// Set the state of each channels (enable or disable)
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
 		dev->state[i] = init_param.state[i];
 		if (dev->ctrl_mode == ad7770_SPI_CTRL)
 			ret |= ad7770_set_state(dev, (ad7770_ch)i, dev->state[i]);
 	}
- 
+	
+	// Set the gain of each channels
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
 		dev->gain[i] = init_param.gain[i];
 		if (dev->ctrl_mode == ad7770_SPI_CTRL)
 			ret |= ad7770_set_gain(dev, (ad7770_ch)i, dev->gain[i]);
 	}
-
+	
+	// Set the deciaml rate to configure the data rate
 	dev->dec_rate_int = init_param.dec_rate_int;
 	dev->dec_rate_dec = init_param.dec_rate_dec;
 	if (dev->ctrl_mode == ad7770_SPI_CTRL)
 		ret |= ad7770_set_dec_rate(dev, dev->dec_rate_int, dev->dec_rate_dec);
-
+	// Update decimation (ODR)
+	ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_SRC_UPDATE, 0x01, 0x01);
+	usleep(1000);
+	ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_SRC_UPDATE, 0x01, 0x00);
+	usleep(1000);
+	
+	// Set the reference type
  	dev->ref_type = init_param.ref_type;
 	if (dev->ctrl_mode == ad7770_SPI_CTRL)
 		ret |= ad7770_set_reference_type(dev, dev->ref_type);
-
+	
+	// Set the power mode
 	dev->pwr_mode = init_param.pwr_mode;
+	/*if (dev->ctrl_mode == ad7770_SPI_CTRL)
+		ret |= ad7770_set_reference_type(dev, dev->ref_type);*/
 	if (dev->ctrl_mode == ad7770_SPI_CTRL)
-		ret |= ad7770_set_reference_type(dev, dev->ref_type);
-
+		ret |= ad7770_set_power_mode(dev, dev->pwr_mode);
+	
 	if (dev->ctrl_mode == ad7770_PIN_CTRL) {
 		ret |= ad7770_do_update_mode_pins(dev);
 	}
-
+	// Update power mode
+	bcm2835_gpio_clr(dev->gpio_start);
+	usleep(1000);
+	bcm2835_gpio_set(dev->gpio_start);
+	usleep(1000);
+	
+	// Set DCLK divider
 	dev->dclk_div = init_param.dclk_div;
 	ad7770_set_dclk_div(dev, dev->dclk_div);
-
+	//printf("test2 ret = %d\n", ret);
+	// Set sync. offset, gain offset and corr,
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
+		//printf("------------------------------------------------ ch = %d\n",i);
 		dev->sync_offset[i] = init_param.sync_offset[i];
 		dev->offset_corr[i] = init_param.offset_corr[i];
 		dev->gain_corr[i] = init_param.gain_corr[i];
 		if (dev->ctrl_mode == ad7770_SPI_CTRL) {
 			ret |= ad7770_set_sync_offset(dev, (ad7770_ch)i,
 								dev->sync_offset[i]);
+			//printf("test sync\n");
+			// Update phase
+			bcm2835_gpio_clr(dev->gpio_start);
+			usleep(1000);
+			bcm2835_gpio_set(dev->gpio_start);
+			usleep(1000);
 			ret |= ad7770_set_offset_corr(dev, (ad7770_ch)i,
 								dev->offset_corr[i]);
-			ret |= ad7770_set_gain_corr(dev, (ad7770_ch)i,
+			//printf("test offset\n");
+			// Update offset
+			bcm2835_gpio_clr(dev->gpio_start);
+			usleep(1000);
+			bcm2835_gpio_set(dev->gpio_start);
+			usleep(1000);					
+			// Not shure we need to change the gain
+			if(dev->gain_corr[i] != 1) ret |= ad7770_set_gain_corr(dev, (ad7770_ch)i,
 								dev->gain_corr[i]);
+			//printf("test gain\n"); 
+			// Update gain
+			bcm2835_gpio_clr(dev->gpio_start);
+			usleep(1000);
+			bcm2835_gpio_set(dev->gpio_start);
+			usleep(1000);
 		}
 	}
-
+	//printf("test6 ret = %d\n", ret);
+	
+	// Set sigma-delta in spi mode
+	ret |= ad7770_set_spi_op_mode(dev, dev->spi_op_mode);
+	//printf("test7 ret = %d\n", ret);
+	
+	
+	/*bcm2835_gpio_clr(dev->gpio_start);
+	usleep(10000);
+	bcm2835_gpio_set(dev->gpio_start);
+	usleep(10000);*/
+	
 	*device = dev;
-
-	if (!ret)
+	
+	if (ret == SUCCESS){
 		printf("ad7770 successfully initialized\n");
-	else
+		fflush(stdout);
+	}
+	else{
 		printf("ad7770 initialization error (%d)\n", ret);
+		fflush(stdout);
+	}
+
+	return ret;
+}
+
+/**
+ * Control the state of all the register, and compare it with the reset value
+ * @param dev - The device structure.
+ * @return SUCCESS in case of success, negative error code otherwise.
+ */
+int32_t ad7770_ctrl_all_reg(ad7770_dev *dev, bool all_reg)
+{
+	int i, start_reg;
+	int32_t ret = 0;
+	uint8_t	reg_val[ad7770_REG_SRC_UPDATE + 1];
+	// Return in register mode, to control the ad7770
+	ret |= ad7770_set_spi_op_mode(dev, ad7770_INT_REG);
+	
+	if(all_reg == true) start_reg = ad7770_REG_CH_CONFIG(0);
+	else start_reg = ad7770_REG_CH_ERR_REG(0);
+	
+	for (i = start_reg; i <= ad7770_REG_SRC_UPDATE; i++){
+			if(i == 0x1b) i++;
+			if(ad7770_spi_int_reg_read(dev, i, &reg_val[i]) == FAILURE){
+				//i = (ad7770_REG_SRC_UPDATE + 1);
+				printf("Failure during registers reading\n");
+				fflush(stdout);
+				ret |= FAILURE;
+			}
+			else{
+				/*printf("reg 0x%02X) 0x%02X, 0x%02X, 0x%02X", i, dev->reset_reg_val[i], dev->cached_reg_val[i], reg_val[i]);
+				if(dev->reset_reg_val[i] == dev->cached_reg_val[i]) printf("  RESET Cached");
+				else printf("              ");
+				if(dev->reset_reg_val[i] == reg_val[i]) printf("  RESET Now");
+				else printf("           ");
+				if(reg_val[i] != dev->cached_reg_val[i]) printf("  PROBLEM");
+				printf("\n");	*/
+				if(reg_val[i] != dev->cached_reg_val[i]){
+					printf("reg 0x%02X) 0x%02X, 0x%02X, 0x%02X", i, dev->reset_reg_val[i], dev->cached_reg_val[i], reg_val[i]);
+					fflush(stdout);
+					printf("  PROBLEM\n");
+					fflush(stdout);
+				}
+			}											
+	}
+	
+	// Set sigma-delta in spi mode
+	ret |= ad7770_set_spi_op_mode(dev, ad7770_SD_CONV);	
 
 	return ret;
 }
