@@ -206,10 +206,10 @@ int main(int argc, char **argv) {
   init_param.sinc5_state = ad7770_DISABLE;
 
   printf("done done done\n");
-  if (ad7770_setup(&device, init_param) != SUCCESS)
+  if (ad7770_setup(&device, init_param) != SUCCESS) {
     printf("setup fail\n");
     return 0;
-
+  }
 
   printf("done setup\n");
   // ----------------------------------------------------------------
