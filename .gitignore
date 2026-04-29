@@ -8,7 +8,6 @@ CMakeFiles/
 CMakeCache.txt
 CMakeConfigureLog.yaml
 cmake_install.cmake
-Makefile
 *.cmake
 
 # Dépendances téléchargées (comme picotool)
