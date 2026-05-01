@@ -186,7 +186,6 @@ int main(int argc, char **argv) {
     init_param.gain[i] = ad7770_GAIN_1;
     printf("AD7770 configure gain %d\n", i);
   }
-
   init_param.dec_rate_int = 0x0080; // data rate = 16kHz -> decimation = 2048/16 = 128
   init_param.dec_rate_dec = 0x0000; // 4096 = 0x0080  0*2^16 = 0 = 0x0000
   init_param.ref_type = ad7770_EXT_REF;
@@ -225,11 +224,8 @@ int main(int argc, char **argv) {
   /* strftime(time_str, 64, "%d%B_%Hh%Mmin%Ssec", tm); */
   
   /* printf("done02\n"); */
-  /* sprintf(dir_name, "%s/%s", SAVE_DIR, time_str); */
-  /* printf(" directory = %s\n", dir_name); */
-  /* fflush(stdout); */
-  sprintf(dir_name, "%s", SAVE_DIR);
-  printf("directory = %s\n", dir_name);
+  sprintf(dir_name, "%s/%s", SAVE_DIR, time_str);
+  printf(" directory = %s\n", dir_name);
   fflush(stdout);
 
   /* printf("creation save directory \n"); */
@@ -293,13 +289,17 @@ int main(int argc, char **argv) {
   // Writing the configuration to config.txt
   // ----------------------------------------------------------------
   sprintf(config_str, "Sampling frequency : 16kHz\n");
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
   sprintf(config_str, "Averaging on 32 samples\n");
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
   sprintf(config_str, "Storage frequency : 500Hz\n");
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
   sprintf(config_str, "Data format : 32bits / little endian / 1 file per channel per day\n");
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
 
   // ----------------------------------------------------------------
   // Initializing data acquisition
@@ -316,7 +316,9 @@ int main(int argc, char **argv) {
   tm = localtime(&t);
   strftime(time_str, 64, "%c", tm);
   sprintf(config_str, "Start time : %s\n", time_str);
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
+
 
   //--------------------------------------------------------------
   // MAIN ACQUISITION LOOP
@@ -359,7 +361,8 @@ int main(int argc, char **argv) {
 
       //  Save the 9 values (8 channels + error) to their respective files
       for (i = 0; i < 9; i++) {
-        nbr_element = fwrite(&data[i], 4, 1, write_ptr[i]);
+	fprintf(write_ptr[i], "%d\n", data[i]); 
+        /* nbr_element = fwrite(&data[i], 4, 1, write_ptr[i]); */
         data[i] = 0;
       }
       bcm2835_gpio_set(LED_ERR);
@@ -369,14 +372,21 @@ int main(int argc, char **argv) {
 
   // Save number of errors and good samples in config.txt
   sprintf(config_str, "Number of good samples = %d\n",nbr_value); // write in config_str buffer
-  fwrite(config_str, strlen(config_str), 1, config_ptr); // write the content of config_str in the file config_ptr
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); // write the content of config_str in the file config_ptr */
+  fprintf(config_ptr, "%s\n", config_str); 
+
   sprintf(config_str, "Number of errors = %d\n", nbr_error);
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
+
   t = time(NULL);
   tm = localtime(&t);
   strftime(time_str, 64, "%c", tm);
   sprintf(config_str, "Stop time : %s\n", time_str);
-  fwrite(config_str, strlen(config_str), 1, config_ptr);
+  /* fwrite(config_str, strlen(config_str), 1, config_ptr); */
+  fprintf(config_ptr, "%s\n", config_str); 
+
+
 
   printf("\n--------- CONTROL STATE REGISTERS-------------\n");
   fflush(stdout);
