@@ -34,7 +34,7 @@
 
 
 #define NB_SAMPLES_FOR_AVG 128
-#define DECALAGE 7
+#define DECALAGE 7      //DECALAGE = log_2(NB_SAMPLES_FOR_AVG)
 #define NB_CHANNEL 4
 
 int main(int argc, char **argv) {
@@ -43,21 +43,15 @@ int main(int argc, char **argv) {
   ad7770_init_param init_param;
   int i, flag_error;
   uint32_t decimation;
-  char buf_rx[32];
-  char buf_tx[32] = {0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
-                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
-                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
-                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0};
+  char buf_rx[NB_CHANNEL * 4];
+  char buf_tx[NB_CHANNEL * 4] = {0x80, 0x0, 0x80, 0x0,
+                                  0x80, 0x0, 0x80, 0x0,
+                                  0x80, 0x0, 0x80, 0x0,
+                                  0x80, 0x0, 0x80, 0x0};
   int32_t data[NB_CHANNEL+1];
   uint32_t nbr_error = 0;
   uint32_t nbr_value = 0;
 
-  /* //DHCP */
-  /* struct sockaddr_in address; */
-  /* int sock = 0, valread; */
-  /* struct sockaddr_in serv_addr; */
-  /* char data_str[100]; */
-  /* char buffer[1024] = {0}; */
 
   // File
   FILE *write_ptr[NB_CHANNEL+1];
@@ -184,11 +178,11 @@ int main(int argc, char **argv) {
   init_param.spi_crc_en = ad7770_ENABLE;
 
   //Enable all 4 channels with gain set to 1
-  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
     init_param.state[i] = ad7770_ENABLE;
     printf("AD7770 enable ch%d\n", i);
   }
-  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
     init_param.gain[i] = ad7770_GAIN_1;
     printf("AD7770 configure gain %d\n", i);
   }
@@ -200,7 +194,7 @@ int main(int argc, char **argv) {
   init_param.dclk_div = ad7770_DCLK_DIV_1;
 
   // Gain/offset error compensation
-  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
     init_param.sync_offset[i] = 0;
     init_param.offset_corr[i] = 0;
     init_param.gain_corr[i] = 1; // 0x555555;
@@ -221,29 +215,9 @@ int main(int argc, char **argv) {
   // Creation of the save directory on the Raspberry Pi
   // Format : /home/fr1boise/Documents/Fungi/ADC/27April_14h30min00sec
   // ----------------------------------------------------------------
-  /* t = time(NULL); */
-  /* tm = localtime(&t); */
-  
-  /* printf("done01\n"); */
-  /* strftime(time_str, 64, "%d%B_%Hh%Mmin%Ssec", tm); */
-  
-  /* printf("done02\n"); */
-  /* sprintf(dir_name, "%s/%s", SAVE_DIR, time_str); */
-  /* printf(" directory = %s\n", dir_name); */
-  /* fflush(stdout); */
   sprintf(dir_name, "%s", SAVE_DIR);
   printf("directory = %s\n", dir_name);
   fflush(stdout);
-
-  /* printf("creation save directory \n"); */
-
-  /* umask(0); */
-  /* if (mkdir(dir_name, 0777) < 0) { */
-  /*   perror("mkdir failed"); */
-  /*   printf("Check that %s exists and is writable.\n", SAVE_DIR); */
-  /*   fflush(stdout); */
-  /*   return -1; */
-  /* } */
 
   // ----------------------------------------------------------------
   // Opening files : Ch0 to Ch7 -- error -- config
@@ -303,9 +277,9 @@ int main(int argc, char **argv) {
   // ----------------------------------------------------------------
   sprintf(config_str, "Sampling frequency : 16kHz\n");
   fwrite(config_str, strlen(config_str), 1, config_ptr);
-  sprintf(config_str, "Averaging on 32 samples\n");
+  sprintf(config_str, "Averaging on %d samples\n", NB_SAMPLES_FOR_AVG);
   fwrite(config_str, strlen(config_str), 1, config_ptr);
-  sprintf(config_str, "Storage frequency : 500Hz\n");
+  sprintf(config_str, "Storage frequency : %dHz\n", 16000 / NB_SAMPLES_FOR_AVG);
   fwrite(config_str, strlen(config_str), 1, config_ptr);
   sprintf(config_str, "Data format : 32bits / little endian / 1 file per channel per day\n");
   fwrite(config_str, strlen(config_str), 1, config_ptr);
@@ -345,30 +319,30 @@ int main(int argc, char **argv) {
     // Read SPI data from the NB_CHANNEL channels (NB_CHANNEL × 4 bytes)
     // Byte 0: status | Bytes 1–3: 24bit data
     else {
-      bcm2835_spi_transfernb(buf_tx, buf_rx, 32);
+      bcm2835_spi_transfernb(buf_tx, buf_rx, NB_CHANNEL*4);
 
-      for (i = 0; i < 32; i += 4) {
+      for (i = 0; i < NB_CHANNEL*4; i += 4) {
         // Reconstruction of a 24-bit integer ---   [00][byte1][byte2][byte3]
         data[i >> 2] += ((buf_rx[i + 1] << 24) | (buf_rx[i + 2] << 16) | (buf_rx[i + 3] << 8)) >> 8; // data[0] --> i=0   data[1] --> i=4
       }
     }
 
-    // Every 32 readings : calculate the average and save it
+    // Every NB_SAMPLES_FOR_AVG readings : calculate the average and save it
     decimation++;
-    if (decimation >= 32) {
+    if (decimation >= NB_SAMPLES_FOR_AVG) {
       if (flag_error > 0) { // Error
         nbr_error++;        // datas = 0, and error is set
-        for (i = 0; i < 8; i++) data[i] = 0;
-        data[8] = 10000000;
+        for (i = 0; i < NB_CHANNEL; i++) data[i] = 0;
+        data[NB_CHANNEL] = 10000000;
         flag_error = 0;
       } else {
         nbr_value++;
-        for (i = 0; i < 8; i++) data[i] = (data[i] >> 5); // Division by 32 --> average on 32 samples (Decimation)
+        for (i = 0; i < NB_CHANNEL; i++) data[i] = (data[i] >> DECALAGE); // Division by 32 --> average on 32 samples (Decimation)
       }
 
       timestamp = time(NULL);
       //  Save the 9 values (8 channels + error) to their respective files
-      for (i = 0; i < 9; i++) {
+      for (i = 0; i < NB_CHANNEL+1; i++) {
         nbr_element = fwrite(&data[i], 4, 1, write_ptr[i]);
         data[i] = 0;
       }
@@ -396,7 +370,7 @@ int main(int argc, char **argv) {
   fflush(stdout);
 
   // Close files, SPI, library
-  for (i = 0; i < 9; i++) fclose(write_ptr[i]);
+  for (i = 0; i < NB_CHANNEL+1; i++) fclose(write_ptr[i]);
   fclose(config_ptr);
   fclose(timestamp_ptr);
   bcm2835_gpio_set(LED_RUN);
