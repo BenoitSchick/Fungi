@@ -48,7 +48,7 @@ int main(int argc, char **argv) {
                      0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
                      0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
                      0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0};
-  int32_t data[9];
+  int32_t data[NB_CHANNEL+1];
   uint32_t nbr_error = 0;
   uint32_t nbr_value = 0;
 
@@ -60,7 +60,7 @@ int main(int argc, char **argv) {
   /* char buffer[1024] = {0}; */
 
   // File
-  FILE *write_ptr[9];
+  FILE *write_ptr[NB_CHANNEL+1];
   FILE *config_ptr;
   FILE *timestamp_ptr;
   char config_str[200];
@@ -266,8 +266,8 @@ int main(int argc, char **argv) {
   }
 
   sprintf(file_name, "%s/error", dir_name);
-  write_ptr[8] = fopen(file_name, "wb");
-  if (write_ptr[8] == 0) {
+  write_ptr[NB_CHANNEL] = fopen(file_name, "wb");
+  if (write_ptr[NB_CHANNEL] == 0) {
     sprintf(file_name, "%s openning", file_name);
     perror(file_name); // error msg
     return -1;
@@ -317,7 +317,7 @@ int main(int argc, char **argv) {
   bcm2835_gpio_set(LED_RDY);
   bcm2835_gpio_set_eds(TEST);
   decimation = 0;
-  for (i = 0; i < 9; i++) data[i] = 0;
+  for (i = 0; i < NB_CHANNEL+1; i++) data[i] = 0;
   nbr_value = 0;
   nbr_error = 0;
   flag_error = 0;
@@ -342,7 +342,7 @@ int main(int argc, char **argv) {
       flag_error = 1;
       bcm2835_gpio_set_eds(TEST); // clear bit
     }
-    // Read SPI data from the 8 channels (32 bytes = 8 × 4 bytes)
+    // Read SPI data from the NB_CHANNEL channels (NB_CHANNEL × 4 bytes)
     // Byte 0: status | Bytes 1–3: 24bit data
     else {
       bcm2835_spi_transfernb(buf_tx, buf_rx, 32);
