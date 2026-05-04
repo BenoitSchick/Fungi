@@ -8,22 +8,10 @@ timestamps = np.fromfile("Measurement_ADC/timestamp", dtype=np.int64)
 print(f"Valeurs lues      : {len(values)}")
 print(f"Timestamps lus    : {len(timestamps)}")
 
-
-nblocks = min(len(timestamps), len(values)
-
-for b in range(nblocks):
-
-    ts = timestamps[b]
-
+for i in range(n):
     date_str = time.strftime(
         "%Y-%m-%d %H:%M:%S",
-        time.localtime(ts)
+        time.localtime(timestamps[i])
     )
 
-    start = b * SAMPLES_PER_TIMESTAMP
-    end   = start + SAMPLES_PER_TIMESTAMP
-
-    bloc = values[start:end]
-
-    print(f"=== {date_str} ===")
-    print(bloc)
+    print(f"Date: {date_str} | Valeur: {values[i]}")
