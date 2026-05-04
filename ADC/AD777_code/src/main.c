@@ -33,6 +33,10 @@
 #define SAVE_DIR    "/home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC"
 
 
+#define NB_SAMPLES_FOR_AVG 128
+#define DECALAGE 7
+#define NB_CHANNEL 4
+
 int main(int argc, char **argv) {
   // Variables
   ad7770_dev *device;
@@ -179,12 +183,12 @@ int main(int argc, char **argv) {
   init_param.ctrl_mode = ad7770_SPI_CTRL;
   init_param.spi_crc_en = ad7770_ENABLE;
 
-  //Enable all 8 channels with gain set to 1
-  for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
+  //Enable all 4 channels with gain set to 1
+  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
     init_param.state[i] = ad7770_ENABLE;
     printf("AD7770 enable ch%d\n", i);
   }
-  for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
     init_param.gain[i] = ad7770_GAIN_1;
     printf("AD7770 configure gain %d\n", i);
   }
@@ -196,7 +200,7 @@ int main(int argc, char **argv) {
   init_param.dclk_div = ad7770_DCLK_DIV_1;
 
   // Gain/offset error compensation
-  for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH3; i++) {
     init_param.sync_offset[i] = 0;
     init_param.offset_corr[i] = 0;
     init_param.gain_corr[i] = 1; // 0x555555;
@@ -244,7 +248,7 @@ int main(int argc, char **argv) {
   // ----------------------------------------------------------------
   // Opening files : Ch0 to Ch7 -- error -- config
   // ----------------------------------------------------------------
-  for (i = 0; i < 8; i++) {
+  for (i = 0; i < NB_CHANNEL; i++) {
     sprintf(file_name, "%s/channel%d", dir_name, i); // write in file_name
     write_ptr[i] = fopen(file_name, "wb"); // write the content of file_name in the file : write_ptr
 					   
