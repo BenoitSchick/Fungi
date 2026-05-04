@@ -8,6 +8,9 @@ timestamps = np.fromfile("Measurement_ADC/timestamp", dtype=np.int64)
 print(f"Valeurs lues      : {len(values)}")
 print(f"Timestamps lus    : {len(timestamps)}")
 
+
+n = min(len(values), len(timestamps))
+
 for i in range(n):
     date_str = time.strftime(
         "%Y-%m-%d %H:%M:%S",
