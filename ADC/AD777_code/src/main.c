@@ -35,7 +35,7 @@
 
 #define NB_SAMPLES_FOR_AVG 128
 #define DECALAGE 7      //DECALAGE = log_2(NB_SAMPLES_FOR_AVG)
-#define NB_CHANNEL 4
+#define NB_CHANNEL 8
 
 int main(int argc, char **argv) {
   // Variables
@@ -44,10 +44,10 @@ int main(int argc, char **argv) {
   int i, flag_error;
   uint32_t decimation;
   char buf_rx[NB_CHANNEL * 4];
-  char buf_tx[NB_CHANNEL * 4] = {0x80, 0x0, 0x80, 0x0,
-                                  0x80, 0x0, 0x80, 0x0,
-                                  0x80, 0x0, 0x80, 0x0,
-                                  0x80, 0x0, 0x80, 0x0};
+  char buf_tx[NB_CHANNEL * 4] = {0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
+                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
+                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0,
+                     0x80, 0x0, 0x80, 0x0, 0x80, 0x0, 0x80, 0x0};
   int32_t data[NB_CHANNEL+1];
   uint32_t nbr_error = 0;
   uint32_t nbr_value = 0;
@@ -178,23 +178,24 @@ int main(int argc, char **argv) {
   init_param.spi_crc_en = ad7770_ENABLE;
 
   //Enable all 4 channels with gain set to 1
-  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL-1; i++) {
     init_param.state[i] = ad7770_ENABLE;
     printf("AD7770 enable ch%d\n", i);
   }
-  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL-1; i++) {
     init_param.gain[i] = ad7770_GAIN_1;
     printf("AD7770 configure gain %d\n", i);
   }
 
-  init_param.dec_rate_int = 0x0080; // data rate = 16kHz -> decimation = 2048/16 = 128
+  /* init_param.dec_rate_int = 0x0080; // data rate = 16kHz -> decimation = 2048/16 = 128 */
+  init_param.dec_rate_int = 0x0800; // data rate = 1kSPS -> decimation = 2048/2048 = 1kSPS
   init_param.dec_rate_dec = 0x0000; // 4096 = 0x0080  0*2^16 = 0 = 0x0000
   init_param.ref_type = ad7770_EXT_REF;
   init_param.pwr_mode = ad7770_HIGH_RES;
   init_param.dclk_div = ad7770_DCLK_DIV_1;
 
   // Gain/offset error compensation
-  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL; i++) {
+  for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL-1; i++) {
     init_param.sync_offset[i] = 0;
     init_param.offset_corr[i] = 0;
     init_param.gain_corr[i] = 1; // 0x555555;
