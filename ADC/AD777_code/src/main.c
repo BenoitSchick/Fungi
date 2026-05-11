@@ -33,8 +33,8 @@
 #define SAVE_DIR    "/home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC"
 
 
-#define NB_SAMPLES_FOR_AVG 128
-#define DECALAGE 7      //DECALAGE = log_2(NB_SAMPLES_FOR_AVG)
+#define NB_SAMPLES_FOR_AVG 8
+#define DECALAGE 3      //DECALAGE = log_2(NB_SAMPLES_FOR_AVG)
 #define NB_CHANNEL 8
 
 int main(int argc, char **argv) {
@@ -276,11 +276,11 @@ int main(int argc, char **argv) {
   // ----------------------------------------------------------------
   // Writing the configuration to config.txt
   // ----------------------------------------------------------------
-  sprintf(config_str, "Sampling frequency : 16kHz\n");
+  sprintf(config_str, "Sampling frequency : 1kHz\n");
   fwrite(config_str, strlen(config_str), 1, config_ptr);
   sprintf(config_str, "Averaging on %d samples\n", NB_SAMPLES_FOR_AVG);
   fwrite(config_str, strlen(config_str), 1, config_ptr);
-  sprintf(config_str, "Storage frequency : %dHz\n", 16000 / NB_SAMPLES_FOR_AVG);
+  sprintf(config_str, "Storage frequency : %dHz\n", 1000 / NB_SAMPLES_FOR_AVG);
   fwrite(config_str, strlen(config_str), 1, config_ptr);
   sprintf(config_str, "Data format : 32bits / little endian / 1 file per channel per day\n");
   fwrite(config_str, strlen(config_str), 1, config_ptr);
