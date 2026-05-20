@@ -2,7 +2,8 @@
 build/
 bin/
 obj/
-
+*.venv/
+*tags
 # Fichiers spécifiques à CMake
 CMakeFiles/
 CMakeCache.txt
