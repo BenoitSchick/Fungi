@@ -175,7 +175,7 @@ int main(int argc, char **argv) {
   init_param.gpio_led_rdy = LED_RDY;
   init_param.gpio_led_run = LED_RUN;
   init_param.ctrl_mode = ad7770_SPI_CTRL;
-  init_param.spi_crc_en = ad7770_ENABLE;
+  init_param.spi_crc_en = ad7770_DISABLE;
 
   //Enable all 4 channels with gain set to 1
   for (i = ad7770_CH0; i <= ad7770_CH0+NB_CHANNEL-1; i++) {
@@ -201,17 +201,22 @@ int main(int argc, char **argv) {
     init_param.gain_corr[i] = 1; // 0x555555;
     printf("AD7770 compensation ch%d\n", i);
   }
-
+  
+    printf("test00\n");
 
   init_param.ref_buf_op_mode[1] = ad7770_REF_BUF_DISABLED;
+    printf("test01\n");
   init_param.ref_buf_op_mode[2] = ad7770_REF_BUF_DISABLED;
+    printf("test02\n");
   init_param.sinc5_state = ad7770_DISABLE;
 
+    printf("test03\n");
   if (ad7770_setup(&device, init_param) != SUCCESS) {
     printf("setup fail\n");
     return 0;
   }
 
+    printf("test04\n");
   // ----------------------------------------------------------------
   // Creation of the save directory on the Raspberry Pi
   // Format : /home/fr1boise/Documents/Fungi/ADC/27April_14h30min00sec
@@ -273,6 +278,7 @@ int main(int argc, char **argv) {
     fflush(stdout);
   }
 
+    printf("init00\n");
   // ----------------------------------------------------------------
   // Writing the configuration to config.txt
   // ----------------------------------------------------------------
@@ -285,6 +291,7 @@ int main(int argc, char **argv) {
   sprintf(config_str, "Data format : 32bits / little endian / 1 file per channel per day\n");
   fwrite(config_str, strlen(config_str), 1, config_ptr);
 
+    printf("init01\n");
   // ----------------------------------------------------------------
   // Initializing data acquisition
   // ----------------------------------------------------------------
@@ -302,6 +309,8 @@ int main(int argc, char **argv) {
   sprintf(config_str, "Start time : %s\n", time_str);
   fwrite(config_str, strlen(config_str), 1, config_ptr);
 
+
+    printf("init02\n");
   //--------------------------------------------------------------
   // MAIN ACQUISITION LOOP
   // Runs as long as the switch remains open (LOW)
@@ -312,7 +321,10 @@ int main(int argc, char **argv) {
     // Waiting on signal DRDY to read data
     while (bcm2835_gpio_eds(DRDY_n) == LOW);
 
+    printf("init04\n");
     if (bcm2835_gpio_eds(TEST) == HIGH) { // If there is a problem
+
+    printf("init05\n");
       bcm2835_gpio_clr(LED_ERR);
       flag_error = 1;
       bcm2835_gpio_set_eds(TEST); // clear bit
@@ -320,11 +332,15 @@ int main(int argc, char **argv) {
     // Read SPI data from the NB_CHANNEL channels (NB_CHANNEL × 4 bytes)
     // Byte 0: status | Bytes 1–3: 24bit data
     else {
+    printf("init55\n");
       bcm2835_spi_transfernb(buf_tx, buf_rx, NB_CHANNEL*4);
+    printf("ite: %d\n", nbr_value + nbr_error);
 
       for (i = 0; i < NB_CHANNEL*4; i += 4) {
+
         // Reconstruction of a 24-bit integer ---   [00][byte1][byte2][byte3]
         data[i >> 2] += ((buf_rx[i + 1] << 24) | (buf_rx[i + 2] << 16) | (buf_rx[i + 3] << 8)) >> 8; // data[0] --> i=0   data[1] --> i=4
+    printf("data: %u\n", data);
       }
     }
 
@@ -352,6 +368,7 @@ int main(int argc, char **argv) {
       decimation = 0;
     }
   }
+    printf("end_acquisition\n");
 
   // Save number of errors and good samples in config.txt
   sprintf(config_str, "Number of good samples = %d\n",nbr_value); // write in config_str buffer

@@ -2,24 +2,23 @@ import spidev
 import RPi.GPIO as GPIO
 import time
 
-CS = 0
+CS = 17
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(CS, GPIO.OUT)
 
-GPIO.output(CS, 1)
+GPIO.output(CS, 0)
 
 spi = spidev.SpiDev()
 spi.open(0, 0)
 
-spi.no_cs = True      # IMPORTANT
 spi.mode = 0
 spi.max_speed_hz = 10000
 
 try:
     while True:
 
-        GPIO.output(CS, 0)
+        GPIO.output(CS, 1)
 
         spi.xfer2([0xAA])
         time.sleep(0.05)
@@ -27,11 +26,11 @@ try:
         spi.xfer2([0x55])
         time.sleep(0.05)
 
-        GPIO.output(CS, 1)
+        GPIO.output(CS, 0)
 
-        time.sleep(1)
+        time.sleep(0.5)
 
 finally:
-    GPIO.output(CS, 1)
+    GPIO.output(CS, 0)
     GPIO.cleanup()
     spi.close()

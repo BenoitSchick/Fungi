@@ -645,32 +645,42 @@ void bcm2835_spi_transfernb(char* tbuf, char* rbuf, uint32_t len)
     // BUG ALERT: what happens if we get interupted in this section, and someone else
     // accesses a different peripheral? 
     */
-
+//printf("trans00\n");
     /* Clear TX and RX fifos */
     bcm2835_peri_set_bits(paddr, BCM2835_SPI0_CS_CLEAR, BCM2835_SPI0_CS_CLEAR);
 
+//printf("trans01\n");
     /* Set TA = 1 */
     bcm2835_peri_set_bits(paddr, BCM2835_SPI0_CS_TA, BCM2835_SPI0_CS_TA);
 
+//printf("trans02\n");
     /* Use the FIFO's to reduce the interbyte times */
     while((TXCnt < len)||(RXCnt < len))
     {
+//printf("trans03\n");
+//printf("TXCnt: %u\n\n", TXCnt);
+//printf("RXCnt: %u\n\n", RXCnt);
+//printf("len: %u\n\n", len);
         /* TX fifo not full, so add some more bytes */
         while(((bcm2835_peri_read(paddr) & BCM2835_SPI0_CS_TXD))&&(TXCnt < len ))
         {
+//printf("trans04\n");
            bcm2835_peri_write_nb(fifo, tbuf[TXCnt]);
            TXCnt++;
         }
         /* Rx fifo not empty, so get the next received bytes */
         while(((bcm2835_peri_read(paddr) & BCM2835_SPI0_CS_RXD))&&( RXCnt < len ))
         {
+//printf("trans05\n");
            rbuf[RXCnt] = bcm2835_peri_read_nb(fifo);
            RXCnt++;
         }
     }
+//printf("trans06\n");
     /* Wait for DONE to be set */
     while (!(bcm2835_peri_read_nb(paddr) & BCM2835_SPI0_CS_DONE))
 	;
+//printf("trans07\n");
 
     /* Set TA = 0, and also set the barrier */
     bcm2835_peri_set_bits(paddr, 0, BCM2835_SPI0_CS_TA);

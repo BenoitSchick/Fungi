@@ -1359,6 +1359,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 	uint8_t i, data_rst;
 	int32_t ret = 0;
 
+		printf("setup00");
 	dev = (ad7770_dev *)malloc(sizeof(*dev));
 	if (!dev) {
 		return FAILURE;
@@ -1387,6 +1388,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 	dev->gpio_led_rdy = init_param.gpio_led_rdy;
 	dev->gpio_led_run = init_param.gpio_led_run;	
 	
+		printf("setup01");
 	// Hardware reset because of p.37 INTEGRATED LDOs
 	// and control trough REG_GEN_ERR_REG_2 bit 5
 	dev->spi_crc_en = ad7770_DISABLE; // to have no CRC problem with this 1st message
@@ -1396,10 +1398,11 @@ int32_t ad7770_setup(ad7770_dev **device,
 		usleep(10000);
 		bcm2835_gpio_set(dev->gpio_reset_n);
 		usleep(10000);
-		ad7770_spi_int_reg_read_mask(dev, ad7770_REG_GEN_ERR_REG_2, 0x20, &data_rst);
+		ad7770_spi_int_reg_read_mask(dev, ad7770_REG_GEN_ERR_REG_2, 0x10, &data_rst);
 		count++;
-	}while(data_rst == 0x00);
-	//printf("count = %d\n", count);
+		printf("data: %d\n", data_rst);
+	}while(data_rst != 0x10);
+	printf("count = %d\n", count);
 	/*ret |= gpio_set_direction(&dev->gpio_dev, dev->gpio_reset, GPIO_OUT);
 	ret |= gpio_set_value(&dev->gpio_dev, dev->gpio_reset, GPIO_LOW);
 	mdelay(10);	// RESET Hold Time = min 2 × MCLK
@@ -1424,22 +1427,23 @@ int32_t ad7770_setup(ad7770_dev **device,
 							ad7770_SPI_CRC_TEST_EN);
 		dev->spi_crc_en = ad7770_ENABLE;
 	}
-	//printf("test1\n");
+	printf("test1\n");
 	// Read all the registers and save them
 	if (dev->ctrl_mode == ad7770_SPI_CTRL){
+	printf("OL00\n");
 		for (i = ad7770_REG_CH_CONFIG(0); i <= ad7770_REG_SRC_UPDATE; i++){
+	printf("OL1\n");
 			if(i == 0x1b) i++;
+	printf("OL2\n");
 			dev->reset_reg_val[i] = reset_reg_val[i];
 			ret |= ad7770_spi_int_reg_read(dev, i, &dev->cached_reg_val[i]);
 		}
 	}
-	
-	// Powerdown Vcm
-	//ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_GENERAL_USER_CONFIG_1, ad7770_PDB_VCM, 0x00);
-	
+	printf("OLA00\n");
 	// Set the drive strength to extra strong
 	ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_GENERAL_USER_CONFIG_2, ad7770_SDO_DRIVE_STR(0x03), ad7770_SDO_DRIVE_STR(0x03));
 	
+	printf("OLA01\n");
 	// Set the state of each channels (enable or disable)
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
 		dev->state[i] = init_param.state[i];
@@ -1447,6 +1451,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 			ret |= ad7770_set_state(dev, (ad7770_ch)i, dev->state[i]);
 	}
 	
+	printf("OLA02\n");
 	// Set the gain of each channels
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
 		dev->gain[i] = init_param.gain[i];
@@ -1454,6 +1459,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 			ret |= ad7770_set_gain(dev, (ad7770_ch)i, dev->gain[i]);
 	}
 	
+	printf("OLA03\n");
 	// Set the deciaml rate to configure the data rate
 	dev->dec_rate_int = init_param.dec_rate_int;
 	dev->dec_rate_dec = init_param.dec_rate_dec;
@@ -1465,6 +1471,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 	ret |= ad7770_spi_int_reg_write_mask(dev, ad7770_REG_SRC_UPDATE, 0x01, 0x00);
 	usleep(1000);
 	
+	printf("OLA04\n");
 	// Set the reference type
  	dev->ref_type = init_param.ref_type;
 	if (dev->ctrl_mode == ad7770_SPI_CTRL)
@@ -1489,7 +1496,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 	// Set DCLK divider
 	dev->dclk_div = init_param.dclk_div;
 	ad7770_set_dclk_div(dev, dev->dclk_div);
-	//printf("test2 ret = %d\n", ret);
+	printf("test2 ret = %d\n", ret);
 	// Set sync. offset, gain offset and corr,
 	for (i = ad7770_CH0; i <= ad7770_CH7; i++) {
 		//printf("------------------------------------------------ ch = %d\n",i);
@@ -1499,7 +1506,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 		if (dev->ctrl_mode == ad7770_SPI_CTRL) {
 			ret |= ad7770_set_sync_offset(dev, (ad7770_ch)i,
 								dev->sync_offset[i]);
-			//printf("test sync\n");
+			printf("test sync\n");
 			// Update phase
 			bcm2835_gpio_clr(dev->gpio_start);
 			usleep(1000);
@@ -1507,7 +1514,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 			usleep(1000);
 			ret |= ad7770_set_offset_corr(dev, (ad7770_ch)i,
 								dev->offset_corr[i]);
-			//printf("test offset\n");
+			printf("test offset\n");
 			// Update offset
 			bcm2835_gpio_clr(dev->gpio_start);
 			usleep(1000);
@@ -1516,7 +1523,7 @@ int32_t ad7770_setup(ad7770_dev **device,
 			// Not shure we need to change the gain
 			if(dev->gain_corr[i] != 1) ret |= ad7770_set_gain_corr(dev, (ad7770_ch)i,
 								dev->gain_corr[i]);
-			//printf("test gain\n"); 
+			printf("test gain\n"); 
 			// Update gain
 			bcm2835_gpio_clr(dev->gpio_start);
 			usleep(1000);
