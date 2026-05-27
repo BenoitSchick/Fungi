@@ -2,7 +2,7 @@
 
 mkdir -p /home/fr1boise/Documents/Fungi/adc_snapshot
 
-rsync -a --delete \
+rsync -a --delete --inplace \
 /home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC/ \
 /home/fr1boise/Documents/Fungi/adc_snapshot
 
