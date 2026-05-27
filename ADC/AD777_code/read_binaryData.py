@@ -9,8 +9,8 @@ n = len(values)
 
 for i in range(n):
     date_str = time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(timestamps[i]))
-    # print(f"Date: {date_str} | Valeur: {values[i]}")
-    print(f"{values[i]}")
+    print(f"Date: {date_str} | Valeur: {values[i]}")
+    # print(f"{values[i]}")
 
 
 print(f"Valeurs lues      : {len(values)}")
