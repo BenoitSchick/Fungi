@@ -1,13 +1,13 @@
 #!/bin/bash
 
-mkdir -p /tmp/adc_snapshot
+mkdir -p /home/fr1boise/Documents/Fungi/adc_snapshot
 
 rsync -a --delete \
 /home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC/ \
-/tmp/adc_snapshot/
+/home/fr1boise/Documents/Fungi/adc_snapshot
 
-rclone copy /tmp/adc_snapshot gdrive:mesure_ADC \
-  --checksum \
-  --min-age 2m \
-  --transfers=2 \
+
+rclone copy /home/fr1boise/Documents/Fungi/adc_snapshot gdrive:mesure_ADC \
+  --transfers=4 \
+  --fast-list \
   --drive-use-trash=false
