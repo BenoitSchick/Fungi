@@ -343,7 +343,7 @@ int main(int argc, char **argv) {
 
       timestamp = time(NULL);
       //  Save the 9 values (8 channels + error) to their respective files
-      for (i = 0; i < NB_CHANNEL+1; i++) {
+      for (i = 0; i < NB_CHANNEL; i++) {
         nbr_element = fwrite(&data[i], 4, 1, write_ptr[i]);
         data[i] = 0;
       }
