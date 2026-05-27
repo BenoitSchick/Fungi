@@ -64,3 +64,7 @@ sudo systemctl enable impedance_measure.service
 sudo systemctl start impedance_measure.service
 sudo systemctl status impedance_measure.service
 sudo systemctl stop impedance_measure.service
+
+
+* * * * * rclone sync /home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC gdrive:mesure_ADC --drive-use-trash=false
+
