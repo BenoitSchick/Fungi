@@ -225,7 +225,7 @@ int main(int argc, char **argv) {
   // ----------------------------------------------------------------
   for (i = 0; i < NB_CHANNEL; i++) {
     sprintf(file_name, "%s/channel%d", dir_name, i); // write in file_name
-    write_ptr[i] = fopen(file_name, "wb"); // write the content of file_name in the file : write_ptr
+    write_ptr[i] = fopen(file_name, "ab"); // write the content of file_name in the file : write_ptr
 					   
     if (write_ptr[0] == 0) {
 
@@ -264,7 +264,7 @@ int main(int argc, char **argv) {
   }
 
   sprintf(file_name, "%s/timestamp", dir_name);
-  timestamp_ptr = fopen(file_name, "wb");
+  timestamp_ptr = fopen(file_name, "ab");
   if (timestamp_ptr == 0) {
     perror(file_name);
     return -1;
