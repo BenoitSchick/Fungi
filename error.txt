@@ -1,0 +1,3 @@
+rclone copy /home/fr1boise/Documents/Fungi/adc_snapshot gdrive:mesure_ADC
+2026/06/03 09:16:35 Failed to create file system for "gdrive:mesure_ADC": couldn't find root directory ID: Get "https://www.googleapis.com/drive/v3/files/root?alt=json&fields=id&prettyPrint=false&supportsAllDrives=true": couldn't fetch token - maybe it has expired? - refresh with "rclone config reconnect gdrive:": Post "https://oauth2.googleapis.com/token": dial tcp: lookup oauth2.googleapis.com on [::1]:53: read udp [::1]:38810->[::1]:53: read: connection refused
+
