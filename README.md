@@ -142,3 +142,21 @@ User=root
 [Install]
 WantedBy=multi-user.target
 ```
+
+
+# Tailscale
+## Installation 
+
+- Installation:
+```bash
+curl -fsSL https://tailscale.com/install.sh | sh
+```
+- start the Tailscale client
+```bash
+sudo tailscale up
+sudo tailscale up --force-reauth
+```
+- connect to raspberry
+```bash
+ssh user@100.x.y.z
+```
