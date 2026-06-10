@@ -147,6 +147,11 @@ WantedBy=multi-user.target
 # Tailscale
 ## Installation 
 
+- Enable ssh server
+```bash
+sudo raspi-config
+```
+
 - Installation:
 ```bash
 curl -fsSL https://tailscale.com/install.sh | sh
@@ -159,4 +164,9 @@ sudo tailscale up --force-reauth
 - connect to raspberry
 ```bash
 ssh user@100.x.y.z
+```
+- enable SSH access via Tailscale (optional)
+```bash
+sudo tailscale up --ssh
+tailscale set --ssh
 ```
