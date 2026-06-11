@@ -143,6 +143,23 @@ User=root
 WantedBy=multi-user.target
 ```
 
+- *sync_ADC.sh* : Script to synchronize data on Google Drive
+```bash
+#!/bin/bash
+
+mkdir -p /home/fr1boise/Documents/Fungi/adc_snapshot
+
+rsync -a --delete --inplace \
+/home/fr1boise/Documents/Fungi/ADC/AD777_code/Measurement_ADC/ \
+/home/fr1boise/Documents/Fungi/adc_snapshot
+
+
+rclone copy /home/fr1boise/Documents/Fungi/adc_snapshot gdrive:mesure_ADC \
+  --transfers=4 \
+  --fast-list \
+  --drive-use-trash=false
+```
+
 
 # Tailscale
 ## Installation 
@@ -158,15 +175,19 @@ curl -fsSL https://tailscale.com/install.sh | sh
 ```
 - start the Tailscale client
 ```bash
-sudo tailscale up
+sudo tailscale up --ssh
+```
+if it don't work : 
+```bash
 sudo tailscale up --force-reauth
 ```
+
 - connect to raspberry
 ```bash
-ssh user@100.x.y.z
+ssh fr1boise@100.98.6.121
 ```
-- enable SSH access via Tailscale (optional)
+
+- Transfer file from Raspberry Pi to Laptop (Laptop and Raspberry must be added to tailscale)
 ```bash
-sudo tailscale up --ssh
-tailscale set --ssh
+scp /home/fr1boise/Documents/Fungi/adc_snapshot/channel0 beuns/@100.91.175.60:/home/beuns/Documents
 ```
