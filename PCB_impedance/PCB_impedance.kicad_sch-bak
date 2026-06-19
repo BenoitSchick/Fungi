@@ -3911,7 +3911,7 @@
 	)
 	(text "TODO PCB :\n1) Assigner et controler les footprint\n2) Review Schematic"
 		(exclude_from_sim no)
-		(at 448.818 202.946 0)
+		(at 47.752 259.588 0)
 		(effects
 			(font
 				(size 2.032 2.032)
@@ -4069,6 +4069,12 @@
 		(uuid "275f2536-eba6-4aab-a399-3f522a195c3d")
 	)
 	(junction
+		(at 90.424 137.414)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2baf5d1e-9a44-4aca-af4b-9763cc7e0557")
+	)
+	(junction
 		(at 166.878 144.018)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4121,12 +4127,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d905b5f-63e3-4362-ad42-002ba43d72a3")
-	)
-	(junction
-		(at 90.424 146.05)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5f0ee3a5-0b82-4e24-83ea-f0fab34b8335")
 	)
 	(junction
 		(at 178.308 144.018)
@@ -4277,12 +4277,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e16feea1-0641-469f-9765-c391dfd0a333")
-	)
-	(junction
-		(at 90.424 137.414)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e9799df1-f34d-430c-8bc0-1ab66d1d0563")
 	)
 	(junction
 		(at 124.968 39.116)
@@ -4862,7 +4856,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 137.414) (xy 90.424 137.414)
+			(xy 90.424 137.414) (xy 103.124 137.414)
 		)
 		(stroke
 			(width 0)
@@ -5172,7 +5166,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.424 138.43) (xy 90.424 137.414)
+			(xy 90.424 137.668) (xy 90.424 137.414)
 		)
 		(stroke
 			(width 0)
@@ -5202,7 +5196,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.424 146.05) (xy 90.424 145.796)
+			(xy 90.424 145.288) (xy 90.424 146.812)
 		)
 		(stroke
 			(width 0)
@@ -5359,16 +5353,6 @@
 			(type default)
 		)
 		(uuid "4ba3d544-93d0-46e8-a71e-193e3841659b")
-	)
-	(wire
-		(pts
-			(xy 90.424 146.05) (xy 90.424 146.812)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c4e21af-db5b-40da-92f4-c88d1207affd")
 	)
 	(wire
 		(pts
@@ -6382,16 +6366,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.424 137.414) (xy 103.124 137.414)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f608694-6b25-45af-a60a-410e24ce7e26")
-	)
-	(wire
-		(pts
 			(xy 182.372 69.342) (xy 187.198 69.342)
 		)
 		(stroke
@@ -6979,6 +6953,16 @@
 			(type default)
 		)
 		(uuid "bdefe259-e645-4e3b-99f2-dd923478d8aa")
+	)
+	(wire
+		(pts
+			(xy 78.74 137.414) (xy 90.424 137.414)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf52764b-ff27-4107-aaa4-fa23f32c58d6")
 	)
 	(wire
 		(pts
@@ -7731,7 +7715,7 @@
 		(uuid "fe5e3243-43dc-49a3-8781-890cf2762e72")
 	)
 	(image
-		(at 518.16 170.18)
+		(at 314.325 187.96)
 		(uuid "55602a8b-f654-421e-8bb7-c42f2a74fa39")
 		(data "iVBORw0KGgoAAAANSUhEUgAAA2gAAAHACAIAAABYpNzAAAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
 			"nOzdf1xM6f4A8OcwGCt2XGPvtMaa1mDYpGzt1gozhBBlNxRF0RJKZVkiZmZD3GwjRZJ2itpatZSi"
@@ -10279,6 +10263,149 @@
 		(uuid "ff353175-1772-4d43-8c92-b99f8bdd1e42")
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x04")
+		(at 368.554 89.916 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0143981f-faf1-42bc-806f-4a52171d4f20")
+		(property "Reference" "J6"
+			(at 371.094 89.9159 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x04"
+			(at 371.094 92.4559 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 368.554 89.916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 368.554 89.916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 368.554 89.916 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d0e5e9a-9186-4802-b69f-8ecf8cf1aca3")
+		)
+		(pin "4"
+			(uuid "b20f243e-50f5-463c-a156-4cc777546eed")
+		)
+		(pin "2"
+			(uuid "506b596c-95e4-4efa-b856-4f54d9d00607")
+		)
+		(pin "3"
+			(uuid "c38817c8-19c1-4b02-a068-66d217bf11d3")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 232.664 194.818 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "039fb1ed-5f40-4f20-913a-171d195c6cc2")
+		(property "Reference" "C31"
+			(at 232.664 191.262 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470n"
+			(at 236.728 196.342 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.474 193.8528 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 232.664 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 232.664 194.818 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "e8ffa8ba-8eb7-464b-acaf-f3e2c62a916a")
+		)
+		(pin "1"
+			(uuid "f7767749-5692-4a9c-95e3-e73f7833756e")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 178.308 143.002 0)
 		(unit 1)
@@ -10640,16 +10767,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 116.078 167.894 0)
+		(lib_id "Connector:Screw_Terminal_01x04")
+		(at 368.554 76.962 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "089f5f15-cea3-4cc1-b03e-65b9d3ff83e1")
-		(property "Reference" "C9"
-			(at 112.014 165.608 0)
+		(fields_autoplaced yes)
+		(uuid "0c06ce0d-ba50-4aa6-9751-c09b044b2d40")
+		(property "Reference" "J5"
+			(at 371.094 76.9619 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10657,8 +10785,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470n"
-			(at 110.744 170.18 0)
+		(property "Value" "Screw_Terminal_01x04"
+			(at 371.094 79.5019 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10666,8 +10794,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 117.0432 171.704 0)
+		(property "Footprint" ""
+			(at 368.554 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10676,7 +10804,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.078 167.894 0)
+			(at 368.554 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10684,131 +10812,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 116.078 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 116.078 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 116.078 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 116.078 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ee9eba31-069b-4258-a2ed-e40f215bd46f")
-		)
-		(pin "1"
-			(uuid "d340ffcb-6df2-4d52-80eb-bc790166a43a")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 287.274 39.624 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0c7aaaf9-d9fe-4405-a9c8-c23e59a9a7d8")
-		(property "Reference" "C7"
-			(at 284.226 37.338 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 283.21 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 288.2392 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 287.274 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 287.274 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 287.274 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 287.274 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 287.274 39.624 0)
+		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 368.554 76.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10817,15 +10822,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "afe99b2d-f121-44d6-95a7-2116cd849b4e")
+			(uuid "4e55c096-4dff-4fb3-9d8a-c651809852ca")
+		)
+		(pin "4"
+			(uuid "686b662b-0d68-4f22-8707-b64b49305bc2")
 		)
 		(pin "2"
-			(uuid "0fdddf21-74ae-4d0d-904e-a8e59136eb4a")
+			(uuid "cfb5a11c-96d3-4b7c-bbc4-13733ac16b40")
+		)
+		(pin "3"
+			(uuid "ce7a1e95-abad-4ec7-b20d-a288735d2f1f")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C7")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -10892,198 +10903,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR043")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 145.796 160.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "141cb9b4-f6f0-4253-95eb-04a235cfed9c")
-		(property "Reference" "C20"
-			(at 141.732 157.734 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 141.732 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 146.7612 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 145.796 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 145.796 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 145.796 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 145.796 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 145.796 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "90963390-5b6d-4d18-8851-73b3e736c049")
-		)
-		(pin "2"
-			(uuid "78319de7-6743-4ded-b2f7-f437ba07e8f3")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 166.878 148.336 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "14b04548-02e5-40ba-bb70-c342f839d6bd")
-		(property "Reference" "C16"
-			(at 162.814 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 162.814 150.876 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 167.8432 152.146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 166.878 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 166.878 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 166.878 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 166.878 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 166.878 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dad88748-cd83-49c8-ae55-1629111e1af5")
-		)
-		(pin "2"
-			(uuid "a6a682fa-5a6f-4b1c-8495-847f76df896f")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -11179,7 +10998,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 236.474 174.5488 0)
 			(effects
 				(font
@@ -11188,7 +11007,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD"
+		(property "Datasheet" "~"
 			(at 232.664 175.514 0)
 			(effects
 				(font
@@ -11199,33 +11018,6 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 232.664 175.514 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 232.664 175.514 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0603C153K5RACTU"
-			(at 232.664 175.514 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0603C153K5RACTUDKR-ND"
-			(at 232.664 175.514 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11250,15 +11042,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 232.41 204.216 270)
+		(at 187.198 207.518 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "180c703b-3b23-4478-92ab-310e7dff8dbd")
-		(property "Reference" "C32"
-			(at 233.68 202.946 90)
+		(uuid "18281821-c9f9-498a-97c7-134b21b2e3ec")
+		(property "Reference" "C14"
+			(at 188.214 205.232 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11267,7 +11059,7 @@
 			)
 		)
 		(property "Value" "470n"
-			(at 230.124 208.026 90)
+			(at 187.96 210.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11275,8 +11067,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 228.6 205.1812 0)
+		(property "Footprint" ""
+			(at 188.1632 211.328 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11285,7 +11077,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 232.41 204.216 0)
+			(at 187.198 207.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11293,35 +11085,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 232.41 204.216 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 232.41 204.216 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 232.41 204.216 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 232.41 204.216 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 187.198 207.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11330,15 +11095,15 @@
 			)
 		)
 		(pin "2"
-			(uuid "f74f7d65-ddaf-4ac8-a0ce-ac4225ecda76")
+			(uuid "0e536931-4f74-4858-a4c4-c2b7c31314de")
 		)
 		(pin "1"
-			(uuid "313efcbf-b07b-4f24-9faf-a22f12d4d7ca")
+			(uuid "590aa9e2-7858-4307-8339-fcdf3eeed711")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C32")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -11371,7 +11136,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 125.9332 52.07 0)
 			(effects
 				(font
@@ -11380,7 +11145,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD"
+		(property "Datasheet" "~"
 			(at 124.968 48.26 0)
 			(effects
 				(font
@@ -11389,34 +11154,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 1UF 25V X7R 0805"
-			(at 124.968 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 124.968 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805C105K3RACTU"
-			(at 124.968 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805C105K3RACTUDKR-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 124.968 48.26 0)
 			(effects
 				(font
@@ -11507,102 +11245,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 295.402 39.624 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "22363fac-24c0-48ec-89a8-d6f246070c62")
-		(property "Reference" "C8"
-			(at 292.354 37.338 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 290.068 42.164 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 296.3672 43.434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 295.402 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 295.402 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 295.402 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 295.402 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 295.402 39.624 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "182187ec-a5ef-443e-8ebd-560c22aae0c2")
-		)
-		(pin "2"
-			(uuid "f14cbe62-475b-4c97-84ef-89b03e397e29")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 198.882 31.242 0)
 		(unit 1)
@@ -11669,17 +11311,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 368.554 64.008 0)
+		(lib_id "Device:C")
+		(at 78.74 141.732 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "27341375-e1e6-42c8-90da-5866fc57bfe9")
-		(property "Reference" "J3"
-			(at 371.094 64.0079 0)
+		(uuid "28522dd2-72e0-44fd-81ca-98c6c9d41b21")
+		(property "Reference" "C19"
+			(at 82.804 140.4619 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11687,8 +11329,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x04"
-			(at 371.094 66.5479 0)
+		(property "Value" "10u"
+			(at 82.804 143.0019 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11696,8 +11338,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "AAA_MAZZA_project:TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal"
-			(at 368.554 64.008 0)
+		(property "Footprint" ""
+			(at 79.7052 145.542 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11705,8 +11347,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2450/Combicon%20Compact%20Series.pdf"
-			(at 368.554 64.008 0)
+		(property "Datasheet" "~"
+			(at 78.74 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11714,58 +11356,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 368.554 64.008 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 78.74 141.732 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Manufacturer" "Phoenix Contact"
-			(at 368.554 64.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "1984633"
-			(at 368.554 64.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "277-1860-ND"
-			(at 368.554 64.008 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "521864ca-1a06-4477-8c0d-faaae6f2c5ac")
-		)
-		(pin "4"
-			(uuid "231c7884-133b-43e9-bf13-ebdbc06cd8f2")
 		)
 		(pin "2"
-			(uuid "4efe1986-6dec-4dac-899b-79f7c948a581")
+			(uuid "4b4de53d-525c-44fe-b9a7-c2af775adaf0")
 		)
-		(pin "3"
-			(uuid "b7dcfc14-8c78-4f94-add7-22ae75e0d0cf")
+		(pin "1"
+			(uuid "217a54e7-5b64-4f31-a512-6acda93e50e6")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "J3")
+					(reference "C19")
 					(unit 1)
 				)
 			)
@@ -11930,7 +11539,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 108.6612 171.704 0)
 			(effects
 				(font
@@ -11948,34 +11557,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 107.696 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 107.696 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 107.696 167.894 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 107.696 167.894 0)
 			(effects
 				(font
@@ -11994,6 +11576,144 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "C10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 145.796 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30a17357-c2b4-42ee-8ca7-f915296ac3a9")
+		(property "Reference" "C20"
+			(at 146.812 157.734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 147.066 162.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.7612 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 145.796 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 145.796 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "64eae2cc-3c79-4d1a-ade5-2c483b571c4c")
+		)
+		(pin "1"
+			(uuid "8da86ceb-6966-467a-8f54-51421a9c9d0e")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 178.054 208.788 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3244a599-cdff-42d4-85b0-b3261cdae423")
+		(property "Reference" "C25"
+			(at 179.07 206.502 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 179.07 211.328 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 179.0192 212.598 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 178.054 208.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 178.054 208.788 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "31a51d91-9a10-48bb-9fe8-79aa26631ad4")
+		)
+		(pin "1"
+			(uuid "a4e70aea-01a6-4648-a065-72bb84045e3c")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -12131,102 +11851,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 178.308 148.336 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3891c8a5-30f8-4af6-b081-9822bd17ec5a")
-		(property "Reference" "C22"
-			(at 175.26 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 172.974 150.876 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 179.2732 152.146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 178.308 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 178.308 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 178.308 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 178.308 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 178.308 148.336 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "01d0802b-1045-40be-bc40-6691bdce7c00")
-		)
-		(pin "2"
-			(uuid "bbdf45d4-f92a-4fe4-827a-90fc119420f9")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:MCP1727-3302xMF")
 		(at 103.632 41.656 0)
 		(unit 1)
@@ -12271,33 +11895,6 @@
 			)
 		)
 		(property "Description" "1.5A, Low Voltage, Low Quiescent Current LDO Regulator, 2.3 - 6V Input, Fixed 3.3V Output, 330mV Dropout, DFN-8"
-			(at 103.632 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Microchip Technology"
-			(at 103.632 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "MCP1727T-3302E/MF"
-			(at 103.632 41.656 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "MCP1727T-3302E/MFDKR-ND"
 			(at 103.632 41.656 0)
 			(effects
 				(font
@@ -12501,7 +12098,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 163.0172 40.386 0)
 			(effects
 				(font
@@ -12510,7 +12107,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
+		(property "Datasheet" "~"
 			(at 162.052 36.576 0)
 			(effects
 				(font
@@ -12519,34 +12116,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 162.052 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 162.052 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 162.052 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 162.052 36.576 0)
 			(effects
 				(font
@@ -12565,102 +12135,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 62.23 197.104 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "40892b58-e3e1-42b3-a7ad-6ccb77a0e950")
-		(property "Reference" "C26"
-			(at 59.182 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 56.896 199.644 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 63.1952 200.914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 62.23 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 62.23 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 62.23 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 62.23 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 62.23 197.104 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9a3a0d74-dac1-40ef-8ce0-ad1576222318")
-		)
-		(pin "2"
-			(uuid "fffdaa1e-d45b-4be7-8926-9569096e8af9")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C26")
 					(unit 1)
 				)
 			)
@@ -12868,15 +12342,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 171.704 178.816 0)
+		(at 84.074 207.772 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4d1b4867-95a9-4846-bf66-ac9fba9ba6da")
-		(property "Reference" "C15"
-			(at 167.64 176.53 0)
+		(uuid "45182b39-b8c8-4cd9-99f4-e65ef7ef8f57")
+		(property "Reference" "C27"
+			(at 84.582 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12884,8 +12358,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470n"
-			(at 166.37 181.102 0)
+		(property "Value" "1u"
+			(at 84.836 210.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12893,8 +12367,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 172.6692 182.626 0)
+		(property "Footprint" ""
+			(at 85.0392 211.582 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12903,7 +12377,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 171.704 178.816 0)
+			(at 84.074 207.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12911,35 +12385,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 171.704 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 171.704 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 171.704 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 171.704 178.816 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 84.074 207.772 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12948,15 +12395,221 @@
 			)
 		)
 		(pin "2"
-			(uuid "534fd9ee-0d78-4e12-b37f-952057710436")
+			(uuid "9db9714f-c958-403d-a6b8-330f5897d54f")
 		)
 		(pin "1"
-			(uuid "3c386c17-4dbc-4afe-bb5e-b27a44ce9efc")
+			(uuid "3d38cb84-84fd-48ba-9525-56da6bdbecc4")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C15")
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 233.172 185.42 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4e09a012-aec4-4ccd-8570-7c772226bcb4")
+		(property "Reference" "C30"
+			(at 233.172 181.864 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "470n"
+			(at 237.236 186.944 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.982 184.4548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 233.172 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 233.172 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0fba6711-0558-4957-ba4f-63f36a259052")
+		)
+		(pin "1"
+			(uuid "7e40c4fb-bdac-49fa-b1e2-4a6f0bab062b")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 103.124 141.732 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e1ed581-42d1-484b-9ffa-67b29ca69a2d")
+		(property "Reference" "C24"
+			(at 107.188 140.4619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 107.188 143.0019 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 104.0892 145.542 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 103.124 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 103.124 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a75c3d83-6f3e-4552-857d-93178140176c")
+		)
+		(pin "1"
+			(uuid "b5c95d60-1968-486c-82be-8f648b230b6e")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 207.01 37.592 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "552d6fcc-4c06-4303-af73-dd7ccf8e3f88")
+		(property "Reference" "C4"
+			(at 203.962 35.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 201.676 40.132 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 207.9752 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 207.01 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 207.01 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fbea623a-eec8-438f-b4d6-08411be47e26")
+		)
+		(pin "2"
+			(uuid "c03aa13a-576c-4e9a-98c0-36246afd5e1e")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -13028,119 +12681,16 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 368.554 89.916 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "5be9892a-78a2-47f2-84a3-352325e31878")
-		(property "Reference" "J5"
-			(at 371.094 89.9159 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x04"
-			(at 371.094 92.4559 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "AAA_MAZZA_project:TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2450/Combicon%20Compact%20Series.pdf"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Phoenix Contact"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "1984633"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "277-1860-ND"
-			(at 368.554 89.916 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4558f739-ba83-4eeb-9f25-b01a8b179b41")
-		)
-		(pin "4"
-			(uuid "6fe39828-10fd-4e8c-af89-1db8e1097cd7")
-		)
-		(pin "2"
-			(uuid "1fb107fb-c76e-4ca9-8f13-96ba532043b7")
-		)
-		(pin "3"
-			(uuid "b83a77a3-9f68-47ff-bdc7-e2f68b033d33")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 198.882 37.592 0)
+		(at 116.078 167.894 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5d083ca9-1e48-47e2-9214-d69357c63a86")
-		(property "Reference" "C3"
-			(at 195.834 35.306 0)
+		(uuid "5cf2cd5b-d5bb-4043-a93a-651a26ab80e9")
+		(property "Reference" "C9"
+			(at 113.03 165.608 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13148,8 +12698,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 194.818 40.132 0)
+		(property "Value" "470n"
+			(at 110.744 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13157,8 +12707,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 199.8472 41.402 0)
+		(property "Footprint" ""
+			(at 117.0432 171.704 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13166,8 +12716,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 198.882 37.592 0)
+		(property "Datasheet" "~"
+			(at 116.078 167.894 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13175,52 +12725,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 198.882 37.592 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 116.078 167.894 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 198.882 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 198.882 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 198.882 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e4c3d792-caed-4f27-8783-35abb8f64972")
 		)
 		(pin "2"
-			(uuid "b6d6cfe4-6cd8-46df-be55-a97f57bae6c2")
+			(uuid "cecaf83f-9832-478b-8c5f-15553b528d44")
+		)
+		(pin "1"
+			(uuid "f732c89f-830d-4961-8d5e-4486cc8597d8")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C3")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -13287,294 +12810,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR034")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 187.198 207.518 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "629030bd-80a8-4fe7-a3c8-44b0e94ff205")
-		(property "Reference" "C14"
-			(at 183.134 205.232 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "470n"
-			(at 181.864 209.804 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 188.1632 211.328 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 187.198 207.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 187.198 207.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 187.198 207.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 187.198 207.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 187.198 207.518 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "b92c8deb-acda-41e2-a13a-2a9839464540")
-		)
-		(pin "1"
-			(uuid "1c56d53a-c5f0-490c-accd-89ff0e2c0f40")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 233.172 185.42 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "66a91961-47fb-4ea4-a8ee-43e7fcbc0781")
-		(property "Reference" "C30"
-			(at 234.442 184.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "470n"
-			(at 230.886 189.23 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 229.362 186.3852 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 233.172 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 233.172 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 233.172 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 233.172 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 233.172 185.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a02cf02c-c4c1-4f63-ac9a-1ed0a031caaa")
-		)
-		(pin "1"
-			(uuid "0887aa02-1ab2-4da3-b2e6-41cab537123f")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C30")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 90.424 142.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6ba72f74-59e6-4fb8-8f1e-43247bcb4074")
-		(property "Reference" "C23"
-			(at 86.106 140.208 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 86.36 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 91.3892 146.05 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 90.424 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 90.424 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 90.424 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 90.424 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 90.424 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b77fdbe4-5443-436c-88bc-889d7f7b8a26")
-		)
-		(pin "2"
-			(uuid "8f61be54-1765-49e2-9cb3-dacdd9946398")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C23")
 					(unit 1)
 				)
 			)
@@ -13714,15 +12949,16 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 159.258 178.816 0)
+		(at 178.308 148.336 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "74cf5f9d-0773-4dc0-b9c9-5842a82a7078")
-		(property "Reference" "C17"
-			(at 159.766 176.276 0)
+		(fields_autoplaced yes)
+		(uuid "72f875e1-c525-4ffe-a738-c2a99ef44cae")
+		(property "Reference" "C22"
+			(at 182.372 147.0659 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13730,8 +12966,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7u"
-			(at 159.766 181.356 0)
+		(property "Value" "0.1u"
+			(at 182.372 149.6059 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13739,8 +12975,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 160.2232 182.626 0)
+		(property "Footprint" ""
+			(at 179.2732 152.146 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13749,7 +12985,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 159.258 178.816 0)
+			(at 178.308 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13757,52 +12993,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "4.7 µF ±10% 50V Ceramic Capacitor X5R 0805 (2012 Metric)"
-			(at 159.258 178.816 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 178.308 148.336 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 159.258 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR61H475KE51L"
-			(at 159.258 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-10751-6-ND"
-			(at 159.258 178.816 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bb619bd4-f655-4bdb-a181-9e8b5a19a2dd")
 		)
 		(pin "2"
-			(uuid "027187f1-bc01-457e-973f-b30bdf2d5f46")
+			(uuid "68daadd1-95f9-42d5-92ec-ae0e76ef8a5f")
+		)
+		(pin "1"
+			(uuid "973ad34f-2f15-4718-b0dd-5e5112d805fb")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C17")
+					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -13875,6 +13084,146 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 90.424 141.478 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8158b233-111b-4f1e-9683-aa79ed77183b")
+		(property "Reference" "C23"
+			(at 94.488 140.2079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 94.488 142.7479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.3892 145.288 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.424 141.478 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 90.424 141.478 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "9cb0eaa8-0e99-4a8c-b6e8-feb1da2f8803")
+		)
+		(pin "1"
+			(uuid "13d218cd-d5f4-4c3c-a0a2-c4e090674067")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115.062 141.732 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "819932cd-eb6b-4070-9d30-06f26bd8753f")
+		(property "Reference" "C18"
+			(at 119.126 140.4619 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 119.126 143.0019 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.0272 145.542 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.062 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 115.062 141.732 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "16140f7b-98e2-466e-bc2a-7d11f808e0f9")
+		)
+		(pin "1"
+			(uuid "b93b07c1-f22a-492d-9ba8-0c175a91600c")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Screw_Terminal_01x04")
 		(at 368.554 51.054 0)
 		(unit 1)
@@ -13902,7 +13251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "AAA_MAZZA_project:TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal"
+		(property "Footprint" ""
 			(at 368.554 51.054 0)
 			(effects
 				(font
@@ -13911,7 +13260,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2450/Combicon%20Compact%20Series.pdf"
+		(property "Datasheet" "~"
 			(at 368.554 51.054 0)
 			(effects
 				(font
@@ -13921,33 +13270,6 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 368.554 51.054 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Phoenix Contact"
-			(at 368.554 51.054 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "1984633"
-			(at 368.554 51.054 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "277-1860-ND"
 			(at 368.554 51.054 0)
 			(effects
 				(font
@@ -14109,102 +13431,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 250.698 38.608 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8ee7384f-51bc-4180-ad21-21802857dda7")
-		(property "Reference" "C6"
-			(at 247.65 36.322 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 245.364 41.148 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 251.6632 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 250.698 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 250.698 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 250.698 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 250.698 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 250.698 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a9be0ed9-ade9-42de-86e0-a3a207cf7158")
-		)
-		(pin "2"
-			(uuid "f2ad250f-c2f1-49aa-baf7-6b2f84d98d60")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 87.122 48.768 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14231,7 +13457,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 88.0872 52.578 0)
 			(effects
 				(font
@@ -14240,7 +13466,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD"
+		(property "Datasheet" "~"
 			(at 87.122 48.768 0)
 			(effects
 				(font
@@ -14249,34 +13475,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 1000PF 50V X7R 0603"
-			(at 87.122 48.768 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 87.122 48.768 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0603C102K5RACTU"
-			(at 87.122 48.768 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0603C102K5RACTUDKR-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 87.122 48.768 0)
 			(effects
 				(font
@@ -14370,102 +13569,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 178.054 208.788 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "947bcfb4-a038-4f15-9935-7826b4e77af0")
-		(property "Reference" "C25"
-			(at 175.006 206.502 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 172.72 211.328 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 179.0192 212.598 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 178.054 208.788 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 178.054 208.788 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 178.054 208.788 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 178.054 208.788 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 178.054 208.788 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "29ef7724-3223-4c56-97f5-3a050fafebe0")
-		)
-		(pin "2"
-			(uuid "6d39d130-2ec2-496b-aaeb-33cba5590527")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 103.124 147.066 0)
 		(unit 1)
@@ -14526,102 +13629,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR044")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 103.124 141.732 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9920716e-37d8-487d-bb1b-87bb0c37a9f5")
-		(property "Reference" "C18"
-			(at 100.076 139.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 97.79 144.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 104.0892 145.542 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 103.124 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 103.124 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 103.124 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 103.124 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 103.124 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "70228c40-06e6-4d63-9201-5797aa4126fb")
-		)
-		(pin "2"
-			(uuid "84eb97d3-abd0-4abf-b8cc-1e16177afea9")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -14857,16 +13864,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 78.74 141.732 0)
+		(lib_id "Connector:Screw_Terminal_01x04")
+		(at 368.554 64.008 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a18c45f4-ce1a-4011-984e-a33d6567ab51")
-		(property "Reference" "C19"
-			(at 74.422 139.446 0)
+		(fields_autoplaced yes)
+		(uuid "a3d77cf9-951a-446c-878d-be147d35a1ff")
+		(property "Reference" "J4"
+			(at 371.094 64.0079 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14874,8 +13882,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u"
-			(at 74.676 144.272 0)
+		(property "Value" "Screw_Terminal_01x04"
+			(at 371.094 66.5479 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14883,8 +13891,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 79.7052 145.542 0)
+		(property "Footprint" ""
+			(at 368.554 64.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14892,8 +13900,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 78.74 141.732 0)
+		(property "Datasheet" "~"
+			(at 368.554 64.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14901,35 +13909,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 78.74 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 78.74 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 78.74 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 78.74 141.732 0)
+		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 368.554 64.008 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14938,15 +13919,21 @@
 			)
 		)
 		(pin "1"
-			(uuid "6a5f223b-d826-4594-b3e4-34c57c81f67b")
+			(uuid "469cf7f0-29c9-4681-b0ee-1a7c0f29a24f")
+		)
+		(pin "4"
+			(uuid "c06bba8a-1173-46eb-86a5-a9c9d0a6444e")
 		)
 		(pin "2"
-			(uuid "2f788b23-3efc-45c0-ae43-b2619e400b41")
+			(uuid "79524b5c-37b1-4442-a03e-83d4d936af82")
+		)
+		(pin "3"
+			(uuid "e300fac7-401d-4fe7-b71d-1d0e91be72f7")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C19")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -14954,42 +13941,31 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 154.94 160.02 0)
+		(at 232.41 204.216 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a4a12c0d-0a88-4bb1-a823-0bc9a9e89c0e")
-		(property "Reference" "C21"
-			(at 151.892 157.734 0)
+		(uuid "a53aebeb-40d1-4352-be61-97b3da2ac3ef")
+		(property "Reference" "C32"
+			(at 232.41 200.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "100n"
-			(at 149.606 162.56 0)
+		(property "Value" "470n"
+			(at 236.22 205.74 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 155.9052 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 154.94 160.02 0)
+		(property "Footprint" ""
+			(at 236.22 203.2508 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14997,8 +13973,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 154.94 160.02 0)
+		(property "Datasheet" "~"
+			(at 232.41 204.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15006,43 +13982,25 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "KEMET"
-			(at 154.94 160.02 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 232.41 204.216 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 154.94 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 154.94 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7c81c326-5c9c-4cf0-ac94-47311ae9f0fe")
 		)
 		(pin "2"
-			(uuid "24127d4a-89bd-4854-9b48-daee087c4469")
+			(uuid "26d15c5d-3a8e-4215-8adc-4902d55fd0d4")
+		)
+		(pin "1"
+			(uuid "0dcc11ab-318d-4e93-ba0f-b62a4b92d687")
 		)
 		(instances
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C21")
+					(reference "C32")
 					(unit 1)
 				)
 			)
@@ -15109,198 +14067,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 115.062 141.732 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a6c80e16-c979-4645-bc76-fd6e6e4fc4d3")
-		(property "Reference" "C24"
-			(at 112.014 139.446 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 109.728 144.272 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 116.0272 145.542 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 115.062 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 115.062 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 115.062 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 115.062 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 115.062 141.732 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5317e1f8-131f-420a-af9b-ca90c499a278")
-		)
-		(pin "2"
-			(uuid "26a08422-d773-474c-b380-b9995376fe90")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 232.664 194.818 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a8bd21f5-afef-41b7-a67e-3519da4d682f")
-		(property "Reference" "C31"
-			(at 233.934 193.548 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "470n"
-			(at 230.378 198.628 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 228.854 195.7832 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 232.664 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.47 µF ±10% 16V Ceramic Capacitor X7R 0603 (1608 Metric)"
-			(at 232.664 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 232.664 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GCM188R71C474KA55D"
-			(at 232.664 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-4775-6-ND"
-			(at 232.664 194.818 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "6b05448e-4b8e-4376-af4a-9e0a083d7bb0")
-		)
-		(pin "1"
-			(uuid "1155a834-ebfd-469b-8b68-19bc78f2f45f")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C31")
 					(unit 1)
 				)
 			)
@@ -15800,6 +14566,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 159.258 178.816 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b4c2813e-7a09-467e-945f-c2a308d2cc78")
+		(property "Reference" "C17"
+			(at 162.56 177.5459 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7u"
+			(at 162.56 180.0859 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.2232 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 159.258 178.816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 159.258 178.816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "72e350c2-3a78-4604-b9cc-bfa64aac7d90")
+		)
+		(pin "1"
+			(uuid "38aa7396-58f6-4615-a724-2eec6ae88118")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 78.74 147.066 0)
 		(unit 1)
@@ -15860,6 +14696,75 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR036")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 287.274 39.624 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b79de248-0ceb-4075-84f3-f10815a6494d")
+		(property "Reference" "C7"
+			(at 284.226 37.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 283.21 42.164 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 288.2392 43.434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 287.274 39.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 287.274 39.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e1bf7ccb-9e44-4d43-9f75-bd4a5a21de90")
+		)
+		(pin "2"
+			(uuid "961a8dc3-4205-46cf-bb05-468aa710b27d")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -15931,198 +14836,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 207.01 37.592 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bd737be6-7466-4493-9f4c-67cc8b61d8f5")
-		(property "Reference" "C4"
-			(at 203.962 35.306 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 201.676 40.132 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 207.9752 41.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1012_X7R_OPENMODE_SMD"
-			(at 207.01 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 0805 0.1UF 100VDC X7R"
-			(at 207.01 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 207.01 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805F104K1RACAUTO"
-			(at 207.01 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805F104K1RACAUTODKR-ND"
-			(at 207.01 37.592 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bde60826-94b2-4c06-b4c8-bedbbdf5670b")
-		)
-		(pin "2"
-			(uuid "9f881f15-648e-42d9-98c3-e74d31716351")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 84.074 207.772 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bf7338f3-6916-4af8-9e17-753559e7aeee")
-		(property "Reference" "C27"
-			(at 84.582 205.486 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1u"
-			(at 84.582 209.804 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 85.0392 211.582 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/KEM_C1002_X7R_SMD"
-			(at 84.074 207.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 1UF 25V X7R 0805"
-			(at 84.074 207.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "KEMET"
-			(at 84.074 207.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "C0805C105K3RACTU"
-			(at 84.074 207.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "399-C0805C105K3RACTUDKR-ND"
-			(at 84.074 207.772 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cc8044dd-f821-41ee-8c25-3c9068209f45")
-		)
-		(pin "2"
-			(uuid "18dffd9b-b370-4679-ac09-71b79987662e")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 169.418 199.39 0)
 		(unit 1)
@@ -16182,6 +14895,75 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.94 160.02 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c3476151-f490-4105-a5b2-f0dc786deaac")
+		(property "Reference" "C21"
+			(at 155.956 157.734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1u"
+			(at 155.956 162.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 155.9052 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 154.94 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 154.94 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "962c7fd3-1634-4c02-b259-2d20a0d7265c")
+		)
+		(pin "1"
+			(uuid "108e2a3b-386b-4b3c-891e-1a531e674120")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C21")
 					(unit 1)
 				)
 			)
@@ -16320,6 +15102,144 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 242.57 38.608 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c7c63e5e-f278-47b8-be4c-7711ef0dfb8d")
+		(property "Reference" "C5"
+			(at 239.522 36.322 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 238.506 41.148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 243.5352 42.418 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 242.57 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 242.57 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c7d1524-e2ad-4456-baf8-0e55d2d2d5e7")
+		)
+		(pin "2"
+			(uuid "550f3bf3-3ab0-43c0-a661-44089f9006fe")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 295.402 39.624 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c915331d-3050-4cb9-a15d-806a9b0e3372")
+		(property "Reference" "C8"
+			(at 292.354 37.338 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 290.068 42.164 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 296.3672 43.434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 295.402 39.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 295.402 39.624 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7aa88c2f-ad3c-4c7b-a260-1f835599bc16")
+		)
+		(pin "2"
+			(uuid "5167be99-61b3-4dc7-88dc-16090ca1c83f")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 84.074 212.344 0)
 		(unit 1)
@@ -16411,7 +15331,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 79.4512 49.53 0)
 			(effects
 				(font
@@ -16429,34 +15349,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "4.7 µF ±10% 50V Ceramic Capacitor X5R 0805 (2012 Metric)"
-			(at 78.486 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 78.486 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR61H475KE51L"
-			(at 78.486 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-10751-6-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 78.486 45.72 0)
 			(effects
 				(font
@@ -16475,6 +15368,76 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 166.878 148.336 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf1f2af7-16d3-4e51-87d4-0bf1079fce7e")
+		(property "Reference" "C16"
+			(at 170.942 147.0659 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 170.942 149.6059 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.8432 152.146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 166.878 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 166.878 148.336 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6a32f86e-bd52-4ec4-bfc5-e06d0742f446")
+		)
+		(pin "1"
+			(uuid "c3bd6f63-1701-4bae-9a59-d1df949721aa")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -16780,6 +15743,145 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 62.23 197.104 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d65b119b-04e1-4af5-8702-5405d1af0cc2")
+		(property "Reference" "C26"
+			(at 62.738 195.072 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 62.992 199.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.1952 200.914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 62.23 197.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 62.23 197.104 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "07a05fdd-0e31-40ee-9625-3bacdf5c53b0")
+		)
+		(pin "1"
+			(uuid "970ff846-f0cd-4938-a441-760347e3c80f")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 171.704 178.816 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d75b74db-7f0b-4841-bc2b-6620c5fb6e44")
+		(property "Reference" "C15"
+			(at 175.26 177.5459 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "470n"
+			(at 175.26 180.0859 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 172.6692 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 171.704 178.816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 171.704 178.816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "cb358874-e85c-410f-bb42-911932c0cf73")
+		)
+		(pin "1"
+			(uuid "b77054d1-ced9-4c85-84c1-e1270ff55a5c")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 178.308 153.67 0)
 		(unit 1)
@@ -17003,6 +16105,75 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 250.698 38.608 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "da8e2687-2b10-4a96-b410-3f2680928a5d")
+		(property "Reference" "C6"
+			(at 247.65 36.322 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 245.364 41.148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 251.6632 42.418 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 250.698 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 250.698 38.608 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "500cee82-75eb-472e-9500-60db4dbd8e37")
+		)
+		(pin "2"
+			(uuid "98139ed9-ced5-43d4-9f55-48c2ce3fb448")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -17272,6 +16443,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 198.882 37.592 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "df5e4fff-888e-46ad-9f06-b0de54b580b3")
+		(property "Reference" "C3"
+			(at 195.834 35.306 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 194.818 40.132 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 199.8472 41.402 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 198.882 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 198.882 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3e5ff9a1-f4ce-4187-b7bd-759deb03ffca")
+		)
+		(pin "2"
+			(uuid "decfdb33-1817-4a96-aac7-392ce42b6d7a")
+		)
+		(instances
+			(project "PCB_impedance"
+				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_02x20_Odd_Even")
 		(at 48.26 61.976 0)
 		(unit 1)
@@ -17297,7 +16537,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -17306,7 +16546,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" "~"
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -17315,34 +16555,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "40 Position Header Connector 0.100\" (2.54mm) Through Hole Tin"
-			(at 48.26 61.976 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Sullins Connector Solutions"
-			(at 48.26 61.976 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "PPTC202LFBN-RC"
-			(at 48.26 61.976 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "S6104-ND"
+		(property "Description" "Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -17573,7 +16786,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" ""
 			(at 154.8892 40.386 0)
 			(effects
 				(font
@@ -17582,7 +16795,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "~"
 			(at 153.924 36.576 0)
 			(effects
 				(font
@@ -17591,34 +16804,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 153.924 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 153.924 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 153.924 36.576 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 153.924 36.576 0)
 			(effects
 				(font
@@ -17637,109 +16823,6 @@
 			(project "PCB_impedance"
 				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x04")
-		(at 368.554 76.962 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f03367ff-ea3b-4327-a6d2-ccb86a59ffe0")
-		(property "Reference" "J4"
-			(at 371.094 76.9619 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x04"
-			(at 371.094 79.5019 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "AAA_MAZZA_project:TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/2450/Combicon%20Compact%20Series.pdf"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Phoenix Contact"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "1984633"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "277-1860-ND"
-			(at 368.554 76.962 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0ca63c24-87b9-4552-b212-0f2a1d264e89")
-		)
-		(pin "4"
-			(uuid "75206ced-6587-4c5f-8ad4-fe512648d208")
-		)
-		(pin "2"
-			(uuid "f6db401c-f8d4-4717-b6cf-e79a71b8c735")
-		)
-		(pin "3"
-			(uuid "e5ed1f22-977c-48a9-84f8-b3fedb2d6011")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -17812,102 +16895,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 242.57 38.608 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f41df1ee-f870-4f3b-bb02-a8c6f3426ef5")
-		(property "Reference" "C5"
-			(at 239.522 36.322 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 238.506 41.148 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 243.5352 42.418 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "CAP CER 10UF 10V X7R 0805"
-			(at 242.57 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 242.57 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM21BR71A106KA73K"
-			(at 242.57 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-14381-6-ND"
-			(at 242.57 38.608 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f4c94baf-2687-41f3-b880-974490e03329")
-		)
-		(pin "2"
-			(uuid "4cf1cab9-743d-4f43-9b84-15fd70912f3a")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 169.418 230.632 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17933,7 +16920,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 170.3832 234.442 0)
 			(effects
 				(font
@@ -17951,34 +16938,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "CAP CER 4700PF 50V C0G/NP0 0603"
-			(at 169.418 230.632 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Murata Electronics"
-			(at 169.418 230.632 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Part Number" "GRM1885C1H472JA01D"
-			(at 169.418 230.632 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Digikey Part Number" "490-9669-6-ND"
+		(property "Description" "Unpolarized capacitor"
 			(at 169.418 230.632 0)
 			(effects
 				(font
