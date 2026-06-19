@@ -38,3 +38,7 @@ _deps/
 no_os/
 Pico_code/
 RaspBerry_code/
+
+timestamp
+channel*
+*.csv
