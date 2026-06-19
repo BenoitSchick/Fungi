@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "lib_mesure_impedance")(type "KiCad")(uri "${KIPRJMOD}/lib_mesure_impedance.kicad_sym")(options "")(descr ""))
+)
