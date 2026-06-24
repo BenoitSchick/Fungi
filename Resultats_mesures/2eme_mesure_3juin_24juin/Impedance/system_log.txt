@@ -1,0 +1,1616 @@
+2026-04-22 13:36:10,469 Started
+2026-04-22 13:36:30,480 Thread for /dev/ttyACM2 created
+2026-04-22 13:36:30,481 Thread for /dev/ttyACM1 created
+2026-04-22 13:36:30,481 Thread for /dev/ttyACM0 created
+2026-04-22 13:36:30,481 Thread for gathering data created
+2026-04-22 13:38:07,578 USB removed : /dev/ttyACM0 — Service restart
+2026-04-22 13:38:10,493 Interrupted thread detected - Restart Service
+2026-04-22 13:38:16,244 Started
+2026-04-22 13:38:36,254 Thread for /dev/ttyACM2 created
+2026-04-22 13:38:36,255 Thread for /dev/ttyACM1 created
+2026-04-22 13:38:36,255 Thread for gathering data created
+2026-04-24 09:54:22,223 USB connected : /dev/ttyACM0 — Service restart
+2026-04-24 09:54:22,962 Interrupted thread detected - Restart Service
+2026-04-24 09:54:28,813 Started
+2026-04-24 09:54:48,831 Thread for /dev/ttyACM3 created
+2026-04-24 09:54:48,832 Thread for /dev/ttyACM0 created
+2026-04-24 09:54:48,832 Thread for /dev/ttyACM2 created
+2026-04-24 09:54:48,832 Thread for /dev/ttyACM1 created
+2026-04-24 09:54:48,833 Thread for gathering data created
+2026-04-24 09:51:48,256 Started
+2026-04-24 09:52:08,272 Thread for /dev/ttyACM3 created
+2026-04-24 09:52:08,273 Thread for /dev/ttyACM2 created
+2026-04-24 09:52:08,279 Thread for /dev/ttyACM1 created
+2026-04-24 09:52:08,279 Thread for gathering data created
+2026-04-24 09:52:31,955 USB removed : /dev/ttyACM2 — Service restart
+2026-04-24 09:52:33,288 Interrupted thread detected - Restart Service
+2026-04-24 09:52:38,952 Started
+2026-04-24 09:52:58,965 Thread for /dev/ttyACM3 created
+2026-04-24 09:52:58,966 Thread for /dev/ttyACM1 created
+2026-04-24 09:52:58,966 Thread for gathering data created
+2026-04-24 09:51:30,120 Started
+2026-04-24 09:51:50,127 Thread for /dev/ttyACM1 created
+2026-04-24 09:51:50,128 Thread for /dev/ttyACM0 created
+2026-04-24 09:51:50,128 Thread for gathering data created
+2026-04-24 10:03:21,078 Started
+2026-04-24 10:03:41,093 Thread for /dev/ttyACM3 created
+2026-04-24 10:03:41,094 Thread for /dev/ttyACM2 created
+2026-04-24 10:03:41,094 Thread for /dev/ttyACM1 created
+2026-04-24 10:03:41,094 Thread for /dev/ttyACM0 created
+2026-04-24 10:03:41,095 Thread for gathering data created
+2026-04-24 16:01:27,854 USB removed : /dev/ttyACM3 — Service restart
+2026-04-24 16:01:29,579 Interrupted thread detected - Restart Service
+2026-04-24 16:01:35,328 Started
+2026-04-24 16:01:55,346 Thread for /dev/ttyACM3 created
+2026-04-24 16:01:55,347 Thread for /dev/ttyACM2 created
+2026-04-24 16:01:55,347 Thread for /dev/ttyACM1 created
+2026-04-24 16:01:55,348 Thread for /dev/ttyACM0 created
+2026-04-24 16:01:55,348 Thread for gathering data created
+2026-04-24 20:18:14,986 USB removed : /dev/ttyACM0 — Service restart
+2026-04-24 20:18:15,820 Interrupted thread detected - Restart Service
+2026-04-24 20:18:21,356 Started
+2026-04-24 20:18:41,371 Thread for /dev/ttyACM0 created
+2026-04-24 20:18:41,372 Thread for /dev/ttyACM3 created
+2026-04-24 20:18:41,373 Thread for /dev/ttyACM2 created
+2026-04-24 20:18:41,373 Thread for /dev/ttyACM1 created
+2026-04-24 20:18:41,373 Thread for gathering data created
+2026-04-24 22:33:57,844 USB removed : /dev/ttyACM1 — Service restart
+2026-04-24 22:34:01,626 Interrupted thread detected - Restart Service
+2026-04-24 22:34:07,131 Started
+2026-04-24 22:34:27,146 Thread for /dev/ttyACM1 created
+2026-04-24 22:34:27,147 Thread for /dev/ttyACM0 created
+2026-04-24 22:34:27,147 Thread for /dev/ttyACM3 created
+2026-04-24 22:34:27,148 Thread for /dev/ttyACM2 created
+2026-04-24 22:34:27,148 Thread for gathering data created
+2026-04-25 05:55:16,393 USB removed : /dev/ttyACM3 — Service restart
+2026-04-25 05:55:17,942 Interrupted thread detected - Restart Service
+2026-04-25 05:55:23,624 Started
+2026-04-25 05:55:43,643 Thread for /dev/ttyACM3 created
+2026-04-25 05:55:43,644 Thread for /dev/ttyACM1 created
+2026-04-25 05:55:43,644 Thread for /dev/ttyACM0 created
+2026-04-25 05:55:43,645 Thread for /dev/ttyACM2 created
+2026-04-25 05:55:43,645 Thread for gathering data created
+2026-04-25 11:37:43,990 USB removed : /dev/ttyACM0 — Service restart
+2026-04-25 11:37:44,270 Interrupted thread detected - Restart Service
+2026-04-25 11:37:50,055 Started
+2026-04-25 11:38:10,069 Thread for /dev/ttyACM0 created
+2026-04-25 11:38:10,070 Thread for /dev/ttyACM3 created
+2026-04-25 11:38:10,070 Thread for /dev/ttyACM1 created
+2026-04-25 11:38:10,070 Thread for /dev/ttyACM2 created
+2026-04-25 11:38:10,071 Thread for gathering data created
+2026-04-25 14:35:13,598 USB removed : /dev/ttyACM3 — Service restart
+2026-04-25 14:35:15,397 Interrupted thread detected - Restart Service
+2026-04-25 14:35:20,873 Started
+2026-04-25 14:35:40,886 Thread for /dev/ttyACM3 created
+2026-04-25 14:35:40,887 Thread for /dev/ttyACM0 created
+2026-04-25 14:35:40,887 Thread for /dev/ttyACM1 created
+2026-04-25 14:35:40,888 Thread for /dev/ttyACM2 created
+2026-04-25 14:35:40,888 Thread for gathering data created
+2026-04-26 07:36:17,457 USB removed : /dev/ttyACM3 — Service restart
+2026-04-26 07:36:17,723 Interrupted thread detected - Restart Service
+2026-04-26 07:36:23,373 Started
+2026-04-26 07:36:43,387 Thread for /dev/ttyACM3 created
+2026-04-26 07:36:43,388 Thread for /dev/ttyACM0 created
+2026-04-26 07:36:43,388 Thread for /dev/ttyACM1 created
+2026-04-26 07:36:43,389 Thread for /dev/ttyACM2 created
+2026-04-26 07:36:43,389 Thread for gathering data created
+2026-04-26 15:15:35,356 USB removed : /dev/ttyACM1 — Service restart
+2026-04-26 15:15:39,215 Interrupted thread detected - Restart Service
+2026-04-26 15:15:44,863 Started
+2026-04-26 15:16:04,877 Thread for /dev/ttyACM1 created
+2026-04-26 15:16:04,878 Thread for /dev/ttyACM3 created
+2026-04-26 15:16:04,878 Thread for /dev/ttyACM0 created
+2026-04-26 15:16:04,879 Thread for /dev/ttyACM2 created
+2026-04-26 15:16:04,879 Thread for gathering data created
+2026-04-26 20:36:14,272 USB removed : /dev/ttyACM3 — Service restart
+2026-04-26 20:36:15,458 Interrupted thread detected - Restart Service
+2026-04-26 20:36:21,127 Started
+2026-04-26 20:36:41,145 Thread for /dev/ttyACM3 created
+2026-04-26 20:36:41,145 Thread for /dev/ttyACM1 created
+2026-04-26 20:36:41,146 Thread for /dev/ttyACM0 created
+2026-04-26 20:36:41,146 Thread for /dev/ttyACM2 created
+2026-04-26 20:36:41,147 Thread for gathering data created
+2026-04-27 00:28:43,200 USB removed : /dev/ttyACM0 — Service restart
+2026-04-27 00:28:46,563 Interrupted thread detected - Restart Service
+2026-04-27 00:28:52,123 Started
+2026-04-27 00:29:12,137 Thread for /dev/ttyACM0 created
+2026-04-27 00:29:12,138 Thread for /dev/ttyACM3 created
+2026-04-27 00:29:12,139 Thread for /dev/ttyACM1 created
+2026-04-27 00:29:12,139 Thread for /dev/ttyACM2 created
+2026-04-27 00:29:12,139 Thread for gathering data created
+2026-04-27 02:52:53,948 USB removed : /dev/ttyACM0 — Service restart
+2026-04-27 02:52:57,399 Interrupted thread detected - Restart Service
+2026-04-27 02:53:02,871 Started
+2026-04-27 02:53:22,886 Thread for /dev/ttyACM0 created
+2026-04-27 02:53:22,886 Thread for /dev/ttyACM3 created
+2026-04-27 02:53:22,887 Thread for /dev/ttyACM1 created
+2026-04-27 02:53:22,887 Thread for /dev/ttyACM2 created
+2026-04-27 02:53:22,888 Thread for gathering data created
+2026-04-27 13:16:18,607 USB removed : /dev/ttyACM0 — Service restart
+2026-04-27 13:16:19,000 Interrupted thread detected - Restart Service
+2026-04-27 13:16:24,618 Started
+2026-04-27 13:16:44,631 Thread for /dev/ttyACM0 created
+2026-04-27 13:16:44,632 Thread for /dev/ttyACM3 created
+2026-04-27 13:16:44,632 Thread for /dev/ttyACM1 created
+2026-04-27 13:16:44,633 Thread for /dev/ttyACM2 created
+2026-04-27 13:16:44,633 Thread for gathering data created
+2026-04-27 23:30:07,802 USB removed : /dev/ttyACM0 — Service restart
+2026-04-27 23:30:10,735 Interrupted thread detected - Restart Service
+2026-04-27 23:30:16,375 Started
+2026-04-27 23:30:36,391 Thread for /dev/ttyACM0 created
+2026-04-27 23:30:36,392 Thread for /dev/ttyACM3 created
+2026-04-27 23:30:36,393 Thread for /dev/ttyACM1 created
+2026-04-27 23:30:36,393 Thread for /dev/ttyACM2 created
+2026-04-27 23:30:36,394 Thread for gathering data created
+2026-04-28 07:43:50,080 USB removed : /dev/ttyACM0 — Service restart
+2026-04-28 07:43:52,318 Interrupted thread detected - Restart Service
+2026-04-28 07:43:57,866 Started
+2026-04-28 07:44:17,880 Thread for /dev/ttyACM0 created
+2026-04-28 07:44:17,884 Thread for /dev/ttyACM3 created
+2026-04-28 07:44:17,885 Thread for /dev/ttyACM1 created
+2026-04-28 07:44:17,885 Thread for /dev/ttyACM2 created
+2026-04-28 07:44:17,886 Thread for gathering data created
+2026-04-28 12:54:10,494 USB removed : /dev/ttyACM0 — Service restart
+2026-04-28 12:54:13,455 Interrupted thread detected - Restart Service
+2026-04-28 12:54:19,122 Started
+2026-04-28 12:54:39,139 Thread for /dev/ttyACM0 created
+2026-04-28 12:54:39,140 Thread for /dev/ttyACM3 created
+2026-04-28 12:54:39,140 Thread for /dev/ttyACM1 created
+2026-04-28 12:54:39,141 Thread for /dev/ttyACM2 created
+2026-04-28 12:54:39,141 Thread for gathering data created
+2026-04-29 00:25:24,548 USB removed : /dev/ttyACM3 — Service restart
+2026-04-29 00:25:25,380 Interrupted thread detected - Restart Service
+2026-04-29 00:25:30,865 Started
+2026-04-29 00:25:50,876 Thread for /dev/ttyACM3 created
+2026-04-29 00:25:50,877 Thread for /dev/ttyACM0 created
+2026-04-29 00:25:50,877 Thread for /dev/ttyACM1 created
+2026-04-29 00:25:50,877 Thread for /dev/ttyACM2 created
+2026-04-29 00:25:50,877 Thread for gathering data created
+2026-04-29 02:23:36,767 USB removed : /dev/ttyACM1 — Service restart
+2026-04-29 02:23:41,094 Interrupted thread detected - Restart Service
+2026-04-29 02:23:46,627 Started
+2026-04-29 02:24:06,642 Thread for /dev/ttyACM1 created
+2026-04-29 02:24:06,643 Thread for /dev/ttyACM3 created
+2026-04-29 02:24:06,644 Thread for /dev/ttyACM0 created
+2026-04-29 02:24:06,644 Thread for /dev/ttyACM2 created
+2026-04-29 02:24:06,644 Thread for gathering data created
+2026-04-29 07:19:43,154 USB removed : /dev/ttyACM3 — Service restart
+2026-04-29 07:19:47,178 Interrupted thread detected - Restart Service
+2026-04-29 07:19:52,865 Started
+2026-04-29 07:20:12,878 Thread for /dev/ttyACM3 created
+2026-04-29 07:20:12,878 Thread for /dev/ttyACM1 created
+2026-04-29 07:20:12,879 Thread for /dev/ttyACM0 created
+2026-04-29 07:20:12,879 Thread for /dev/ttyACM2 created
+2026-04-29 07:20:12,880 Thread for gathering data created
+2026-04-29 18:53:51,290 USB removed : /dev/ttyACM1 — Service restart
+2026-04-29 18:53:54,135 Interrupted thread detected - Restart Service
+2026-04-29 18:53:59,622 Started
+2026-04-29 18:54:19,637 Thread for /dev/ttyACM1 created
+2026-04-29 18:54:19,638 Thread for /dev/ttyACM3 created
+2026-04-29 18:54:19,638 Thread for /dev/ttyACM0 created
+2026-04-29 18:54:19,639 Thread for /dev/ttyACM2 created
+2026-04-29 18:54:19,639 Thread for gathering data created
+2026-04-29 19:26:51,707 USB removed : /dev/ttyACM2 — Service restart
+2026-04-29 19:26:54,705 Interrupted thread detected - Restart Service
+2026-04-29 19:27:00,364 Started
+2026-04-29 19:27:20,377 Thread for /dev/ttyACM2 created
+2026-04-29 19:27:20,378 Thread for /dev/ttyACM1 created
+2026-04-29 19:27:20,378 Thread for /dev/ttyACM3 created
+2026-04-29 19:27:20,378 Thread for /dev/ttyACM0 created
+2026-04-29 19:27:20,379 Thread for gathering data created
+2026-04-30 03:03:23,714 USB removed : /dev/ttyACM2 — Service restart
+2026-04-30 03:03:26,204 Interrupted thread detected - Restart Service
+2026-04-30 03:03:31,878 Started
+2026-04-30 03:03:51,898 Thread for /dev/ttyACM2 created
+2026-04-30 03:03:51,899 Thread for /dev/ttyACM1 created
+2026-04-30 03:03:51,899 Thread for /dev/ttyACM3 created
+2026-04-30 03:03:51,900 Thread for /dev/ttyACM0 created
+2026-04-30 03:03:51,900 Thread for gathering data created
+2026-04-30 18:53:07,259 USB removed : /dev/ttyACM0 — Service restart
+2026-04-30 18:53:08,572 Interrupted thread detected - Restart Service
+2026-04-30 18:53:14,124 Started
+2026-04-30 18:53:34,141 Thread for /dev/ttyACM0 created
+2026-04-30 18:53:34,142 Thread for /dev/ttyACM2 created
+2026-04-30 18:53:34,142 Thread for /dev/ttyACM1 created
+2026-04-30 18:53:34,143 Thread for /dev/ttyACM3 created
+2026-04-30 18:53:34,143 Thread for gathering data created
+2026-05-01 00:27:25,378 USB removed : /dev/ttyACM1 — Service restart
+2026-05-01 00:27:29,735 Interrupted thread detected - Restart Service
+2026-05-01 00:27:35,379 Started
+2026-05-01 00:27:55,392 Thread for /dev/ttyACM1 created
+2026-05-01 00:27:55,393 Thread for /dev/ttyACM0 created
+2026-05-01 00:27:55,393 Thread for /dev/ttyACM2 created
+2026-05-01 00:27:55,394 Thread for /dev/ttyACM3 created
+2026-05-01 00:27:55,394 Thread for gathering data created
+2026-05-01 02:11:13,322 USB removed : /dev/ttyACM0 — Service restart
+2026-05-01 02:11:15,587 Interrupted thread detected - Restart Service
+2026-05-01 02:11:21,116 Started
+2026-05-01 02:11:41,138 Thread for /dev/ttyACM0 created
+2026-05-01 02:11:41,139 Thread for /dev/ttyACM1 created
+2026-05-01 02:11:41,139 Thread for /dev/ttyACM2 created
+2026-05-01 02:11:41,140 Thread for /dev/ttyACM3 created
+2026-05-01 02:11:41,140 Thread for gathering data created
+2026-05-01 05:08:44,986 USB removed : /dev/ttyACM0 — Service restart
+2026-05-01 05:08:46,470 Interrupted thread detected - Restart Service
+2026-05-01 05:08:52,130 Started
+2026-05-01 05:09:12,144 Thread for /dev/ttyACM0 created
+2026-05-01 05:09:12,145 Thread for /dev/ttyACM1 created
+2026-05-01 05:09:12,145 Thread for /dev/ttyACM2 created
+2026-05-01 05:09:12,145 Thread for /dev/ttyACM3 created
+2026-05-01 05:09:12,146 Thread for gathering data created
+2026-05-01 12:25:18,909 USB removed : /dev/ttyACM0 — Service restart
+2026-05-01 12:25:22,948 Interrupted thread detected - Restart Service
+2026-05-01 12:25:28,622 Started
+2026-05-01 12:25:48,638 Thread for /dev/ttyACM0 created
+2026-05-01 12:25:48,639 Thread for /dev/ttyACM1 created
+2026-05-01 12:25:48,640 Thread for /dev/ttyACM2 created
+2026-05-01 12:25:48,640 Thread for /dev/ttyACM3 created
+2026-05-01 12:25:48,640 Thread for gathering data created
+2026-05-01 20:38:16,138 USB removed : /dev/ttyACM3 — Service restart
+2026-05-01 20:38:19,521 Interrupted thread detected - Restart Service
+2026-05-01 20:38:25,119 Started
+2026-05-01 20:38:45,135 Thread for /dev/ttyACM3 created
+2026-05-01 20:38:45,136 Thread for /dev/ttyACM0 created
+2026-05-01 20:38:45,141 Thread for /dev/ttyACM1 created
+2026-05-01 20:38:45,141 Thread for /dev/ttyACM2 created
+2026-05-01 20:38:45,142 Thread for gathering data created
+2026-05-01 22:52:12,484 USB removed : /dev/ttyACM3 — Service restart
+2026-05-01 22:52:15,392 Interrupted thread detected - Restart Service
+2026-05-01 22:52:20,866 Started
+2026-05-01 22:52:40,884 Thread for /dev/ttyACM3 created
+2026-05-01 22:52:40,885 Thread for /dev/ttyACM0 created
+2026-05-01 22:52:40,885 Thread for /dev/ttyACM1 created
+2026-05-01 22:52:40,885 Thread for /dev/ttyACM2 created
+2026-05-01 22:52:40,886 Thread for gathering data created
+2026-05-02 07:48:18,380 USB removed : /dev/ttyACM2 — Service restart
+2026-05-02 07:48:21,851 Interrupted thread detected - Restart Service
+2026-05-02 07:48:27,370 Started
+2026-05-02 07:48:47,383 Thread for /dev/ttyACM2 created
+2026-05-02 07:48:47,384 Thread for /dev/ttyACM3 created
+2026-05-02 07:48:47,384 Thread for /dev/ttyACM0 created
+2026-05-02 07:48:47,385 Thread for /dev/ttyACM1 created
+2026-05-02 07:48:47,385 Thread for gathering data created
+2026-05-02 09:32:18,611 USB removed : /dev/ttyACM3 — Service restart
+2026-05-02 09:32:22,584 Interrupted thread detected - Restart Service
+2026-05-02 09:32:28,128 Started
+2026-05-02 09:32:48,137 Thread for /dev/ttyACM3 created
+2026-05-02 09:32:48,138 Thread for /dev/ttyACM2 created
+2026-05-02 09:32:48,138 Thread for /dev/ttyACM0 created
+2026-05-02 09:32:48,138 Thread for /dev/ttyACM1 created
+2026-05-02 09:32:48,138 Thread for gathering data created
+2026-05-03 12:17:19,678 USB removed : /dev/ttyACM1 — Service restart
+2026-05-03 12:17:21,028 Interrupted thread detected - Restart Service
+2026-05-03 12:17:26,618 Started
+2026-05-03 12:17:46,633 Thread for /dev/ttyACM1 created
+2026-05-03 12:17:46,634 Thread for /dev/ttyACM3 created
+2026-05-03 12:17:46,634 Thread for /dev/ttyACM2 created
+2026-05-03 12:17:46,634 Thread for /dev/ttyACM0 created
+2026-05-03 12:17:46,635 Thread for gathering data created
+2026-05-03 18:13:40,800 USB removed : /dev/ttyACM2 — Service restart
+2026-05-03 18:13:42,269 Interrupted thread detected - Restart Service
+2026-05-03 18:13:47,854 Started
+2026-05-03 18:14:07,870 Thread for /dev/ttyACM2 created
+2026-05-03 18:14:07,871 Thread for /dev/ttyACM1 created
+2026-05-03 18:14:07,872 Thread for /dev/ttyACM3 created
+2026-05-03 18:14:07,872 Thread for /dev/ttyACM0 created
+2026-05-03 18:14:07,872 Thread for gathering data created
+2026-05-03 21:35:24,474 USB removed : /dev/ttyACM2 — Service restart
+2026-05-03 21:35:28,243 Interrupted thread detected - Restart Service
+2026-05-03 21:35:33,863 Started
+2026-05-03 21:35:53,879 Thread for /dev/ttyACM2 created
+2026-05-03 21:35:53,880 Thread for /dev/ttyACM1 created
+2026-05-03 21:35:53,880 Thread for /dev/ttyACM3 created
+2026-05-03 21:35:53,881 Thread for /dev/ttyACM0 created
+2026-05-03 21:35:53,881 Thread for gathering data created
+2026-05-04 06:18:36,234 USB removed : /dev/ttyACM3 — Service restart
+2026-05-04 06:18:39,808 Interrupted thread detected - Restart Service
+2026-05-04 06:18:45,374 Started
+2026-05-04 06:19:05,386 Thread for /dev/ttyACM3 created
+2026-05-04 06:19:05,387 Thread for /dev/ttyACM2 created
+2026-05-04 06:19:05,387 Thread for /dev/ttyACM1 created
+2026-05-04 06:19:05,387 Thread for /dev/ttyACM0 created
+2026-05-04 06:19:05,387 Thread for gathering data created
+2026-05-05 17:40:30,132 USB removed : /dev/ttyACM0 — Service restart
+2026-05-05 17:40:34,211 Interrupted thread detected - Restart Service
+2026-05-05 17:40:39,871 Started
+2026-05-05 17:40:59,884 Thread for /dev/ttyACM0 created
+2026-05-05 17:40:59,885 Thread for /dev/ttyACM3 created
+2026-05-05 17:40:59,885 Thread for /dev/ttyACM2 created
+2026-05-05 17:40:59,886 Thread for /dev/ttyACM1 created
+2026-05-05 17:40:59,886 Thread for gathering data created
+2026-05-06 03:47:35,871 USB removed : /dev/ttyACM1 — Service restart
+2026-05-06 03:47:35,982 Interrupted thread detected - Restart Service
+2026-05-06 03:47:41,625 Started
+2026-05-06 03:48:01,641 Thread for /dev/ttyACM1 created
+2026-05-06 03:48:01,642 Thread for /dev/ttyACM0 created
+2026-05-06 03:48:01,643 Thread for /dev/ttyACM3 created
+2026-05-06 03:48:01,643 Thread for /dev/ttyACM2 created
+2026-05-06 03:48:01,644 Thread for gathering data created
+2026-05-06 08:47:19,359 USB removed : /dev/ttyACM2 — Service restart
+2026-05-06 08:47:22,194 Interrupted thread detected - Restart Service
+2026-05-06 08:47:27,871 Started
+2026-05-06 08:47:47,885 Thread for /dev/ttyACM2 created
+2026-05-06 08:47:47,886 Thread for /dev/ttyACM1 created
+2026-05-06 08:47:47,886 Thread for /dev/ttyACM0 created
+2026-05-06 08:47:47,886 Thread for /dev/ttyACM3 created
+2026-05-06 08:47:47,886 Thread for gathering data created
+2026-05-06 13:59:18,075 USB removed : /dev/ttyACM2 — Service restart
+2026-05-06 13:59:18,438 Interrupted thread detected - Restart Service
+2026-05-06 13:59:24,118 Started
+2026-05-06 13:59:44,132 Thread for /dev/ttyACM2 created
+2026-05-06 13:59:44,132 Thread for /dev/ttyACM1 created
+2026-05-06 13:59:44,133 Thread for /dev/ttyACM0 created
+2026-05-06 13:59:44,133 Thread for /dev/ttyACM3 created
+2026-05-06 13:59:44,134 Thread for gathering data created
+2026-05-07 08:48:42,303 USB removed : /dev/ttyACM3 — Service restart
+2026-05-07 08:48:46,179 Interrupted thread detected - Restart Service
+2026-05-07 08:48:51,872 Started
+2026-05-07 08:49:11,889 Thread for /dev/ttyACM3 created
+2026-05-07 08:49:11,890 Thread for /dev/ttyACM2 created
+2026-05-07 08:49:11,890 Thread for /dev/ttyACM1 created
+2026-05-07 08:49:11,891 Thread for /dev/ttyACM0 created
+2026-05-07 08:49:11,891 Thread for gathering data created
+2026-05-07 17:08:12,738 USB removed : /dev/ttyACM1 — Service restart
+2026-05-07 17:08:12,792 Interrupted thread detected - Restart Service
+2026-05-07 17:08:18,368 Started
+2026-05-07 17:08:38,382 Thread for /dev/ttyACM1 created
+2026-05-07 17:08:38,383 Thread for /dev/ttyACM3 created
+2026-05-07 17:08:38,383 Thread for /dev/ttyACM2 created
+2026-05-07 17:08:38,384 Thread for /dev/ttyACM0 created
+2026-05-07 17:08:38,384 Thread for gathering data created
+2026-05-07 18:33:45,036 USB removed : /dev/ttyACM3 — Service restart
+2026-05-07 18:33:48,549 Interrupted thread detected - Restart Service
+2026-05-07 18:33:54,128 Started
+2026-05-07 18:34:14,144 Thread for /dev/ttyACM3 created
+2026-05-07 18:34:14,145 Thread for /dev/ttyACM1 created
+2026-05-07 18:34:14,145 Thread for /dev/ttyACM2 created
+2026-05-07 18:34:14,146 Thread for /dev/ttyACM0 created
+2026-05-07 18:34:14,146 Thread for gathering data created
+2026-05-08 06:48:22,075 USB removed : /dev/ttyACM3 — Service restart
+2026-05-08 06:48:25,458 Interrupted thread detected - Restart Service
+2026-05-08 06:48:31,107 Started
+2026-05-08 06:48:51,121 Thread for /dev/ttyACM3 created
+2026-05-08 06:48:51,122 Thread for /dev/ttyACM1 created
+2026-05-08 06:48:51,122 Thread for /dev/ttyACM2 created
+2026-05-08 06:48:51,123 Thread for /dev/ttyACM0 created
+2026-05-08 06:48:51,123 Thread for gathering data created
+2026-05-08 10:50:06,014 USB removed : /dev/ttyACM0 — Service restart
+2026-05-08 10:50:06,560 Interrupted thread detected - Restart Service
+2026-05-08 10:50:12,116 Started
+2026-05-08 10:50:32,129 Thread for /dev/ttyACM0 created
+2026-05-08 10:50:32,130 Thread for /dev/ttyACM3 created
+2026-05-08 10:50:32,130 Thread for /dev/ttyACM1 created
+2026-05-08 10:50:32,130 Thread for /dev/ttyACM2 created
+2026-05-08 10:50:32,131 Thread for gathering data created
+2026-05-08 15:43:01,960 USB removed : /dev/ttyACM2 — Service restart
+2026-05-08 15:43:02,659 Interrupted thread detected - Restart Service
+2026-05-08 15:43:08,114 Started
+2026-05-08 15:43:28,127 Thread for /dev/ttyACM2 created
+2026-05-08 15:43:28,128 Thread for /dev/ttyACM0 created
+2026-05-08 15:43:28,129 Thread for /dev/ttyACM3 created
+2026-05-08 15:43:28,129 Thread for /dev/ttyACM1 created
+2026-05-08 15:43:28,129 Thread for gathering data created
+2026-05-08 16:41:30,160 USB removed : /dev/ttyACM2 — Service restart
+2026-05-08 16:41:33,242 Interrupted thread detected - Restart Service
+2026-05-08 16:41:38,858 Started
+2026-05-08 16:41:58,870 Thread for /dev/ttyACM2 created
+2026-05-08 16:41:58,870 Thread for /dev/ttyACM0 created
+2026-05-08 16:41:58,870 Thread for /dev/ttyACM3 created
+2026-05-08 16:41:58,871 Thread for /dev/ttyACM1 created
+2026-05-08 16:41:58,871 Thread for gathering data created
+2026-05-09 15:33:09,050 USB removed : /dev/ttyACM1 — Service restart
+2026-05-09 15:33:11,304 Interrupted thread detected - Restart Service
+2026-05-09 15:33:16,869 Started
+2026-05-09 15:33:36,883 Thread for /dev/ttyACM1 created
+2026-05-09 15:33:36,884 Thread for /dev/ttyACM2 created
+2026-05-09 15:33:36,885 Thread for /dev/ttyACM0 created
+2026-05-09 15:33:36,885 Thread for /dev/ttyACM3 created
+2026-05-09 15:33:36,885 Thread for gathering data created
+2026-05-10 05:12:06,730 USB removed : /dev/ttyACM2 — Service restart
+2026-05-10 05:12:08,361 Interrupted thread detected - Restart Service
+2026-05-10 05:12:13,866 Started
+2026-05-10 05:12:33,881 Thread for /dev/ttyACM2 created
+2026-05-10 05:12:33,881 Thread for /dev/ttyACM1 created
+2026-05-10 05:12:33,882 Thread for /dev/ttyACM0 created
+2026-05-10 05:12:33,882 Thread for /dev/ttyACM3 created
+2026-05-10 05:12:33,882 Thread for gathering data created
+2026-05-10 21:27:16,013 USB removed : /dev/ttyACM0 — Service restart
+2026-05-10 21:27:20,673 Interrupted thread detected - Restart Service
+2026-05-10 21:27:26,371 Started
+2026-05-10 21:27:46,387 Thread for /dev/ttyACM0 created
+2026-05-10 21:27:46,388 Thread for /dev/ttyACM2 created
+2026-05-10 21:27:46,389 Thread for /dev/ttyACM1 created
+2026-05-10 21:27:46,389 Thread for /dev/ttyACM3 created
+2026-05-10 21:27:46,389 Thread for gathering data created
+2026-05-11 05:34:16,877 USB removed : /dev/ttyACM0 — Service restart
+2026-05-11 05:34:17,273 Interrupted thread detected - Restart Service
+2026-05-11 05:34:22,871 Started
+2026-05-11 05:34:42,885 Thread for /dev/ttyACM0 created
+2026-05-11 05:34:42,886 Thread for /dev/ttyACM2 created
+2026-05-11 05:34:42,886 Thread for /dev/ttyACM1 created
+2026-05-11 05:34:42,886 Thread for /dev/ttyACM3 created
+2026-05-11 05:34:42,887 Thread for gathering data created
+2026-05-11 09:26:35,569 USB removed : /dev/ttyACM0 — Service restart
+2026-05-11 09:26:38,305 Interrupted thread detected - Restart Service
+2026-05-11 09:26:43,856 Started
+2026-05-11 09:27:03,874 Thread for /dev/ttyACM0 created
+2026-05-11 09:27:03,874 Thread for /dev/ttyACM2 created
+2026-05-11 09:27:03,875 Thread for /dev/ttyACM1 created
+2026-05-11 09:27:03,875 Thread for /dev/ttyACM3 created
+2026-05-11 09:27:03,876 Thread for gathering data created
+2026-05-12 17:39:07,197 USB removed : /dev/ttyACM2 — Service restart
+2026-05-12 17:39:07,346 Interrupted thread detected - Restart Service
+2026-05-12 17:39:12,874 Started
+2026-05-12 17:39:32,890 Thread for /dev/ttyACM2 created
+2026-05-12 17:39:32,891 Thread for /dev/ttyACM0 created
+2026-05-12 17:39:32,891 Thread for /dev/ttyACM1 created
+2026-05-12 17:39:32,892 Thread for /dev/ttyACM3 created
+2026-05-12 17:39:32,892 Thread for gathering data created
+2026-05-12 20:57:54,734 USB removed : /dev/ttyACM1 — Service restart
+2026-05-12 20:57:58,261 Interrupted thread detected - Restart Service
+2026-05-12 20:58:03,854 Started
+2026-05-12 20:58:23,871 Thread for /dev/ttyACM1 created
+2026-05-12 20:58:23,872 Thread for /dev/ttyACM2 created
+2026-05-12 20:58:23,872 Thread for /dev/ttyACM0 created
+2026-05-12 20:58:23,873 Thread for /dev/ttyACM3 created
+2026-05-12 20:58:23,874 Thread for gathering data created
+2026-05-12 21:52:53,978 Interrupted thread detected - Restart Service
+2026-05-12 21:52:59,618 Started
+2026-05-12 21:53:19,634 Thread for /dev/ttyACM1 created
+2026-05-12 21:53:19,635 Thread for /dev/ttyACM2 created
+2026-05-12 21:53:19,636 Thread for /dev/ttyACM0 created
+2026-05-12 21:53:19,636 Thread for /dev/ttyACM3 created
+2026-05-12 21:53:19,637 Thread for gathering data created
+2026-05-12 23:32:48,580 USB removed : /dev/ttyACM2 — Service restart
+2026-05-12 23:32:49,823 Interrupted thread detected - Restart Service
+2026-05-12 23:32:55,362 Started
+2026-05-12 23:33:15,377 Thread for /dev/ttyACM2 created
+2026-05-12 23:33:15,378 Thread for /dev/ttyACM1 created
+2026-05-12 23:33:15,378 Thread for /dev/ttyACM0 created
+2026-05-12 23:33:15,378 Thread for /dev/ttyACM3 created
+2026-05-12 23:33:15,379 Thread for gathering data created
+2026-05-13 03:10:18,445 USB removed : /dev/ttyACM3 — Service restart
+2026-05-13 03:10:20,766 Interrupted thread detected - Restart Service
+2026-05-13 03:10:26,366 Started
+2026-05-13 03:10:46,379 Thread for /dev/ttyACM3 created
+2026-05-13 03:10:46,380 Thread for /dev/ttyACM2 created
+2026-05-13 03:10:46,380 Thread for /dev/ttyACM1 created
+2026-05-13 03:10:46,380 Thread for /dev/ttyACM0 created
+2026-05-13 03:10:46,381 Thread for gathering data created
+2026-05-13 03:25:44,123 USB removed : /dev/ttyACM3 — Service restart
+2026-05-13 03:25:46,416 Interrupted thread detected - Restart Service
+2026-05-13 03:25:51,870 Started
+2026-05-13 03:26:11,883 Thread for /dev/ttyACM3 created
+2026-05-13 03:26:11,884 Thread for /dev/ttyACM2 created
+2026-05-13 03:26:11,885 Thread for /dev/ttyACM1 created
+2026-05-13 03:26:11,885 Thread for /dev/ttyACM0 created
+2026-05-13 03:26:11,885 Thread for gathering data created
+2026-05-13 08:00:28,476 USB removed : /dev/ttyACM3 — Service restart
+2026-05-13 08:00:32,381 Interrupted thread detected - Restart Service
+2026-05-13 08:00:37,876 Started
+2026-05-13 08:00:57,891 Thread for /dev/ttyACM3 created
+2026-05-13 08:00:57,892 Thread for /dev/ttyACM2 created
+2026-05-13 08:00:57,893 Thread for /dev/ttyACM1 created
+2026-05-13 08:00:57,893 Thread for /dev/ttyACM0 created
+2026-05-13 08:00:57,893 Thread for gathering data created
+2026-05-13 17:20:17,730 USB removed : /dev/ttyACM2 — Service restart
+2026-05-13 17:20:18,895 Interrupted thread detected - Restart Service
+2026-05-13 17:20:24,369 Started
+2026-05-13 17:20:44,385 Thread for /dev/ttyACM2 created
+2026-05-13 17:20:44,386 Thread for /dev/ttyACM3 created
+2026-05-13 17:20:44,386 Thread for /dev/ttyACM1 created
+2026-05-13 17:20:44,387 Thread for /dev/ttyACM0 created
+2026-05-13 17:20:44,387 Thread for gathering data created
+2026-05-13 21:21:37,082 USB removed : /dev/ttyACM0 — Service restart
+2026-05-13 21:21:39,826 Interrupted thread detected - Restart Service
+2026-05-13 21:21:45,385 Started
+2026-05-13 21:22:05,399 Thread for /dev/ttyACM0 created
+2026-05-13 21:22:05,403 Thread for /dev/ttyACM2 created
+2026-05-13 21:22:05,404 Thread for /dev/ttyACM3 created
+2026-05-13 21:22:05,404 Thread for /dev/ttyACM1 created
+2026-05-13 21:22:05,404 Thread for gathering data created
+2026-05-14 08:20:46,013 USB removed : /dev/ttyACM3 — Service restart
+2026-05-14 08:20:46,584 Interrupted thread detected - Restart Service
+2026-05-14 08:20:52,115 Started
+2026-05-14 08:21:12,128 Thread for /dev/ttyACM3 created
+2026-05-14 08:21:12,129 Thread for /dev/ttyACM0 created
+2026-05-14 08:21:12,129 Thread for /dev/ttyACM2 created
+2026-05-14 08:21:12,130 Thread for /dev/ttyACM1 created
+2026-05-14 08:21:12,130 Thread for gathering data created
+2026-05-14 19:26:17,919 USB removed : /dev/ttyACM0 — Service restart
+2026-05-14 19:26:18,306 Interrupted thread detected - Restart Service
+2026-05-14 19:26:23,865 Started
+2026-05-14 19:26:43,878 Thread for /dev/ttyACM0 created
+2026-05-14 19:26:43,879 Thread for /dev/ttyACM3 created
+2026-05-14 19:26:43,879 Thread for /dev/ttyACM2 created
+2026-05-14 19:26:43,879 Thread for /dev/ttyACM1 created
+2026-05-14 19:26:43,880 Thread for gathering data created
+2026-05-14 20:39:37,006 USB removed : /dev/ttyACM3 — Service restart
+2026-05-14 20:39:39,018 Interrupted thread detected - Restart Service
+2026-05-14 20:39:44,609 Started
+2026-05-14 20:40:04,622 Thread for /dev/ttyACM3 created
+2026-05-14 20:40:04,623 Thread for /dev/ttyACM0 created
+2026-05-14 20:40:04,623 Thread for /dev/ttyACM2 created
+2026-05-14 20:40:04,624 Thread for /dev/ttyACM1 created
+2026-05-14 20:40:04,624 Thread for gathering data created
+2026-05-14 20:47:58,795 USB removed : /dev/ttyACM0 — Service restart
+2026-05-14 20:47:59,647 Interrupted thread detected - Restart Service
+2026-05-14 20:48:05,106 Started
+2026-05-14 20:48:25,122 Thread for /dev/ttyACM0 created
+2026-05-14 20:48:25,123 Thread for /dev/ttyACM3 created
+2026-05-14 20:48:25,123 Thread for /dev/ttyACM2 created
+2026-05-14 20:48:25,123 Thread for /dev/ttyACM1 created
+2026-05-14 20:48:25,124 Thread for gathering data created
+2026-05-14 23:37:47,579 USB removed : /dev/ttyACM3 — Service restart
+2026-05-14 23:37:50,431 Interrupted thread detected - Restart Service
+2026-05-14 23:37:56,119 Started
+2026-05-14 23:38:16,133 Thread for /dev/ttyACM3 created
+2026-05-14 23:38:16,133 Thread for /dev/ttyACM0 created
+2026-05-14 23:38:16,134 Thread for /dev/ttyACM2 created
+2026-05-14 23:38:16,134 Thread for /dev/ttyACM1 created
+2026-05-14 23:38:16,134 Thread for gathering data created
+2026-05-15 18:21:44,122 USB removed : /dev/ttyACM0 — Service restart
+2026-05-15 18:21:48,143 Interrupted thread detected - Restart Service
+2026-05-15 18:21:53,605 Started
+2026-05-15 18:22:13,623 Thread for /dev/ttyACM0 created
+2026-05-15 18:22:13,624 Thread for /dev/ttyACM3 created
+2026-05-15 18:22:13,624 Thread for /dev/ttyACM2 created
+2026-05-15 18:22:13,624 Thread for /dev/ttyACM1 created
+2026-05-15 18:22:13,625 Thread for gathering data created
+2026-05-15 19:15:46,089 USB removed : /dev/ttyACM0 — Service restart
+2026-05-15 19:15:48,731 Interrupted thread detected - Restart Service
+2026-05-15 19:15:54,387 Started
+2026-05-15 19:16:14,400 Thread for /dev/ttyACM0 created
+2026-05-15 19:16:14,401 Thread for /dev/ttyACM3 created
+2026-05-15 19:16:14,402 Thread for /dev/ttyACM2 created
+2026-05-15 19:16:14,402 Thread for /dev/ttyACM1 created
+2026-05-15 19:16:14,402 Thread for gathering data created
+2026-05-15 22:45:14,684 USB removed : /dev/ttyACM2 — Service restart
+2026-05-15 22:45:14,796 Interrupted thread detected - Restart Service
+2026-05-15 22:45:20,377 Started
+2026-05-15 22:45:40,392 Thread for /dev/ttyACM2 created
+2026-05-15 22:45:40,392 Thread for /dev/ttyACM0 created
+2026-05-15 22:45:40,393 Thread for /dev/ttyACM3 created
+2026-05-15 22:45:40,393 Thread for /dev/ttyACM1 created
+2026-05-15 22:45:40,393 Thread for gathering data created
+2026-05-15 23:11:52,130 USB removed : /dev/ttyACM1 — Service restart
+2026-05-15 23:11:55,448 Interrupted thread detected - Restart Service
+2026-05-15 23:12:01,122 Started
+2026-05-15 23:12:21,136 Thread for /dev/ttyACM1 created
+2026-05-15 23:12:21,137 Thread for /dev/ttyACM2 created
+2026-05-15 23:12:21,137 Thread for /dev/ttyACM0 created
+2026-05-15 23:12:21,137 Thread for /dev/ttyACM3 created
+2026-05-15 23:12:21,138 Thread for gathering data created
+2026-05-15 23:56:06,226 Interrupted thread detected - Restart Service
+2026-05-15 23:56:11,878 Started
+2026-05-15 23:56:31,891 Thread for /dev/ttyACM1 created
+2026-05-15 23:56:31,892 Thread for /dev/ttyACM2 created
+2026-05-15 23:56:31,892 Thread for /dev/ttyACM0 created
+2026-05-15 23:56:31,893 Thread for /dev/ttyACM3 created
+2026-05-15 23:56:31,893 Thread for gathering data created
+2026-05-16 02:51:14,607 USB removed : /dev/ttyACM2 — Service restart
+2026-05-16 02:51:17,212 Interrupted thread detected - Restart Service
+2026-05-16 02:51:22,867 Started
+2026-05-16 02:51:42,882 Thread for /dev/ttyACM2 created
+2026-05-16 02:51:42,883 Thread for /dev/ttyACM1 created
+2026-05-16 02:51:42,884 Thread for /dev/ttyACM0 created
+2026-05-16 02:51:42,884 Thread for /dev/ttyACM3 created
+2026-05-16 02:51:42,884 Thread for gathering data created
+2026-05-16 03:24:39,612 USB removed : /dev/ttyACM0 — Service restart
+2026-05-16 03:24:42,953 Interrupted thread detected - Restart Service
+2026-05-16 03:24:48,624 Started
+2026-05-16 03:25:08,640 Thread for /dev/ttyACM0 created
+2026-05-16 03:25:08,640 Thread for /dev/ttyACM2 created
+2026-05-16 03:25:08,641 Thread for /dev/ttyACM1 created
+2026-05-16 03:25:08,641 Thread for /dev/ttyACM3 created
+2026-05-16 03:25:08,642 Thread for gathering data created
+2026-05-16 21:47:50,973 USB removed : /dev/ttyACM2 — Service restart
+2026-05-16 21:47:55,613 Interrupted thread detected - Restart Service
+2026-05-16 21:48:01,140 Started
+2026-05-16 21:48:21,157 Thread for /dev/ttyACM2 created
+2026-05-16 21:48:21,158 Thread for /dev/ttyACM0 created
+2026-05-16 21:48:21,158 Thread for /dev/ttyACM1 created
+2026-05-16 21:48:21,159 Thread for /dev/ttyACM3 created
+2026-05-16 21:48:21,159 Thread for gathering data created
+2026-05-17 06:07:58,266 USB removed : /dev/ttyACM3 — Service restart
+2026-05-17 06:08:02,050 Interrupted thread detected - Restart Service
+2026-05-17 06:08:07,617 Started
+2026-05-17 06:08:27,630 Thread for /dev/ttyACM3 created
+2026-05-17 06:08:27,630 Thread for /dev/ttyACM2 created
+2026-05-17 06:08:27,631 Thread for /dev/ttyACM0 created
+2026-05-17 06:08:27,631 Thread for /dev/ttyACM1 created
+2026-05-17 06:08:27,631 Thread for gathering data created
+2026-05-17 09:03:45,470 USB removed : /dev/ttyACM1 — Service restart
+2026-05-17 09:03:47,953 Interrupted thread detected - Restart Service
+2026-05-17 09:03:53,625 Started
+2026-05-17 09:04:13,640 Thread for /dev/ttyACM2 created
+2026-05-17 09:04:13,641 Thread for /dev/ttyACM1 created
+2026-05-17 09:04:13,642 Thread for /dev/ttyACM3 created
+2026-05-17 09:04:13,642 Thread for /dev/ttyACM0 created
+2026-05-17 09:04:13,642 Thread for gathering data created
+2026-05-17 13:39:39,451 USB removed : /dev/ttyACM1 — Service restart
+2026-05-17 13:39:44,169 Interrupted thread detected - Restart Service
+2026-05-17 13:39:49,684 Started
+2026-05-17 13:40:09,704 Thread for /dev/ttyACM1 created
+2026-05-17 13:40:09,705 Thread for /dev/ttyACM2 created
+2026-05-17 13:40:09,706 Thread for /dev/ttyACM3 created
+2026-05-17 13:40:09,706 Thread for /dev/ttyACM0 created
+2026-05-17 13:40:09,706 Thread for gathering data created
+2026-05-17 18:52:02,734 USB removed : /dev/ttyACM3 — Service restart
+2026-05-17 18:52:05,278 Interrupted thread detected - Restart Service
+2026-05-17 18:52:10,884 Started
+2026-05-17 18:52:30,899 Thread for /dev/ttyACM3 created
+2026-05-17 18:52:30,900 Thread for /dev/ttyACM1 created
+2026-05-17 18:52:30,901 Thread for /dev/ttyACM2 created
+2026-05-17 18:52:30,901 Thread for /dev/ttyACM0 created
+2026-05-17 18:52:30,901 Thread for gathering data created
+2026-05-17 20:32:07,474 USB removed : /dev/ttyACM1 — Service restart
+2026-05-17 20:32:11,084 Interrupted thread detected - Restart Service
+2026-05-17 20:32:16,606 Started
+2026-05-17 20:32:36,621 Thread for /dev/ttyACM1 created
+2026-05-17 20:32:36,622 Thread for /dev/ttyACM3 created
+2026-05-17 20:32:36,622 Thread for /dev/ttyACM2 created
+2026-05-17 20:32:36,623 Thread for /dev/ttyACM0 created
+2026-05-17 20:32:36,623 Thread for gathering data created
+2026-05-18 13:29:32,206 USB removed : /dev/ttyACM3 — Service restart
+2026-05-18 13:29:33,450 Interrupted thread detected - Restart Service
+2026-05-18 13:29:39,119 Started
+2026-05-18 13:29:59,132 Thread for /dev/ttyACM3 created
+2026-05-18 13:29:59,132 Thread for /dev/ttyACM1 created
+2026-05-18 13:29:59,133 Thread for /dev/ttyACM2 created
+2026-05-18 13:29:59,133 Thread for /dev/ttyACM0 created
+2026-05-18 13:29:59,134 Thread for gathering data created
+2026-05-19 04:43:06,938 USB removed : /dev/ttyACM2 — Service restart
+2026-05-19 04:43:10,778 Interrupted thread detected - Restart Service
+2026-05-19 04:43:16,390 Started
+2026-05-19 04:43:36,406 Thread for /dev/ttyACM2 created
+2026-05-19 04:43:36,407 Thread for /dev/ttyACM3 created
+2026-05-19 04:43:36,407 Thread for /dev/ttyACM1 created
+2026-05-19 04:43:36,408 Thread for /dev/ttyACM0 created
+2026-05-19 04:43:36,408 Thread for gathering data created
+2026-05-19 07:49:10,595 USB removed : /dev/ttyACM3 — Service restart
+2026-05-19 07:49:11,749 Interrupted thread detected - Restart Service
+2026-05-19 07:49:17,376 Started
+2026-05-19 07:49:37,390 Thread for /dev/ttyACM3 created
+2026-05-19 07:49:37,390 Thread for /dev/ttyACM2 created
+2026-05-19 07:49:37,391 Thread for /dev/ttyACM1 created
+2026-05-19 07:49:37,391 Thread for /dev/ttyACM0 created
+2026-05-19 07:49:37,391 Thread for gathering data created
+2026-05-19 08:52:58,301 USB removed : /dev/ttyACM3 — Service restart
+2026-05-19 08:53:02,510 Interrupted thread detected - Restart Service
+2026-05-19 08:53:08,123 Started
+2026-05-19 08:53:28,136 Thread for /dev/ttyACM3 created
+2026-05-19 08:53:28,137 Thread for /dev/ttyACM2 created
+2026-05-19 08:53:28,137 Thread for /dev/ttyACM1 created
+2026-05-19 08:53:28,138 Thread for /dev/ttyACM0 created
+2026-05-19 08:53:28,138 Thread for gathering data created
+2026-05-19 15:02:07,439 USB removed : /dev/ttyACM0 — Service restart
+2026-05-19 15:02:08,806 Interrupted thread detected - Restart Service
+2026-05-19 15:02:14,363 Started
+2026-05-19 15:02:34,379 Thread for /dev/ttyACM0 created
+2026-05-19 15:02:34,379 Thread for /dev/ttyACM3 created
+2026-05-19 15:02:34,380 Thread for /dev/ttyACM2 created
+2026-05-19 15:02:34,380 Thread for /dev/ttyACM1 created
+2026-05-19 15:02:34,381 Thread for gathering data created
+2026-05-20 06:09:27,356 USB removed : /dev/ttyACM1 — Service restart
+2026-05-20 06:09:30,988 Interrupted thread detected - Restart Service
+2026-05-20 06:09:36,617 Started
+2026-05-20 06:09:56,630 Thread for /dev/ttyACM1 created
+2026-05-20 06:09:56,631 Thread for /dev/ttyACM0 created
+2026-05-20 06:09:56,632 Thread for /dev/ttyACM3 created
+2026-05-20 06:09:56,632 Thread for /dev/ttyACM2 created
+2026-05-20 06:09:56,633 Thread for gathering data created
+2026-05-20 16:11:34,075 USB removed : /dev/ttyACM3 — Service restart
+2026-05-20 16:11:37,717 Interrupted thread detected - Restart Service
+2026-05-20 16:11:43,377 Started
+2026-05-20 16:12:03,391 Thread for /dev/ttyACM3 created
+2026-05-20 16:12:03,391 Thread for /dev/ttyACM1 created
+2026-05-20 16:12:03,392 Thread for /dev/ttyACM0 created
+2026-05-20 16:12:03,392 Thread for /dev/ttyACM2 created
+2026-05-20 16:12:03,393 Thread for gathering data created
+2026-05-21 00:56:07,755 USB removed : /dev/ttyACM1 — Service restart
+2026-05-21 00:56:09,340 Interrupted thread detected - Restart Service
+2026-05-21 00:56:14,864 Started
+2026-05-21 00:56:34,879 Thread for /dev/ttyACM1 created
+2026-05-21 00:56:34,880 Thread for /dev/ttyACM3 created
+2026-05-21 00:56:34,881 Thread for /dev/ttyACM0 created
+2026-05-21 00:56:34,881 Thread for /dev/ttyACM2 created
+2026-05-21 00:56:34,881 Thread for gathering data created
+2026-05-21 02:26:43,130 USB removed : /dev/ttyACM1 — Service restart
+2026-05-21 02:26:45,050 Interrupted thread detected - Restart Service
+2026-05-21 02:26:50,630 Started
+2026-05-21 02:27:10,644 Thread for /dev/ttyACM1 created
+2026-05-21 02:27:10,644 Thread for /dev/ttyACM3 created
+2026-05-21 02:27:10,645 Thread for /dev/ttyACM0 created
+2026-05-21 02:27:10,645 Thread for /dev/ttyACM2 created
+2026-05-21 02:27:10,646 Thread for gathering data created
+2026-05-21 09:15:44,323 USB removed : /dev/ttyACM1 — Service restart
+2026-05-21 09:15:46,390 Interrupted thread detected - Restart Service
+2026-05-21 09:15:51,866 Started
+2026-05-21 09:16:11,882 Thread for /dev/ttyACM1 created
+2026-05-21 09:16:11,883 Thread for /dev/ttyACM3 created
+2026-05-21 09:16:11,884 Thread for /dev/ttyACM0 created
+2026-05-21 09:16:11,884 Thread for /dev/ttyACM2 created
+2026-05-21 09:16:11,884 Thread for gathering data created
+2026-05-21 21:43:01,166 USB removed : /dev/ttyACM0 — Service restart
+2026-05-21 21:43:03,217 Interrupted thread detected - Restart Service
+2026-05-21 21:43:08,862 Started
+2026-05-21 21:43:28,879 Thread for /dev/ttyACM0 created
+2026-05-21 21:43:28,880 Thread for /dev/ttyACM1 created
+2026-05-21 21:43:28,880 Thread for /dev/ttyACM3 created
+2026-05-21 21:43:28,881 Thread for /dev/ttyACM2 created
+2026-05-21 21:43:28,881 Thread for gathering data created
+2026-05-21 22:41:27,365 USB removed : /dev/ttyACM2 — Service restart
+2026-05-21 22:41:28,997 Interrupted thread detected - Restart Service
+2026-05-21 22:41:34,617 Started
+2026-05-21 22:41:54,634 Thread for /dev/ttyACM2 created
+2026-05-21 22:41:54,634 Thread for /dev/ttyACM0 created
+2026-05-21 22:41:54,635 Thread for /dev/ttyACM1 created
+2026-05-21 22:41:54,635 Thread for /dev/ttyACM3 created
+2026-05-21 22:41:54,636 Thread for gathering data created
+2026-05-21 22:48:35,391 USB removed : /dev/ttyACM3 — Service restart
+2026-05-21 22:48:39,658 Interrupted thread detected - Restart Service
+2026-05-21 22:48:45,117 Started
+2026-05-21 22:49:05,132 Thread for /dev/ttyACM3 created
+2026-05-21 22:49:05,133 Thread for /dev/ttyACM2 created
+2026-05-21 22:49:05,133 Thread for /dev/ttyACM0 created
+2026-05-21 22:49:05,134 Thread for /dev/ttyACM1 created
+2026-05-21 22:49:05,134 Thread for gathering data created
+2026-05-22 03:16:19,918 USB removed : /dev/ttyACM0 — Service restart
+2026-05-22 03:16:20,615 Interrupted thread detected - Restart Service
+2026-05-22 03:16:26,105 Started
+2026-05-22 03:16:46,128 Thread for /dev/ttyACM0 created
+2026-05-22 03:16:46,128 Thread for /dev/ttyACM3 created
+2026-05-22 03:16:46,129 Thread for /dev/ttyACM2 created
+2026-05-22 03:16:46,129 Thread for /dev/ttyACM1 created
+2026-05-22 03:16:46,130 Thread for gathering data created
+2026-05-22 06:14:34,568 USB removed : /dev/ttyACM0 — Service restart
+2026-05-22 06:14:36,448 Interrupted thread detected - Restart Service
+2026-05-22 06:14:42,117 Started
+2026-05-22 06:15:02,130 Thread for /dev/ttyACM0 created
+2026-05-22 06:15:02,131 Thread for /dev/ttyACM3 created
+2026-05-22 06:15:02,132 Thread for /dev/ttyACM2 created
+2026-05-22 06:15:02,132 Thread for /dev/ttyACM1 created
+2026-05-22 06:15:02,132 Thread for gathering data created
+2026-05-22 13:58:57,593 USB removed : /dev/ttyACM1 — Service restart
+2026-05-22 13:58:57,961 Interrupted thread detected - Restart Service
+2026-05-22 13:59:03,613 Started
+2026-05-22 13:59:23,627 Thread for /dev/ttyACM1 created
+2026-05-22 13:59:23,628 Thread for /dev/ttyACM0 created
+2026-05-22 13:59:23,628 Thread for /dev/ttyACM3 created
+2026-05-22 13:59:23,628 Thread for /dev/ttyACM2 created
+2026-05-22 13:59:23,629 Thread for gathering data created
+2026-05-22 18:51:06,427 USB removed : /dev/ttyACM0 — Service restart
+2026-05-22 18:51:09,167 Interrupted thread detected - Restart Service
+2026-05-22 18:51:14,621 Started
+2026-05-22 18:51:34,636 Thread for /dev/ttyACM0 created
+2026-05-22 18:51:34,637 Thread for /dev/ttyACM1 created
+2026-05-22 18:51:34,637 Thread for /dev/ttyACM3 created
+2026-05-22 18:51:34,638 Thread for /dev/ttyACM2 created
+2026-05-22 18:51:34,638 Thread for gathering data created
+2026-05-22 20:48:19,266 USB removed : /dev/ttyACM3 — Service restart
+2026-05-22 20:48:19,862 Interrupted thread detected - Restart Service
+2026-05-22 20:48:25,364 Started
+2026-05-22 20:48:45,379 Thread for /dev/ttyACM3 created
+2026-05-22 20:48:45,380 Thread for /dev/ttyACM0 created
+2026-05-22 20:48:45,381 Thread for /dev/ttyACM1 created
+2026-05-22 20:48:45,381 Thread for /dev/ttyACM2 created
+2026-05-22 20:48:45,381 Thread for gathering data created
+2026-05-22 22:01:01,500 USB removed : /dev/ttyACM0 — Service restart
+2026-05-22 22:01:05,520 Interrupted thread detected - Restart Service
+2026-05-22 22:01:11,124 Started
+2026-05-22 22:01:31,141 Thread for /dev/ttyACM0 created
+2026-05-22 22:01:31,142 Thread for /dev/ttyACM3 created
+2026-05-22 22:01:31,142 Thread for /dev/ttyACM1 created
+2026-05-22 22:01:31,143 Thread for /dev/ttyACM2 created
+2026-05-22 22:01:31,143 Thread for gathering data created
+2026-05-23 05:08:57,280 USB removed : /dev/ttyACM0 — Service restart
+2026-05-23 05:09:01,917 Interrupted thread detected - Restart Service
+2026-05-23 05:09:07,357 Started
+2026-05-23 05:09:27,372 Thread for /dev/ttyACM0 created
+2026-05-23 05:09:27,373 Thread for /dev/ttyACM3 created
+2026-05-23 05:09:27,374 Thread for /dev/ttyACM1 created
+2026-05-23 05:09:27,374 Thread for /dev/ttyACM2 created
+2026-05-23 05:09:27,375 Thread for gathering data created
+2026-05-23 18:40:55,098 USB removed : /dev/ttyACM2 — Service restart
+2026-05-23 18:40:58,845 Interrupted thread detected - Restart Service
+2026-05-23 18:41:04,367 Started
+2026-05-23 18:41:24,380 Thread for /dev/ttyACM2 created
+2026-05-23 18:41:24,381 Thread for /dev/ttyACM0 created
+2026-05-23 18:41:24,381 Thread for /dev/ttyACM3 created
+2026-05-23 18:41:24,382 Thread for /dev/ttyACM1 created
+2026-05-23 18:41:24,382 Thread for gathering data created
+2026-05-23 18:46:14,589 USB removed : /dev/ttyACM3 — Service restart
+2026-05-23 18:46:19,400 Interrupted thread detected - Restart Service
+2026-05-23 18:46:24,861 Started
+2026-05-23 18:46:44,878 Thread for /dev/ttyACM3 created
+2026-05-23 18:46:44,879 Thread for /dev/ttyACM2 created
+2026-05-23 18:46:44,879 Thread for /dev/ttyACM0 created
+2026-05-23 18:46:44,880 Thread for /dev/ttyACM1 created
+2026-05-23 18:46:44,880 Thread for gathering data created
+2026-05-23 23:48:17,338 USB removed : /dev/ttyACM1 — Service restart
+2026-05-23 23:48:20,428 Interrupted thread detected - Restart Service
+2026-05-23 23:48:26,118 Started
+2026-05-23 23:48:46,131 Thread for /dev/ttyACM1 created
+2026-05-23 23:48:46,132 Thread for /dev/ttyACM3 created
+2026-05-23 23:48:46,132 Thread for /dev/ttyACM2 created
+2026-05-23 23:48:46,133 Thread for /dev/ttyACM0 created
+2026-05-23 23:48:46,133 Thread for gathering data created
+2026-05-24 10:23:38,816 USB removed : /dev/ttyACM1 — Service restart
+2026-05-24 10:23:42,283 Interrupted thread detected - Restart Service
+2026-05-24 10:23:47,869 Started
+2026-05-24 10:24:07,886 Thread for /dev/ttyACM1 created
+2026-05-24 10:24:07,887 Thread for /dev/ttyACM3 created
+2026-05-24 10:24:07,887 Thread for /dev/ttyACM2 created
+2026-05-24 10:24:07,888 Thread for /dev/ttyACM0 created
+2026-05-24 10:24:07,888 Thread for gathering data created
+2026-05-24 13:28:30,788 USB removed : /dev/ttyACM1 — Service restart
+2026-05-24 13:28:33,228 Interrupted thread detected - Restart Service
+2026-05-24 13:28:38,877 Started
+2026-05-24 13:28:58,894 Thread for /dev/ttyACM1 created
+2026-05-24 13:28:58,895 Thread for /dev/ttyACM3 created
+2026-05-24 13:28:58,896 Thread for /dev/ttyACM2 created
+2026-05-24 13:28:58,896 Thread for /dev/ttyACM0 created
+2026-05-24 13:28:58,896 Thread for gathering data created
+2026-05-25 11:16:32,178 USB removed : /dev/ttyACM3 — Service restart
+2026-05-25 11:16:36,246 Interrupted thread detected - Restart Service
+2026-05-25 11:16:41,869 Started
+2026-05-25 11:17:01,885 Thread for /dev/ttyACM3 created
+2026-05-25 11:17:01,885 Thread for /dev/ttyACM1 created
+2026-05-25 11:17:01,886 Thread for /dev/ttyACM2 created
+2026-05-25 11:17:01,886 Thread for /dev/ttyACM0 created
+2026-05-25 11:17:01,887 Thread for gathering data created
+2026-05-26 02:30:35,585 USB removed : /dev/ttyACM1 — Service restart
+2026-05-26 02:30:38,508 Interrupted thread detected - Restart Service
+2026-05-26 02:30:44,106 Started
+2026-05-26 02:31:04,125 Thread for /dev/ttyACM1 created
+2026-05-26 02:31:04,128 Thread for /dev/ttyACM3 created
+2026-05-26 02:31:04,129 Thread for /dev/ttyACM2 created
+2026-05-26 02:31:04,129 Thread for /dev/ttyACM0 created
+2026-05-26 02:31:04,129 Thread for gathering data created
+2026-05-26 07:03:15,007 USB removed : /dev/ttyACM3 — Service restart
+2026-05-26 07:03:19,623 Interrupted thread detected - Restart Service
+2026-05-26 07:03:25,121 Started
+2026-05-26 07:03:45,138 Thread for /dev/ttyACM3 created
+2026-05-26 07:03:45,139 Thread for /dev/ttyACM1 created
+2026-05-26 07:03:45,140 Thread for /dev/ttyACM2 created
+2026-05-26 07:03:45,140 Thread for /dev/ttyACM0 created
+2026-05-26 07:03:45,141 Thread for gathering data created
+2026-05-27 07:49:43,344 USB removed : /dev/ttyACM2 — Service restart
+2026-05-27 07:49:47,779 Interrupted thread detected - Restart Service
+2026-05-27 07:49:53,366 Started
+2026-05-27 07:50:13,381 Thread for /dev/ttyACM2 created
+2026-05-27 07:50:13,381 Thread for /dev/ttyACM3 created
+2026-05-27 07:50:13,382 Thread for /dev/ttyACM1 created
+2026-05-27 07:50:13,382 Thread for /dev/ttyACM0 created
+2026-05-27 07:50:13,383 Thread for gathering data created
+2026-05-27 12:59:47,386 USB removed : /dev/ttyACM1 — Service restart
+2026-05-27 12:59:48,941 Interrupted thread detected - Restart Service
+2026-05-27 12:59:54,617 Started
+2026-05-27 13:00:14,632 Thread for /dev/ttyACM1 created
+2026-05-27 13:00:14,633 Thread for /dev/ttyACM2 created
+2026-05-27 13:00:14,633 Thread for /dev/ttyACM3 created
+2026-05-27 13:00:14,634 Thread for /dev/ttyACM0 created
+2026-05-27 13:00:14,634 Thread for gathering data created
+2026-05-28 21:58:38,125 USB removed : /dev/ttyACM1 — Service restart
+2026-05-28 21:58:38,153 Interrupted thread detected - Restart Service
+2026-05-28 21:58:43,614 Started
+2026-05-28 21:59:03,631 Thread for /dev/ttyACM1 created
+2026-05-28 21:59:03,632 Thread for /dev/ttyACM2 created
+2026-05-28 21:59:03,632 Thread for /dev/ttyACM3 created
+2026-05-28 21:59:03,633 Thread for /dev/ttyACM0 created
+2026-05-28 21:59:03,633 Thread for gathering data created
+2026-05-29 03:24:28,336 USB removed : /dev/ttyACM1 — Service restart
+2026-05-29 03:24:29,250 Interrupted thread detected - Restart Service
+2026-05-29 03:24:34,868 Started
+2026-05-29 03:24:54,887 Thread for /dev/ttyACM1 created
+2026-05-29 03:24:54,888 Thread for /dev/ttyACM2 created
+2026-05-29 03:24:54,888 Thread for /dev/ttyACM3 created
+2026-05-29 03:24:54,888 Thread for /dev/ttyACM0 created
+2026-05-29 03:24:54,889 Thread for gathering data created
+2026-05-29 11:07:11,037 USB removed : /dev/ttyACM2 — Service restart
+2026-05-29 11:07:15,731 Interrupted thread detected - Restart Service
+2026-05-29 11:07:21,363 Started
+2026-05-29 11:07:41,377 Thread for /dev/ttyACM2 created
+2026-05-29 11:07:41,378 Thread for /dev/ttyACM1 created
+2026-05-29 11:07:41,379 Thread for /dev/ttyACM3 created
+2026-05-29 11:07:41,379 Thread for /dev/ttyACM0 created
+2026-05-29 11:07:41,379 Thread for gathering data created
+2026-05-29 19:08:03,262 USB removed : /dev/ttyACM3 — Service restart
+2026-05-29 19:08:07,269 Interrupted thread detected - Restart Service
+2026-05-29 19:08:12,863 Started
+2026-05-29 19:08:32,878 Thread for /dev/ttyACM3 created
+2026-05-29 19:08:32,879 Thread for /dev/ttyACM2 created
+2026-05-29 19:08:32,880 Thread for /dev/ttyACM1 created
+2026-05-29 19:08:32,880 Thread for /dev/ttyACM0 created
+2026-05-29 19:08:32,880 Thread for gathering data created
+2026-05-29 21:16:40,122 USB removed : /dev/ttyACM1 — Service restart
+2026-05-29 21:16:43,124 Interrupted thread detected - Restart Service
+2026-05-29 21:16:48,623 Started
+2026-05-29 21:17:08,637 Thread for /dev/ttyACM1 created
+2026-05-29 21:17:08,640 Thread for /dev/ttyACM3 created
+2026-05-29 21:17:08,641 Thread for /dev/ttyACM2 created
+2026-05-29 21:17:08,641 Thread for /dev/ttyACM0 created
+2026-05-29 21:17:08,642 Thread for gathering data created
+2026-05-29 21:24:04,538 USB removed : /dev/ttyACM2 — Service restart
+2026-05-29 21:24:08,663 Interrupted thread detected - Restart Service
+2026-05-29 21:24:14,114 Started
+2026-05-29 21:24:34,128 Thread for /dev/ttyACM2 created
+2026-05-29 21:24:34,128 Thread for /dev/ttyACM1 created
+2026-05-29 21:24:34,129 Thread for /dev/ttyACM3 created
+2026-05-29 21:24:34,129 Thread for /dev/ttyACM0 created
+2026-05-29 21:24:34,130 Thread for gathering data created
+2026-05-29 22:10:42,111 USB removed : /dev/ttyACM1 — Service restart
+2026-05-29 22:10:44,220 Interrupted thread detected - Restart Service
+2026-05-29 22:10:49,876 Started
+2026-05-29 22:11:09,893 Thread for /dev/ttyACM1 created
+2026-05-29 22:11:09,894 Thread for /dev/ttyACM2 created
+2026-05-29 22:11:09,895 Thread for /dev/ttyACM3 created
+2026-05-29 22:11:09,895 Thread for /dev/ttyACM0 created
+2026-05-29 22:11:09,895 Thread for gathering data created
+2026-05-29 22:17:21,463 USB removed : /dev/ttyACM2 — Service restart
+2026-05-29 22:17:24,915 Interrupted thread detected - Restart Service
+2026-05-29 22:17:30,382 Started
+2026-05-29 22:17:50,394 Thread for /dev/ttyACM2 created
+2026-05-29 22:17:50,395 Thread for /dev/ttyACM1 created
+2026-05-29 22:17:50,395 Thread for /dev/ttyACM3 created
+2026-05-29 22:17:50,395 Thread for /dev/ttyACM0 created
+2026-05-29 22:17:50,395 Thread for gathering data created
+2026-05-30 06:29:39,767 USB removed : /dev/ttyACM3 — Service restart
+2026-05-30 06:29:41,282 Interrupted thread detected - Restart Service
+2026-05-30 06:29:46,868 Started
+2026-05-30 06:30:06,881 Thread for /dev/ttyACM3 created
+2026-05-30 06:30:06,882 Thread for /dev/ttyACM2 created
+2026-05-30 06:30:06,882 Thread for /dev/ttyACM1 created
+2026-05-30 06:30:06,883 Thread for /dev/ttyACM0 created
+2026-05-30 06:30:06,883 Thread for gathering data created
+2026-05-30 08:21:16,718 USB removed : /dev/ttyACM0 — Service restart
+2026-05-30 08:21:17,092 Interrupted thread detected - Restart Service
+2026-05-30 08:21:22,614 Started
+2026-05-30 08:21:42,628 Thread for /dev/ttyACM0 created
+2026-05-30 08:21:42,629 Thread for /dev/ttyACM3 created
+2026-05-30 08:21:42,629 Thread for /dev/ttyACM2 created
+2026-05-30 08:21:42,629 Thread for /dev/ttyACM1 created
+2026-05-30 08:21:42,630 Thread for gathering data created
+2026-05-30 18:00:57,905 USB removed : /dev/ttyACM1 — Service restart
+2026-05-30 18:00:58,676 Interrupted thread detected - Restart Service
+2026-05-30 18:01:04,409 Started
+2026-05-30 18:01:24,423 Thread for /dev/ttyACM1 created
+2026-05-30 18:01:24,424 Thread for /dev/ttyACM0 created
+2026-05-30 18:01:24,424 Thread for /dev/ttyACM3 created
+2026-05-30 18:01:24,425 Thread for /dev/ttyACM2 created
+2026-05-30 18:01:24,425 Thread for gathering data created
+2026-05-31 04:36:43,962 USB removed : /dev/ttyACM2 — Service restart
+2026-05-31 04:36:45,569 Interrupted thread detected - Restart Service
+2026-05-31 04:36:51,116 Started
+2026-05-31 04:37:11,129 Thread for /dev/ttyACM2 created
+2026-05-31 04:37:11,130 Thread for /dev/ttyACM1 created
+2026-05-31 04:37:11,130 Thread for /dev/ttyACM0 created
+2026-05-31 04:37:11,131 Thread for /dev/ttyACM3 created
+2026-05-31 04:37:11,131 Thread for gathering data created
+2026-05-31 04:43:35,609 USB removed : /dev/ttyACM3 — Service restart
+2026-05-31 04:43:36,153 Interrupted thread detected - Restart Service
+2026-05-31 04:43:41,617 Started
+2026-05-31 04:44:01,633 Thread for /dev/ttyACM3 created
+2026-05-31 04:44:01,634 Thread for /dev/ttyACM2 created
+2026-05-31 04:44:01,634 Thread for /dev/ttyACM1 created
+2026-05-31 04:44:01,635 Thread for /dev/ttyACM0 created
+2026-05-31 04:44:01,635 Thread for gathering data created
+2026-05-31 16:48:29,004 USB removed : /dev/ttyACM3 — Service restart
+2026-05-31 16:48:32,928 Interrupted thread detected - Restart Service
+2026-05-31 16:48:38,605 Started
+2026-05-31 16:48:58,621 Thread for /dev/ttyACM3 created
+2026-05-31 16:48:58,622 Thread for /dev/ttyACM2 created
+2026-05-31 16:48:58,622 Thread for /dev/ttyACM1 created
+2026-05-31 16:48:58,623 Thread for /dev/ttyACM0 created
+2026-05-31 16:48:58,623 Thread for gathering data created
+2026-06-01 07:08:50,887 USB removed : /dev/ttyACM1 — Service restart
+2026-06-01 07:08:55,160 Interrupted thread detected - Restart Service
+2026-06-01 07:09:00,626 Started
+2026-06-01 07:09:20,640 Thread for /dev/ttyACM1 created
+2026-06-01 07:09:20,641 Thread for /dev/ttyACM3 created
+2026-06-01 07:09:20,641 Thread for /dev/ttyACM2 created
+2026-06-01 07:09:20,641 Thread for /dev/ttyACM0 created
+2026-06-01 07:09:20,642 Thread for gathering data created
+2026-06-01 13:25:05,981 USB removed : /dev/ttyACM3 — Service restart
+2026-06-01 13:25:06,321 Interrupted thread detected - Restart Service
+2026-06-01 13:25:11,818 Started
+2026-06-01 13:25:31,834 Thread for /dev/ttyACM3 created
+2026-06-01 13:25:31,835 Thread for /dev/ttyACM1 created
+2026-06-01 13:25:31,835 Thread for /dev/ttyACM2 created
+2026-06-01 13:25:31,836 Thread for /dev/ttyACM0 created
+2026-06-01 13:25:31,836 Thread for gathering data created
+2026-06-01 19:35:49,307 USB removed : /dev/ttyACM2 — Service restart
+2026-06-01 19:35:52,515 Interrupted thread detected - Restart Service
+2026-06-01 19:35:58,123 Started
+2026-06-01 19:36:18,139 Thread for /dev/ttyACM2 created
+2026-06-01 19:36:18,139 Thread for /dev/ttyACM3 created
+2026-06-01 19:36:18,140 Thread for /dev/ttyACM1 created
+2026-06-01 19:36:18,140 Thread for /dev/ttyACM0 created
+2026-06-01 19:36:18,141 Thread for gathering data created
+2026-06-02 03:20:34,877 USB removed : /dev/ttyACM1 — Service restart
+2026-06-02 03:20:38,977 Interrupted thread detected - Restart Service
+2026-06-02 03:20:44,615 Started
+2026-06-02 03:21:04,628 Thread for /dev/ttyACM1 created
+2026-06-02 03:21:04,629 Thread for /dev/ttyACM2 created
+2026-06-02 03:21:04,629 Thread for /dev/ttyACM3 created
+2026-06-02 03:21:04,630 Thread for /dev/ttyACM0 created
+2026-06-02 03:21:04,630 Thread for gathering data created
+2026-06-02 08:54:55,042 USB removed : /dev/ttyACM2 — Service restart
+2026-06-02 08:54:55,234 Interrupted thread detected - Restart Service
+2026-06-02 08:55:00,863 Started
+2026-06-02 08:55:20,877 Thread for /dev/ttyACM2 created
+2026-06-02 08:55:20,877 Thread for /dev/ttyACM1 created
+2026-06-02 08:55:20,878 Thread for /dev/ttyACM3 created
+2026-06-02 08:55:20,878 Thread for /dev/ttyACM0 created
+2026-06-02 08:55:20,879 Thread for gathering data created
+2026-06-02 12:58:09,082 USB removed : /dev/ttyACM1 — Service restart
+2026-06-02 12:58:11,326 Interrupted thread detected - Restart Service
+2026-06-02 12:58:16,867 Started
+2026-06-02 12:58:36,882 Thread for /dev/ttyACM1 created
+2026-06-02 12:58:36,883 Thread for /dev/ttyACM2 created
+2026-06-02 12:58:36,884 Thread for /dev/ttyACM3 created
+2026-06-02 12:58:36,884 Thread for /dev/ttyACM0 created
+2026-06-02 12:58:36,885 Thread for gathering data created
+2026-06-03 04:58:11,144 USB removed : /dev/ttyACM0 — Service restart
+2026-06-03 04:58:13,643 Interrupted thread detected - Restart Service
+2026-06-03 04:58:19,121 Started
+2026-06-03 04:58:39,137 Thread for /dev/ttyACM0 created
+2026-06-03 04:58:39,137 Thread for /dev/ttyACM1 created
+2026-06-03 04:58:39,138 Thread for /dev/ttyACM2 created
+2026-06-03 04:58:39,138 Thread for /dev/ttyACM3 created
+2026-06-03 04:58:39,138 Thread for gathering data created
+2026-06-03 14:51:47,898 USB removed : /dev/ttyACM1 — Service restart
+2026-06-03 14:51:50,216 Interrupted thread detected - Restart Service
+2026-06-03 14:51:55,866 Started
+2026-06-03 14:52:15,884 Thread for /dev/ttyACM1 created
+2026-06-03 14:52:15,884 Thread for /dev/ttyACM0 created
+2026-06-03 14:52:15,885 Thread for /dev/ttyACM2 created
+2026-06-03 14:52:15,885 Thread for /dev/ttyACM3 created
+2026-06-03 14:52:15,886 Thread for gathering data created
+2026-06-03 15:25:37,466 USB removed : /dev/ttyACM2 — Service restart
+2026-06-03 15:25:40,957 Interrupted thread detected - Restart Service
+2026-06-03 15:25:46,624 Started
+2026-06-03 15:26:06,641 Thread for /dev/ttyACM2 created
+2026-06-03 15:26:06,642 Thread for /dev/ttyACM1 created
+2026-06-03 15:26:06,642 Thread for /dev/ttyACM0 created
+2026-06-03 15:26:06,643 Thread for /dev/ttyACM3 created
+2026-06-03 15:26:06,643 Thread for gathering data created
+2026-06-03 16:00:16,477 Started
+2026-06-03 16:00:36,491 Thread for /dev/ttyACM1 created
+2026-06-03 16:00:36,491 Thread for /dev/ttyACM0 created
+2026-06-03 16:00:36,501 Thread for gathering data created
+2026-06-03 16:00:47,574 Started
+2026-06-03 16:01:07,592 Thread for /dev/ttyACM3 created
+2026-06-03 16:01:07,593 Thread for /dev/ttyACM2 created
+2026-06-03 16:01:07,594 Thread for /dev/ttyACM1 created
+2026-06-03 16:01:07,594 Thread for /dev/ttyACM0 created
+2026-06-03 16:01:07,595 Thread for gathering data created
+2026-06-03 19:10:13,512 USB removed : /dev/ttyACM2 — Service restart
+2026-06-03 19:10:16,088 Interrupted thread detected - Restart Service
+2026-06-03 19:10:21,905 Started
+2026-06-03 19:10:41,919 Thread for /dev/ttyACM2 created
+2026-06-03 19:10:41,919 Thread for /dev/ttyACM3 created
+2026-06-03 19:10:41,920 Thread for /dev/ttyACM1 created
+2026-06-03 19:10:41,920 Thread for /dev/ttyACM0 created
+2026-06-03 19:10:41,921 Thread for gathering data created
+2026-06-04 06:57:52,637 USB removed : /dev/ttyACM0 — Service restart
+2026-06-04 06:57:53,207 Interrupted thread detected - Restart Service
+2026-06-04 06:57:58,746 Started
+2026-06-04 06:58:18,763 Thread for /dev/ttyACM0 created
+2026-06-04 06:58:18,764 Thread for /dev/ttyACM2 created
+2026-06-04 06:58:18,764 Thread for /dev/ttyACM3 created
+2026-06-04 06:58:18,765 Thread for /dev/ttyACM1 created
+2026-06-04 06:58:18,765 Thread for gathering data created
+2026-06-04 15:38:34,911 USB removed : /dev/ttyACM0 — Service restart
+2026-06-04 15:38:39,690 Interrupted thread detected - Restart Service
+2026-06-04 15:38:45,238 Started
+2026-06-04 15:39:05,248 Thread for /dev/ttyACM0 created
+2026-06-04 15:39:05,249 Thread for /dev/ttyACM2 created
+2026-06-04 15:39:05,249 Thread for /dev/ttyACM3 created
+2026-06-04 15:39:05,249 Thread for /dev/ttyACM1 created
+2026-06-04 15:39:05,249 Thread for gathering data created
+2026-06-05 16:50:16,710 USB removed : /dev/ttyACM2 — Service restart
+2026-06-05 16:50:17,960 Interrupted thread detected - Restart Service
+2026-06-05 16:50:23,702 Started
+2026-06-05 16:50:43,718 Thread for /dev/ttyACM2 created
+2026-06-05 16:50:43,719 Thread for /dev/ttyACM0 created
+2026-06-05 16:50:43,720 Thread for /dev/ttyACM3 created
+2026-06-05 16:50:43,720 Thread for /dev/ttyACM1 created
+2026-06-05 16:50:43,721 Thread for gathering data created
+2026-06-05 17:45:56,995 USB removed : /dev/ttyACM0 — Service restart
+2026-06-05 17:45:58,830 Interrupted thread detected - Restart Service
+2026-06-05 17:46:04,486 Started
+2026-06-05 17:46:24,503 Thread for /dev/ttyACM0 created
+2026-06-05 17:46:24,504 Thread for /dev/ttyACM2 created
+2026-06-05 17:46:24,505 Thread for /dev/ttyACM3 created
+2026-06-05 17:46:24,506 Thread for /dev/ttyACM1 created
+2026-06-05 17:46:24,506 Thread for gathering data created
+2026-06-05 18:40:58,372 USB removed : /dev/ttyACM1 — Service restart
+2026-06-05 18:40:59,610 Interrupted thread detected - Restart Service
+2026-06-05 18:41:05,226 Started
+2026-06-05 18:41:25,239 Thread for /dev/ttyACM1 created
+2026-06-05 18:41:25,240 Thread for /dev/ttyACM0 created
+2026-06-05 18:41:25,241 Thread for /dev/ttyACM2 created
+2026-06-05 18:41:25,241 Thread for /dev/ttyACM3 created
+2026-06-05 18:41:25,241 Thread for gathering data created
+2026-06-05 20:23:36,715 USB removed : /dev/ttyACM2 — Service restart
+2026-06-05 20:23:40,435 Interrupted thread detected - Restart Service
+2026-06-05 20:23:45,981 Started
+2026-06-05 20:24:05,998 Thread for /dev/ttyACM2 created
+2026-06-05 20:24:05,998 Thread for /dev/ttyACM1 created
+2026-06-05 20:24:05,999 Thread for /dev/ttyACM0 created
+2026-06-05 20:24:05,999 Thread for /dev/ttyACM3 created
+2026-06-05 20:24:06,000 Thread for gathering data created
+2026-06-05 23:03:47,975 USB removed : /dev/ttyACM0 — Service restart
+2026-06-05 23:03:51,289 Interrupted thread detected - Restart Service
+2026-06-05 23:03:56,985 Started
+2026-06-05 23:04:17,000 Thread for /dev/ttyACM0 created
+2026-06-05 23:04:17,001 Thread for /dev/ttyACM2 created
+2026-06-05 23:04:17,001 Thread for /dev/ttyACM1 created
+2026-06-05 23:04:17,002 Thread for /dev/ttyACM3 created
+2026-06-05 23:04:17,002 Thread for gathering data created
+2026-06-06 10:10:02,444 USB removed : /dev/ttyACM0 — Service restart
+2026-06-06 10:10:02,761 Interrupted thread detected - Restart Service
+2026-06-06 10:10:08,313 Started
+2026-06-06 10:10:28,329 Thread for /dev/ttyACM0 created
+2026-06-06 10:10:28,330 Thread for /dev/ttyACM2 created
+2026-06-06 10:10:28,330 Thread for /dev/ttyACM1 created
+2026-06-06 10:10:28,331 Thread for /dev/ttyACM3 created
+2026-06-06 10:10:28,331 Thread for gathering data created
+2026-06-06 22:06:23,824 USB removed : /dev/ttyACM0 — Service restart
+2026-06-06 22:06:24,621 Interrupted thread detected - Restart Service
+2026-06-06 22:06:30,304 Started
+2026-06-06 22:06:50,320 Thread for /dev/ttyACM0 created
+2026-06-06 22:06:50,321 Thread for /dev/ttyACM2 created
+2026-06-06 22:06:50,321 Thread for /dev/ttyACM1 created
+2026-06-06 22:06:50,322 Thread for /dev/ttyACM3 created
+2026-06-06 22:06:50,322 Thread for gathering data created
+2026-06-07 06:09:20,974 USB removed : /dev/ttyACM0 — Service restart
+2026-06-07 06:09:21,181 Interrupted thread detected - Restart Service
+2026-06-07 06:09:26,796 Started
+2026-06-07 06:09:46,813 Thread for /dev/ttyACM0 created
+2026-06-07 06:09:46,814 Thread for /dev/ttyACM2 created
+2026-06-07 06:09:46,814 Thread for /dev/ttyACM1 created
+2026-06-07 06:09:46,815 Thread for /dev/ttyACM3 created
+2026-06-07 06:09:46,815 Thread for gathering data created
+2026-06-07 08:32:01,623 USB removed : /dev/ttyACM2 — Service restart
+2026-06-07 08:32:02,075 Interrupted thread detected - Restart Service
+2026-06-07 08:32:07,544 Started
+2026-06-07 08:32:27,560 Thread for /dev/ttyACM2 created
+2026-06-07 08:32:27,560 Thread for /dev/ttyACM0 created
+2026-06-07 08:32:27,561 Thread for /dev/ttyACM1 created
+2026-06-07 08:32:27,561 Thread for /dev/ttyACM3 created
+2026-06-07 08:32:27,562 Thread for gathering data created
+2026-06-07 11:18:21,546 USB removed : /dev/ttyACM2 — Service restart
+2026-06-07 11:18:22,861 Interrupted thread detected - Restart Service
+2026-06-07 11:18:28,546 Started
+2026-06-07 11:18:48,559 Thread for /dev/ttyACM2 created
+2026-06-07 11:18:48,560 Thread for /dev/ttyACM0 created
+2026-06-07 11:18:48,560 Thread for /dev/ttyACM1 created
+2026-06-07 11:18:48,561 Thread for /dev/ttyACM3 created
+2026-06-07 11:18:48,561 Thread for gathering data created
+2026-06-07 18:33:33,517 USB removed : /dev/ttyACM1 — Service restart
+2026-06-07 18:33:34,351 Interrupted thread detected - Restart Service
+2026-06-07 18:33:40,043 Started
+2026-06-07 18:34:00,059 Thread for /dev/ttyACM1 created
+2026-06-07 18:34:00,060 Thread for /dev/ttyACM2 created
+2026-06-07 18:34:00,061 Thread for /dev/ttyACM0 created
+2026-06-07 18:34:00,061 Thread for /dev/ttyACM3 created
+2026-06-07 18:34:00,062 Thread for gathering data created
+2026-06-07 18:39:56,480 USB removed : /dev/ttyACM2 — Service restart
+2026-06-07 18:40:00,083 Interrupted thread detected - Restart Service
+2026-06-07 18:40:05,553 Started
+2026-06-07 18:40:25,566 Thread for /dev/ttyACM2 created
+2026-06-07 18:40:25,567 Thread for /dev/ttyACM1 created
+2026-06-07 18:40:25,568 Thread for /dev/ttyACM0 created
+2026-06-07 18:40:25,568 Thread for /dev/ttyACM3 created
+2026-06-07 18:40:25,568 Thread for gathering data created
+2026-06-08 19:14:48,508 USB removed : /dev/ttyACM2 — Service restart
+2026-06-08 19:14:53,195 Interrupted thread detected - Restart Service
+2026-06-08 19:14:58,796 Started
+2026-06-08 19:15:18,812 Thread for /dev/ttyACM2 created
+2026-06-08 19:15:18,812 Thread for /dev/ttyACM1 created
+2026-06-08 19:15:18,813 Thread for /dev/ttyACM0 created
+2026-06-08 19:15:18,813 Thread for /dev/ttyACM3 created
+2026-06-08 19:15:18,814 Thread for gathering data created
+2026-06-08 23:40:24,019 USB removed : /dev/ttyACM2 — Service restart
+2026-06-08 23:40:24,294 Interrupted thread detected - Restart Service
+2026-06-08 23:40:29,796 Started
+2026-06-08 23:40:49,809 Thread for /dev/ttyACM2 created
+2026-06-08 23:40:49,810 Thread for /dev/ttyACM1 created
+2026-06-08 23:40:49,810 Thread for /dev/ttyACM0 created
+2026-06-08 23:40:49,811 Thread for /dev/ttyACM3 created
+2026-06-08 23:40:49,811 Thread for gathering data created
+2026-06-09 07:35:46,501 USB removed : /dev/ttyACM3 — Service restart
+2026-06-09 07:35:50,666 Interrupted thread detected - Restart Service
+2026-06-09 07:35:56,285 Started
+2026-06-09 07:36:16,301 Thread for /dev/ttyACM3 created
+2026-06-09 07:36:16,302 Thread for /dev/ttyACM2 created
+2026-06-09 07:36:16,303 Thread for /dev/ttyACM1 created
+2026-06-09 07:36:16,303 Thread for /dev/ttyACM0 created
+2026-06-09 07:36:16,303 Thread for gathering data created
+2026-06-09 16:59:39,469 USB removed : /dev/ttyACM3 — Service restart
+2026-06-09 16:59:42,306 Interrupted thread detected - Restart Service
+2026-06-09 16:59:47,798 Started
+2026-06-09 17:00:07,813 Thread for /dev/ttyACM3 created
+2026-06-09 17:00:07,814 Thread for /dev/ttyACM2 created
+2026-06-09 17:00:07,814 Thread for /dev/ttyACM1 created
+2026-06-09 17:00:07,815 Thread for /dev/ttyACM0 created
+2026-06-09 17:00:07,815 Thread for gathering data created
+2026-06-11 00:12:25,039 USB removed : /dev/ttyACM0 — Service restart
+2026-06-11 00:12:26,181 Interrupted thread detected - Restart Service
+2026-06-11 00:12:31,830 Started
+2026-06-11 00:12:51,841 Thread for /dev/ttyACM0 created
+2026-06-11 00:12:51,842 Thread for /dev/ttyACM3 created
+2026-06-11 00:12:51,842 Thread for /dev/ttyACM2 created
+2026-06-11 00:12:51,842 Thread for /dev/ttyACM1 created
+2026-06-11 00:12:51,842 Thread for gathering data created
+2026-06-11 07:45:05,619 USB removed : /dev/ttyACM3 — Service restart
+2026-06-11 07:45:07,654 Interrupted thread detected - Restart Service
+2026-06-11 07:45:13,303 Started
+2026-06-11 07:45:33,316 Thread for /dev/ttyACM3 created
+2026-06-11 07:45:33,316 Thread for /dev/ttyACM0 created
+2026-06-11 07:45:33,317 Thread for /dev/ttyACM2 created
+2026-06-11 07:45:33,317 Thread for /dev/ttyACM1 created
+2026-06-11 07:45:33,318 Thread for gathering data created
+2026-06-11 17:24:16,075 USB removed : /dev/ttyACM0 — Service restart
+2026-06-11 17:24:19,354 Interrupted thread detected - Restart Service
+2026-06-11 17:24:25,044 Started
+2026-06-11 17:24:45,058 Thread for /dev/ttyACM0 created
+2026-06-11 17:24:45,059 Thread for /dev/ttyACM3 created
+2026-06-11 17:24:45,059 Thread for /dev/ttyACM2 created
+2026-06-11 17:24:45,060 Thread for /dev/ttyACM1 created
+2026-06-11 17:24:45,060 Thread for gathering data created
+2026-06-11 23:38:03,739 USB removed : /dev/ttyACM0 — Service restart
+2026-06-11 23:38:05,730 Interrupted thread detected - Restart Service
+2026-06-11 23:38:11,295 Started
+2026-06-11 23:38:31,309 Thread for /dev/ttyACM0 created
+2026-06-11 23:38:31,310 Thread for /dev/ttyACM3 created
+2026-06-11 23:38:31,310 Thread for /dev/ttyACM2 created
+2026-06-11 23:38:31,311 Thread for /dev/ttyACM1 created
+2026-06-11 23:38:31,311 Thread for gathering data created
+2026-06-13 06:31:50,604 USB removed : /dev/ttyACM2 — Service restart
+2026-06-13 06:31:54,612 Interrupted thread detected - Restart Service
+2026-06-13 06:32:00,304 Started
+2026-06-13 06:32:20,315 Thread for /dev/ttyACM2 created
+2026-06-13 06:32:20,315 Thread for /dev/ttyACM0 created
+2026-06-13 06:32:20,320 Thread for /dev/ttyACM3 created
+2026-06-13 06:32:20,321 Thread for /dev/ttyACM1 created
+2026-06-13 06:32:20,321 Thread for gathering data created
+2026-06-14 03:47:12,076 USB removed : /dev/ttyACM0 — Service restart
+2026-06-14 03:47:12,624 Interrupted thread detected - Restart Service
+2026-06-14 03:47:18,295 Started
+2026-06-14 03:47:38,308 Thread for /dev/ttyACM0 created
+2026-06-14 03:47:38,309 Thread for /dev/ttyACM2 created
+2026-06-14 03:47:38,309 Thread for /dev/ttyACM3 created
+2026-06-14 03:47:38,310 Thread for /dev/ttyACM1 created
+2026-06-14 03:47:38,310 Thread for gathering data created
+2026-06-14 11:11:14,502 USB removed : /dev/ttyACM1 — Service restart
+2026-06-14 11:11:19,106 Interrupted thread detected - Restart Service
+2026-06-14 11:11:24,797 Started
+2026-06-14 11:11:44,810 Thread for /dev/ttyACM1 created
+2026-06-14 11:11:44,810 Thread for /dev/ttyACM0 created
+2026-06-14 11:11:44,811 Thread for /dev/ttyACM2 created
+2026-06-14 11:11:44,811 Thread for /dev/ttyACM3 created
+2026-06-14 11:11:44,812 Thread for gathering data created
+2026-06-14 15:21:46,828 USB removed : /dev/ttyACM1 — Service restart
+2026-06-14 15:21:50,265 Interrupted thread detected - Restart Service
+2026-06-14 15:21:55,792 Started
+2026-06-14 15:22:15,813 Thread for /dev/ttyACM1 created
+2026-06-14 15:22:15,814 Thread for /dev/ttyACM0 created
+2026-06-14 15:22:15,814 Thread for /dev/ttyACM2 created
+2026-06-14 15:22:15,814 Thread for /dev/ttyACM3 created
+2026-06-14 15:22:15,815 Thread for gathering data created
+2026-06-14 17:20:46,161 USB removed : /dev/ttyACM3 — Service restart
+2026-06-14 17:20:51,043 Interrupted thread detected - Restart Service
+2026-06-14 17:20:56,550 Started
+2026-06-14 17:21:16,559 Thread for /dev/ttyACM3 created
+2026-06-14 17:21:16,559 Thread for /dev/ttyACM1 created
+2026-06-14 17:21:16,560 Thread for /dev/ttyACM0 created
+2026-06-14 17:21:16,560 Thread for /dev/ttyACM2 created
+2026-06-14 17:21:16,560 Thread for gathering data created
+2026-06-15 00:43:10,290 USB removed : /dev/ttyACM3 — Service restart
+2026-06-15 00:43:12,363 Interrupted thread detected - Restart Service
+2026-06-15 00:43:18,090 Started
+2026-06-15 00:43:38,103 Thread for /dev/ttyACM3 created
+2026-06-15 00:43:38,104 Thread for /dev/ttyACM1 created
+2026-06-15 00:43:38,104 Thread for /dev/ttyACM0 created
+2026-06-15 00:43:38,104 Thread for /dev/ttyACM2 created
+2026-06-15 00:43:38,105 Thread for gathering data created
+2026-06-15 04:45:43,383 USB removed : /dev/ttyACM3 — Service restart
+2026-06-15 04:45:43,532 Interrupted thread detected - Restart Service
+2026-06-15 04:45:49,055 Started
+2026-06-15 04:46:09,072 Thread for /dev/ttyACM3 created
+2026-06-15 04:46:09,073 Thread for /dev/ttyACM1 created
+2026-06-15 04:46:09,073 Thread for /dev/ttyACM0 created
+2026-06-15 04:46:09,074 Thread for /dev/ttyACM2 created
+2026-06-15 04:46:09,074 Thread for gathering data created
+2026-06-15 09:19:24,222 USB removed : /dev/ttyACM2 — Service restart
+2026-06-15 09:19:24,571 Interrupted thread detected - Restart Service
+2026-06-15 09:19:30,051 Started
+2026-06-15 09:19:50,059 Thread for /dev/ttyACM2 created
+2026-06-15 09:19:50,060 Thread for /dev/ttyACM3 created
+2026-06-15 09:19:50,060 Thread for /dev/ttyACM1 created
+2026-06-15 09:19:50,060 Thread for /dev/ttyACM0 created
+2026-06-15 09:19:50,060 Thread for gathering data created
+2026-06-15 15:37:34,040 USB removed : /dev/ttyACM3 — Service restart
+2026-06-15 15:37:35,733 Interrupted thread detected - Restart Service
+2026-06-15 15:37:41,296 Started
+2026-06-15 15:38:01,310 Thread for /dev/ttyACM3 created
+2026-06-15 15:38:01,310 Thread for /dev/ttyACM2 created
+2026-06-15 15:38:01,311 Thread for /dev/ttyACM1 created
+2026-06-15 15:38:01,311 Thread for /dev/ttyACM0 created
+2026-06-15 15:38:01,311 Thread for gathering data created
+2026-06-16 06:22:42,748 USB removed : /dev/ttyACM2 — Service restart
+2026-06-16 06:22:42,893 Interrupted thread detected - Restart Service
+2026-06-16 06:22:48,548 Started
+2026-06-16 06:23:08,565 Thread for /dev/ttyACM2 created
+2026-06-16 06:23:08,566 Thread for /dev/ttyACM3 created
+2026-06-16 06:23:08,567 Thread for /dev/ttyACM1 created
+2026-06-16 06:23:08,567 Thread for /dev/ttyACM0 created
+2026-06-16 06:23:08,567 Thread for gathering data created
+2026-06-16 08:16:20,560 USB removed : /dev/ttyACM0 — Service restart
+2026-06-16 08:16:23,780 Interrupted thread detected - Restart Service
+2026-06-16 08:16:29,301 Started
+2026-06-16 08:16:49,309 Thread for /dev/ttyACM3 created
+2026-06-16 08:16:49,310 Thread for /dev/ttyACM0 created
+2026-06-16 08:16:49,310 Thread for /dev/ttyACM2 created
+2026-06-16 08:16:49,310 Thread for /dev/ttyACM1 created
+2026-06-16 08:16:49,310 Thread for gathering data created
+2026-06-16 12:18:08,595 USB removed : /dev/ttyACM1 — Service restart
+2026-06-16 12:18:09,748 Interrupted thread detected - Restart Service
+2026-06-16 12:18:15,307 Started
+2026-06-16 12:18:35,325 Thread for /dev/ttyACM1 created
+2026-06-16 12:18:35,326 Thread for /dev/ttyACM3 created
+2026-06-16 12:18:35,326 Thread for /dev/ttyACM0 created
+2026-06-16 12:18:35,327 Thread for /dev/ttyACM2 created
+2026-06-16 12:18:35,327 Thread for gathering data created
+2026-06-16 12:32:02,125 USB removed : /dev/ttyACM1 — Service restart
+2026-06-16 12:32:05,362 Interrupted thread detected - Restart Service
+2026-06-16 12:32:11,048 Started
+2026-06-16 12:32:31,061 Thread for /dev/ttyACM1 created
+2026-06-16 12:32:31,062 Thread for /dev/ttyACM3 created
+2026-06-16 12:32:31,062 Thread for /dev/ttyACM0 created
+2026-06-16 12:32:31,062 Thread for /dev/ttyACM2 created
+2026-06-16 12:32:31,063 Thread for gathering data created
+2026-06-16 15:00:37,069 USB removed : /dev/ttyACM1 — Service restart
+2026-06-16 15:00:41,330 Interrupted thread detected - Restart Service
+2026-06-16 15:00:46,801 Started
+2026-06-16 15:01:06,817 Thread for /dev/ttyACM1 created
+2026-06-16 15:01:06,818 Thread for /dev/ttyACM3 created
+2026-06-16 15:01:06,818 Thread for /dev/ttyACM0 created
+2026-06-16 15:01:06,819 Thread for /dev/ttyACM2 created
+2026-06-16 15:01:06,819 Thread for gathering data created
+2026-06-16 22:37:17,259 USB removed : /dev/ttyACM2 — Service restart
+2026-06-16 22:37:17,661 Interrupted thread detected - Restart Service
+2026-06-16 22:37:23,304 Started
+2026-06-16 22:37:43,317 Thread for /dev/ttyACM2 created
+2026-06-16 22:37:43,317 Thread for /dev/ttyACM1 created
+2026-06-16 22:37:43,318 Thread for /dev/ttyACM3 created
+2026-06-16 22:37:43,318 Thread for /dev/ttyACM0 created
+2026-06-16 22:37:43,319 Thread for gathering data created
+2026-06-17 02:56:13,392 USB removed : /dev/ttyACM0 — Service restart
+2026-06-17 02:56:13,788 Interrupted thread detected - Restart Service
+2026-06-17 02:56:19,282 Started
+2026-06-17 02:56:39,300 Thread for /dev/ttyACM0 created
+2026-06-17 02:56:39,301 Thread for /dev/ttyACM2 created
+2026-06-17 02:56:39,302 Thread for /dev/ttyACM1 created
+2026-06-17 02:56:39,302 Thread for /dev/ttyACM3 created
+2026-06-17 02:56:39,302 Thread for gathering data created
+2026-06-17 16:24:36,176 USB removed : /dev/ttyACM1 — Service restart
+2026-06-17 16:24:40,733 Interrupted thread detected - Restart Service
+2026-06-17 16:24:46,305 Started
+2026-06-17 16:25:06,314 Thread for /dev/ttyACM1 created
+2026-06-17 16:25:06,317 Thread for /dev/ttyACM0 created
+2026-06-17 16:25:06,318 Thread for /dev/ttyACM2 created
+2026-06-17 16:25:06,318 Thread for /dev/ttyACM3 created
+2026-06-17 16:25:06,318 Thread for gathering data created
+2026-06-17 18:35:36,396 USB removed : /dev/ttyACM2 — Service restart
+2026-06-17 18:35:36,569 Interrupted thread detected - Restart Service
+2026-06-17 18:35:42,050 Started
+2026-06-17 18:36:02,068 Thread for /dev/ttyACM2 created
+2026-06-17 18:36:02,069 Thread for /dev/ttyACM1 created
+2026-06-17 18:36:02,069 Thread for /dev/ttyACM0 created
+2026-06-17 18:36:02,070 Thread for /dev/ttyACM3 created
+2026-06-17 18:36:02,070 Thread for gathering data created
+2026-06-18 10:23:25,267 USB removed : /dev/ttyACM2 — Service restart
+2026-06-18 10:23:28,747 Interrupted thread detected - Restart Service
+2026-06-18 10:23:34,299 Started
+2026-06-18 10:23:54,315 Thread for /dev/ttyACM2 created
+2026-06-18 10:23:54,316 Thread for /dev/ttyACM1 created
+2026-06-18 10:23:54,317 Thread for /dev/ttyACM0 created
+2026-06-18 10:23:54,317 Thread for /dev/ttyACM3 created
+2026-06-18 10:23:54,317 Thread for gathering data created
+2026-06-18 15:55:03,628 USB removed : /dev/ttyACM1 — Service restart
+2026-06-18 15:55:04,922 Interrupted thread detected - Restart Service
+2026-06-18 15:55:10,544 Started
+2026-06-18 15:55:30,559 Thread for /dev/ttyACM1 created
+2026-06-18 15:55:30,560 Thread for /dev/ttyACM2 created
+2026-06-18 15:55:30,560 Thread for /dev/ttyACM0 created
+2026-06-18 15:55:30,561 Thread for /dev/ttyACM3 created
+2026-06-18 15:55:30,561 Thread for gathering data created
+2026-06-18 16:21:32,874 USB removed : /dev/ttyACM2 — Service restart
+2026-06-18 16:21:35,616 Interrupted thread detected - Restart Service
+2026-06-18 16:21:41,304 Started
+2026-06-18 16:22:01,320 Thread for /dev/ttyACM2 created
+2026-06-18 16:22:01,320 Thread for /dev/ttyACM1 created
+2026-06-18 16:22:01,321 Thread for /dev/ttyACM0 created
+2026-06-18 16:22:01,321 Thread for /dev/ttyACM3 created
+2026-06-18 16:22:01,322 Thread for gathering data created
+2026-06-19 09:54:33,683 USB removed : /dev/ttyACM1 — Service restart
+2026-06-19 09:54:38,208 Interrupted thread detected - Restart Service
+2026-06-19 09:54:43,791 Started
+2026-06-19 09:55:03,808 Thread for /dev/ttyACM1 created
+2026-06-19 09:55:03,809 Thread for /dev/ttyACM2 created
+2026-06-19 09:55:03,810 Thread for /dev/ttyACM0 created
+2026-06-19 09:55:03,810 Thread for /dev/ttyACM3 created
+2026-06-19 09:55:03,811 Thread for gathering data created
+2026-06-19 10:43:01,833 USB removed : /dev/ttyACM1 — Service restart
+2026-06-19 10:43:03,906 Interrupted thread detected - Restart Service
+2026-06-19 10:43:09,553 Started
+2026-06-19 10:43:29,567 Thread for /dev/ttyACM1 created
+2026-06-19 10:43:29,568 Thread for /dev/ttyACM2 created
+2026-06-19 10:43:29,573 Thread for /dev/ttyACM0 created
+2026-06-19 10:43:29,574 Thread for /dev/ttyACM3 created
+2026-06-19 10:43:29,574 Thread for gathering data created
+2026-06-19 21:15:04,640 USB removed : /dev/ttyACM2 — Service restart
+2026-06-19 21:15:05,701 Interrupted thread detected - Restart Service
+2026-06-19 21:15:11,301 Started
+2026-06-19 21:15:31,316 Thread for /dev/ttyACM2 created
+2026-06-19 21:15:31,317 Thread for /dev/ttyACM1 created
+2026-06-19 21:15:31,317 Thread for /dev/ttyACM0 created
+2026-06-19 21:15:31,318 Thread for /dev/ttyACM3 created
+2026-06-19 21:15:31,318 Thread for gathering data created
+2026-06-19 22:57:28,640 USB removed : /dev/ttyACM0 — Service restart
+2026-06-19 22:57:31,514 Interrupted thread detected - Restart Service
+2026-06-19 22:57:37,038 Started
+2026-06-19 22:57:57,054 Thread for /dev/ttyACM0 created
+2026-06-19 22:57:57,055 Thread for /dev/ttyACM2 created
+2026-06-19 22:57:57,056 Thread for /dev/ttyACM1 created
+2026-06-19 22:57:57,056 Thread for /dev/ttyACM3 created
+2026-06-19 22:57:57,056 Thread for gathering data created
+2026-06-20 18:01:45,794 USB removed : /dev/ttyACM1 — Service restart
+2026-06-20 18:01:49,143 Interrupted thread detected - Restart Service
+2026-06-20 18:01:54,800 Started
+2026-06-20 18:02:14,809 Thread for /dev/ttyACM1 created
+2026-06-20 18:02:14,809 Thread for /dev/ttyACM0 created
+2026-06-20 18:02:14,810 Thread for /dev/ttyACM2 created
+2026-06-20 18:02:14,810 Thread for /dev/ttyACM3 created
+2026-06-20 18:02:14,810 Thread for gathering data created
+2026-06-20 20:58:54,925 USB removed : /dev/ttyACM1 — Service restart
+2026-06-20 20:58:55,139 Interrupted thread detected - Restart Service
+2026-06-20 20:59:00,794 Started
+2026-06-20 20:59:20,809 Thread for /dev/ttyACM1 created
+2026-06-20 20:59:20,810 Thread for /dev/ttyACM0 created
+2026-06-20 20:59:20,810 Thread for /dev/ttyACM2 created
+2026-06-20 20:59:20,811 Thread for /dev/ttyACM3 created
+2026-06-20 20:59:20,811 Thread for gathering data created
+2026-06-20 23:06:54,925 USB removed : /dev/ttyACM0 — Service restart
+2026-06-20 23:06:56,046 Interrupted thread detected - Restart Service
+2026-06-20 23:07:01,550 Started
+2026-06-20 23:07:21,567 Thread for /dev/ttyACM0 created
+2026-06-20 23:07:21,567 Thread for /dev/ttyACM1 created
+2026-06-20 23:07:21,568 Thread for /dev/ttyACM2 created
+2026-06-20 23:07:21,568 Thread for /dev/ttyACM3 created
+2026-06-20 23:07:21,569 Thread for gathering data created
+2026-06-20 23:52:55,631 USB removed : /dev/ttyACM1 — Service restart
+2026-06-20 23:52:56,660 Interrupted thread detected - Restart Service
+2026-06-20 23:53:02,301 Started
+2026-06-20 23:53:22,315 Thread for /dev/ttyACM1 created
+2026-06-20 23:53:22,315 Thread for /dev/ttyACM0 created
+2026-06-20 23:53:22,316 Thread for /dev/ttyACM2 created
+2026-06-20 23:53:22,316 Thread for /dev/ttyACM3 created
+2026-06-20 23:53:22,316 Thread for gathering data created
+2026-06-21 10:29:36,973 USB removed : /dev/ttyACM1 — Service restart
+2026-06-21 10:29:38,437 Interrupted thread detected - Restart Service
+2026-06-21 10:29:44,043 Started
+2026-06-21 10:30:04,060 Thread for /dev/ttyACM1 created
+2026-06-21 10:30:04,061 Thread for /dev/ttyACM0 created
+2026-06-21 10:30:04,061 Thread for /dev/ttyACM2 created
+2026-06-21 10:30:04,062 Thread for /dev/ttyACM3 created
+2026-06-21 10:30:04,062 Thread for gathering data created
+2026-06-21 16:30:59,147 USB removed : /dev/ttyACM2 — Service restart
+2026-06-21 16:30:59,708 Interrupted thread detected - Restart Service
+2026-06-21 16:31:05,292 Started
+2026-06-21 16:31:25,306 Thread for /dev/ttyACM2 created
+2026-06-21 16:31:25,307 Thread for /dev/ttyACM1 created
+2026-06-21 16:31:25,307 Thread for /dev/ttyACM0 created
+2026-06-21 16:31:25,308 Thread for /dev/ttyACM3 created
+2026-06-21 16:31:25,308 Thread for gathering data created
+2026-06-22 02:37:48,496 USB removed : /dev/ttyACM3 — Service restart
+2026-06-22 02:37:51,393 Interrupted thread detected - Restart Service
+2026-06-22 02:37:57,050 Started
+2026-06-22 02:38:17,063 Thread for /dev/ttyACM3 created
+2026-06-22 02:38:17,064 Thread for /dev/ttyACM2 created
+2026-06-22 02:38:17,065 Thread for /dev/ttyACM1 created
+2026-06-22 02:38:17,065 Thread for /dev/ttyACM0 created
+2026-06-22 02:38:17,066 Thread for gathering data created
+2026-06-22 06:42:49,022 USB removed : /dev/ttyACM2 — Service restart
+2026-06-22 06:42:52,506 Interrupted thread detected - Restart Service
+2026-06-22 06:42:58,047 Started
+2026-06-22 06:43:18,064 Thread for /dev/ttyACM2 created
+2026-06-22 06:43:18,065 Thread for /dev/ttyACM3 created
+2026-06-22 06:43:18,066 Thread for /dev/ttyACM1 created
+2026-06-22 06:43:18,066 Thread for /dev/ttyACM0 created
+2026-06-22 06:43:18,067 Thread for gathering data created
+2026-06-22 12:05:43,104 USB removed : /dev/ttyACM2 — Service restart
+2026-06-22 12:05:43,640 Interrupted thread detected - Restart Service
+2026-06-22 12:05:49,293 Started
+2026-06-22 12:06:09,307 Thread for /dev/ttyACM2 created
+2026-06-22 12:06:09,307 Thread for /dev/ttyACM3 created
+2026-06-22 12:06:09,308 Thread for /dev/ttyACM1 created
+2026-06-22 12:06:09,308 Thread for /dev/ttyACM0 created
+2026-06-22 12:06:09,308 Thread for gathering data created
+2026-06-22 18:30:07,694 USB removed : /dev/ttyACM3 — Service restart
+2026-06-22 18:30:10,002 Interrupted thread detected - Restart Service
+2026-06-22 18:30:15,555 Started
+2026-06-22 18:30:35,571 Thread for /dev/ttyACM3 created
+2026-06-22 18:30:35,571 Thread for /dev/ttyACM2 created
+2026-06-22 18:30:35,572 Thread for /dev/ttyACM1 created
+2026-06-22 18:30:35,572 Thread for /dev/ttyACM0 created
+2026-06-22 18:30:35,573 Thread for gathering data created
+2026-06-23 08:03:21,276 USB removed : /dev/ttyACM0 — Service restart
+2026-06-23 08:03:22,031 Interrupted thread detected - Restart Service
+2026-06-23 08:03:27,542 Started
+2026-06-23 08:03:47,554 Thread for /dev/ttyACM0 created
+2026-06-23 08:03:47,555 Thread for /dev/ttyACM3 created
+2026-06-23 08:03:47,555 Thread for /dev/ttyACM2 created
+2026-06-23 08:03:47,555 Thread for /dev/ttyACM1 created
+2026-06-23 08:03:47,555 Thread for gathering data created
+2026-06-23 11:34:11,789 USB removed : /dev/ttyACM2 — Service restart
+2026-06-23 11:34:12,929 Interrupted thread detected - Restart Service
+2026-06-23 11:34:18,552 Started
+2026-06-23 11:34:38,568 Thread for /dev/ttyACM2 created
+2026-06-23 11:34:38,569 Thread for /dev/ttyACM0 created
+2026-06-23 11:34:38,569 Thread for /dev/ttyACM3 created
+2026-06-23 11:34:38,570 Thread for /dev/ttyACM1 created
+2026-06-23 11:34:38,570 Thread for gathering data created
+2026-06-23 19:20:23,372 USB removed : /dev/ttyACM1 — Service restart
+2026-06-23 19:20:24,415 Interrupted thread detected - Restart Service
+2026-06-23 19:20:30,041 Started
+2026-06-23 19:20:50,054 Thread for /dev/ttyACM1 created
+2026-06-23 19:20:50,055 Thread for /dev/ttyACM2 created
+2026-06-23 19:20:50,056 Thread for /dev/ttyACM0 created
+2026-06-23 19:20:50,056 Thread for /dev/ttyACM3 created
+2026-06-23 19:20:50,056 Thread for gathering data created
+2026-06-23 19:27:08,876 USB removed : /dev/ttyACM3 — Service restart
+2026-06-23 19:27:10,080 Interrupted thread detected - Restart Service
+2026-06-23 19:27:15,554 Started
+2026-06-23 19:27:35,570 Thread for /dev/ttyACM3 created
+2026-06-23 19:27:35,571 Thread for /dev/ttyACM1 created
+2026-06-23 19:27:35,571 Thread for /dev/ttyACM2 created
+2026-06-23 19:27:35,572 Thread for /dev/ttyACM0 created
+2026-06-23 19:27:35,572 Thread for gathering data created
+2026-06-23 20:12:18,379 USB removed : /dev/ttyACM3 — Service restart
+2026-06-23 20:12:20,664 Interrupted thread detected - Restart Service
+2026-06-23 20:12:26,295 Started
+2026-06-23 20:12:46,312 Thread for /dev/ttyACM3 created
+2026-06-23 20:12:46,314 Thread for /dev/ttyACM1 created
+2026-06-23 20:12:46,314 Thread for /dev/ttyACM2 created
+2026-06-23 20:12:46,314 Thread for /dev/ttyACM0 created
+2026-06-23 20:12:46,315 Thread for gathering data created
+2026-06-23 22:06:33,037 USB removed : /dev/ttyACM3 — Service restart
+2026-06-23 22:06:36,525 Interrupted thread detected - Restart Service
+2026-06-23 22:06:42,052 Started
+2026-06-23 22:07:02,067 Thread for /dev/ttyACM3 created
+2026-06-23 22:07:02,068 Thread for /dev/ttyACM1 created
+2026-06-23 22:07:02,068 Thread for /dev/ttyACM2 created
+2026-06-23 22:07:02,069 Thread for /dev/ttyACM0 created
+2026-06-23 22:07:02,069 Thread for gathering data created
+2026-06-24 00:06:25,617 USB removed : /dev/ttyACM0 — Service restart
+2026-06-24 00:06:27,281 Interrupted thread detected - Restart Service
+2026-06-24 00:06:32,799 Started
+2026-06-24 00:06:52,812 Thread for /dev/ttyACM0 created
+2026-06-24 00:06:52,812 Thread for /dev/ttyACM3 created
+2026-06-24 00:06:52,813 Thread for /dev/ttyACM1 created
+2026-06-24 00:06:52,813 Thread for /dev/ttyACM2 created
+2026-06-24 00:06:52,814 Thread for gathering data created
+2026-06-24 02:57:19,955 USB removed : /dev/ttyACM1 — Service restart
+2026-06-24 02:57:23,133 Interrupted thread detected - Restart Service
+2026-06-24 02:57:28,791 Started
+2026-06-24 02:57:48,802 Thread for /dev/ttyACM1 created
+2026-06-24 02:57:48,802 Thread for /dev/ttyACM0 created
+2026-06-24 02:57:48,802 Thread for /dev/ttyACM3 created
+2026-06-24 02:57:48,803 Thread for /dev/ttyACM2 created
+2026-06-24 02:57:48,803 Thread for gathering data created

@@ -1,0 +1,25 @@
+- Envoyer presentation à Mr.Ben avant 30 juin pour qu'il interprete avant réunion
+- FLECHE 24H sur graphe impedance 
+- pas mettre superposition des 2 graphpes pour le moment --> mettre impedance et ADC séparé
+- !! Mettre images pour voir à quoi correspond les channels !!
+
+- IDEE: Pas avoir d'infos sur la récolte pour pas influencer les résultats --> juste poser des questions dans slide en fonction de ce qu'on voit .. 
+- EX: question dans PPT --> recolte a-t-elle eu lieu le 8 et 18 d'après channel0 ?
+
+
+- eliminer les pics + moyenne glissante (garder les 2) pour img avec tous les channels
+- Spectrogramme : axe x: temps // axe y: cannaux (=position) // axe z: amplitude
+- Vincent
+
+
+
+----- PCB ----
+
+- Adreesse des MUX à corriger
+- Impedance interne (MUX vers Andrea)
+- Jack audio -> 4 cable à verifier
+
+
+- 2 PCB à faire --> 
+    - 1 premier PCB : Mezzanine avec seulement 16 pins pour connecter les électrodes
+    - 2eme PCB : Bornier à vis ou Jack audio
