@@ -64,7 +64,7 @@ plt.gcf().autofmt_xdate()
 
 # Limitation de l'axe Y à 10 000
 # plt.ylim(top=10000) 
-# Note : si tu veux aussi bloquer le bas à 0, utilise : plt.ylim(0, 10000)
+plt.ylim(-10000, 10000)
 
 plt.title("Mesures électrophysiologiques du 3 juin au 24 juin (Canaux 0 à 7)")
 # plt.xlabel("Temps")
@@ -72,5 +72,14 @@ plt.ylabel("Valeur ADC")
 plt.grid(True, linestyle='--', alpha=0.5)
 
 plt.tight_layout()
-plt.legend(loc="upper right") # Placement de la légende pour 8 courbes
+# plt.legend(loc="upper right") # Placement de la légende pour 8 courbes
+plt.gcf().subplots_adjust(bottom=0.25)
+plt.legend(
+    loc='upper center', 
+    bbox_to_anchor=(0.5, -0.32),
+    ncol=7,                      
+    borderaxespad=0.,
+    fontsize='small'              
+)
+
 plt.show()

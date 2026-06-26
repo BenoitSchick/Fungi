@@ -35,6 +35,8 @@ values_filtered = medfilt(values, kernel_size=kernel_size)
 window_size = 200 
 values_filtered = uniform_filter1d(values_filtered, size=window_size)
 
+
+# --------- Plot des graphes --------
 dates = [datetime.fromtimestamp(ts) for ts in timestamps]
 plt.figure(figsize=(12, 6))
 
@@ -42,9 +44,9 @@ plt.figure(figsize=(12, 6))
 plt.plot(dates,values_filtered, linewidth=0.8, label="channel7")
 
 # Valeur non filtre
-# kernel_size = 15 
-# values_nonfilt = medfilt(values, kernel_size=kernel_size)
-# plt.plot(dates,values_nonfilt, linewidth=0.8, label="channel0 non filtré")
+kernel_size = 15 
+values_nonfilt = medfilt(values, kernel_size=kernel_size)
+plt.plot(dates,values_nonfilt, linewidth=0.8, label="channel7 non filtré")
 
 plt.gca().xaxis.set_major_formatter(
     mdates.DateFormatter('%Y-%m-%d %H:%M:%S')
@@ -53,7 +55,7 @@ plt.gca().xaxis.set_major_locator(
     mdates.DayLocator(interval=1)
 )
 plt.gcf().autofmt_xdate()
-
+plt.ylim(-10000, 10000)
 plt.title("Mesures électrophysiologiques du 3 juin au 24 juin")
 # plt.xlabel("Temps")
 plt.ylabel("Valeur ADC")
