@@ -1,18 +1,4 @@
-27432398516865132
-AAA_MAZZA_project
-AD5941_footprint
-
-AD5941BCPZ-RL7 
-0
-49
-49
-AAA_MAZZA_project
-TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal
-terminal block Metz Connect Type059_RT06304HBWC, 4 pins, pitch 3.5mm, size 14x6.5mm, drill diameter 1.2mm, pad diameter 2.3mm, https://www.metz-connect.com/externalfiles/310591/863246.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
-THT terminal block Metz Connect Type059_RT06304HBWC pitch 3.5mm size 14x6.5mm drill 1.2mm pad 2.3mm
-0
-4
-4
+27435963473865276
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -107995,3 +107981,31 @@ Varistor VF
 0
 2
 2
+lib_mesure_impedance
+AD5941_footprint
+
+AD5941BCPZ-RL7 
+0
+49
+49
+lib_mesure_impedance
+ADG706BRUZ
+
+ADG706BRUZ-REEL 
+0
+28
+28
+lib_mesure_impedance
+TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal
+terminal block Metz Connect Type059_RT06304HBWC, 4 pins, pitch 3.5mm, size 14x6.5mm, drill diameter 1.2mm, pad diameter 2.3mm, https://www.metz-connect.com/externalfiles/310591/863246.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
+THT terminal block Metz Connect Type059_RT06304HBWC pitch 3.5mm size 14x6.5mm drill 1.2mm pad 2.3mm
+0
+4
+4
+lib_mesure_impedance
+conn_1x16_PPPC082LFBN-RC
+
+
+0
+16
+16
