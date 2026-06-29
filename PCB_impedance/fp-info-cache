@@ -1,4 +1,4 @@
-27435963473865276
+27441311550056751
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -412,6 +412,13 @@ MCP1726-3302E/MF
 0
 9
 9
+Beuns_PCBFootprint
+PinSocket_2x40_P2.54mm_Vertical
+Through hole straight socket strip, 2x40, 2.54mm pitch, double cols (from Kicad 4.0.7), script generated
+Through hole socket strip THT 2x40 2.54mm double row
+0
+80
+80
 Beuns_PCBFootprint
 SAMTEC_RSP-122811-01
 
@@ -107995,6 +108002,20 @@ ADG706BRUZ-REEL
 0
 28
 28
+lib_mesure_impedance
+ADG726SBUZ
+
+ADG726BSUZ 
+0
+48
+48
+lib_mesure_impedance
+PinHeader_2x20_P2.54mm_Vertical
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+40
+40
 lib_mesure_impedance
 TerminalBlock_MetzConnect_Type059_RT06304HBWC_1x04_P3.50mm_Horizontal
 terminal block Metz Connect Type059_RT06304HBWC, 4 pins, pitch 3.5mm, size 14x6.5mm, drill diameter 1.2mm, pad diameter 2.3mm, https://www.metz-connect.com/externalfiles/310591/863246.PDF, script-generated using https://gitlab.com/kicad/libraries/kicad-footprint-generator/-/tree/master/scripts/TerminalBlock_MetzConnect
