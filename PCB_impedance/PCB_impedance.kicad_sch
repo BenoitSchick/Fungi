@@ -5088,6 +5088,19 @@
 		)
 		(uuid "41f7ae77-3be9-4819-a650-96b4bd9aba86")
 	)
+	(text "For 3x3DFN package, the maximum package power dissipation at 60°C ambiant temperature is :\nP_D(max) = (125°C - 60°C) / 41°C/W = 1.585W"
+		(exclude_from_sim no)
+		(at 75.946 69.088 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.1524)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "45580bd3-9f02-4f4b-aaaa-4024dd8e5a8d")
+	)
 	(text "Electrodes for 4-Wire Impedance Measurement \n(CE0, AIN2, AIN3, AIN1)"
 		(exclude_from_sim no)
 		(at 196.596 243.078 0)
@@ -5132,6 +5145,31 @@
 		)
 		(uuid "52f62a31-d26a-4dcd-9cb8-8466620ad9ec")
 	)
+	(text "P_LDO = (5V - 3.3V) * (10mA (AD5940) + 4*5uA (ADG726)) = 0.02W"
+		(exclude_from_sim no)
+		(at 75.946 73.406 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.1588)
+			)
+			(justify left)
+		)
+		(uuid "5aaaccba-d76b-4ea2-8114-3d45b786ff24")
+	)
+	(text "The maximum continuous junction temperature T_J(max) must stay under 125°C\nT_J(max) = P_LDO * Rtheta_JA + Tambiant = 0.02W * 41.0°C/W + 60°C = 60.7°C"
+		(exclude_from_sim no)
+		(at 75.946 76.962 0)
+		(effects
+			(font
+				(size 0.762 0.762)
+				(thickness 0.1524)
+				(bold yes)
+			)
+			(justify left)
+		)
+		(uuid "6038d34c-f5b6-4a13-9814-50132388d6ae")
+	)
 	(text "CTIA and RTIA"
 		(exclude_from_sim no)
 		(at 34.798 237.49 0)
@@ -5141,6 +5179,18 @@
 			)
 		)
 		(uuid "8b304bef-ee44-43a3-ae2b-4e9f96e64d9e")
+	)
+	(text "Power Dissipation"
+		(exclude_from_sim no)
+		(at 87.884 65.278 0)
+		(effects
+			(font
+				(size 1.778 1.778)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "8db89a0f-b41f-416a-b622-d2922d57e490")
 	)
 	(text "U5 Decoupling capacitors"
 		(exclude_from_sim no)
@@ -25810,118 +25860,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x16_Socket")
-		(at 455.676 59.436 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ca96435d-84af-45cc-873e-408657c5ccfd")
-		(property "Reference" "J1"
-			(at 457.2 59.4359 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x16_Socket"
-			(at 457.2 61.9759 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 455.676 59.436 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 455.676 59.436 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x16, script generated"
-			(at 455.676 59.436 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "16"
-			(uuid "f0a0b7af-d2ff-4621-a7bc-e9a9070579d9")
-		)
-		(pin "9"
-			(uuid "42990d3b-9111-407f-9999-b3d339e295a4")
-		)
-		(pin "14"
-			(uuid "13739fc7-66fa-4d82-a40f-a8f35b5499b1")
-		)
-		(pin "3"
-			(uuid "9024006b-8214-413b-aea9-5ee154d892df")
-		)
-		(pin "12"
-			(uuid "53366cb6-bb0e-49a5-8bfe-32eea749309e")
-		)
-		(pin "4"
-			(uuid "608e67de-b7ec-4b17-b618-8ee853888ce7")
-		)
-		(pin "11"
-			(uuid "0b7e6bf5-7a69-4086-a48e-3bae46a5c53d")
-		)
-		(pin "13"
-			(uuid "cc241d3d-3b02-4a5d-bd96-51978153b552")
-		)
-		(pin "10"
-			(uuid "9a518cb6-70c7-4de3-8903-85d2fdf94101")
-		)
-		(pin "5"
-			(uuid "3eb7f4ee-fcae-4c6a-b0a0-fbb7a7d0864b")
-		)
-		(pin "1"
-			(uuid "ea6d3ab6-c1b1-443b-b10e-8af81f053920")
-		)
-		(pin "6"
-			(uuid "b129e4b2-30e9-4c43-a2af-315aea785365")
-		)
-		(pin "7"
-			(uuid "0d61cca7-7990-43c0-9404-eb9363102c49")
-		)
-		(pin "2"
-			(uuid "6ba8928a-1784-4ead-91be-8ee85b4cf3b6")
-		)
-		(pin "8"
-			(uuid "2d7ce425-a9d0-46ea-bdcf-5044ca8c480f")
-		)
-		(pin "15"
-			(uuid "a2b60b15-ea02-47a4-af9e-11b1110661ae")
-		)
-		(instances
-			(project "PCB_impedance"
-				(path "/17c54b31-e408-4e08-a1dc-baf1e1ebfa28"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 49.53 245.618 0)
 		(unit 1)
@@ -27061,7 +26999,7 @@
 				)
 			)
 		)
-		(property "Footprint" "lib_mesure_impedance:PinHeader_2x20_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical"
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -27070,7 +27008,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/937/Female_Headers.100_DS.pdf"
+		(property "Datasheet" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -27079,7 +27017,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "40 Position Header Connector 0.100\" (2.54mm) Through Hole Tin"
+		(property "Description" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -27088,7 +27026,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Sullins Connector Solutions"
+		(property "Manufacturer" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -27097,7 +27035,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Part Number" "PPTC202LFBN-RC"
+		(property "Manufacturer Part Number" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font
@@ -27106,7 +27044,7 @@
 				(hide yes)
 			)
 		)
-		(property "Digikey Part Number" "S6104-ND"
+		(property "Digikey Part Number" ""
 			(at 48.26 61.976 0)
 			(effects
 				(font

@@ -6,7 +6,7 @@
     "hidden_netclasses": [],
     "hidden_nets": [],
     "high_contrast_mode": 0,
-    "net_color_mode": 2,
+    "net_color_mode": 0,
     "opacity": {
       "images": 0.6,
       "pads": 1.0,
@@ -50,7 +50,7 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_fffffff5_d75555e5",
+    "visible_layers": "ffffffff_ffffffff_fffffff5_d75555a5",
     "zone_display_mode": 0
   },
   "git": {

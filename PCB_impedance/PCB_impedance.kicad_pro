@@ -225,7 +225,7 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.7,
+          "diameter": 0.6,
           "drill": 0.3
         }
       ],
@@ -509,7 +509,20 @@
     "meta": {
       "version": 4
     },
-    "net_colors": null,
+    "net_colors": {
+      "/MUX_CSA0": "rgb(255, 249, 44)",
+      "/MUX_CSA1": "rgb(255, 249, 44)",
+      "/MUX_CSA2": "rgb(255, 249, 44)",
+      "/MUX_CSA3": "rgb(255, 249, 44)",
+      "/MUX_EN0": "rgb(30, 241, 255)",
+      "/MUX_EN1": "rgb(30, 241, 255)",
+      "/MUX_EN2": "rgb(30, 241, 255)",
+      "/MUX_EN3": "rgb(30, 241, 255)",
+      "/MUX_WR0": "rgb(128, 107, 255)",
+      "/MUX_WR1": "rgb(128, 107, 255)",
+      "/MUX_WR2": "rgb(128, 107, 255)",
+      "/MUX_WR3": "rgb(128, 107, 255)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": [
       {
